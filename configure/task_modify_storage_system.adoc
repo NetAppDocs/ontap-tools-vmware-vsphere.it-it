@@ -1,0 +1,40 @@
+---
+permalink: configure/task_modify_storage_system.html 
+sidebar: sidebar 
+keywords:  
+summary: È necessario aggiornare il certificato alla scadenza del certificato o quando il certificato viene modificato manualmente. Quando il certificato del client o del cluster scade o non corrisponde, la comunicazione con il sistema ONTAP viene interrotta. 
+---
+= Modificare i sistemi storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per modificare i sistemi di storage, attenersi alla procedura riportata di seguito.
+
+*Fasi*
+
+. Da *NetApp ONTAP Tools* selezionare *Storage Systems*.
+. Fare clic sul pulsante sistema di storage *azione disponibile* (tre punti verticali) nel punto in cui si desidera aggiornare il certificato.
+. Selezionare *Modify* (Modifica).
++
+
+NOTE: Prima della scadenza del certificato del cluster o del client, si consiglia di ottenere il certificato rinnovato da ONTAP o di generare il certificato del client dagli strumenti ONTAP per VMware vSphere.
+
+. Nella finestra *Modifica sistema di storage*, nel campo *carica certificato*, *Sfoglia* fino alla posizione in cui è memorizzato il certificato ONTAP e caricarlo.
++
+Per il certificato Cluster:
+
++
+** Se il certificato del cluster è stato modificato in ONTAP, è necessario caricare manualmente il certificato modificato negli strumenti ONTAP. Si tratta di un passaggio obbligatorio.
+** Quando il certificato del cluster è scaduto, lo stato del sistema storage diventa Cluster Certificate Expired (certificato cluster scaduto). Alla scadenza del certificato del cluster, l'amministratore dello storage deve generare il nuovo certificato sul lato ONTAP. La finestra *Modifica sistema di storage* recupera automaticamente il certificato del cluster dallo storage ONTAP ed è necessario autorizzare il certificato del cluster.
+
+
+. Quando il certificato client è scaduto, lo stato del sistema storage diventa Client Certificate Expired (certificato client scaduto).
++
+Se il certificato client è scaduto, nella finestra *Modifica sistema di storage*, selezionare l'opzione *genera un nuovo certificato client per ONTAP* per rigenerarlo.
+
+
+
+Una volta installati i certificati, la comunicazione con ONTAP viene ripristinata.

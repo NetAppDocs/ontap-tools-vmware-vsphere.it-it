@@ -1,0 +1,51 @@
+---
+permalink: deploy/reference_port_requirements_for_vsc.html 
+sidebar: sidebar 
+keywords: port requirements 
+summary: Per impostazione predefinita, Virtual Storage Console utilizza porte designate per abilitare la comunicazione tra i suoi componenti, che includono sistemi storage e VMware vCenter Server. Se si dispone di firewall abilitati, assicurarsi che i firewall siano impostati in modo da consentire eccezioni. 
+---
+= Requisiti delle porte per VSC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per impostazione predefinita, Virtual Storage Console (VSC) utilizza porte designate per consentire la comunicazione tra i suoi componenti, tra cui i sistemi storage e VMware vCenter Server. Se si dispone di firewall abilitati, assicurarsi che i firewall siano impostati in modo da consentire eccezioni.
+
+Per firewall diversi da Windows, è necessario concedere manualmente l'accesso a porte specifiche utilizzate da VSC. Se non si concede l'accesso a queste porte, viene visualizzato un messaggio di errore simile al seguente.
+
+`Unable to communicate with the server.`
+
+VSC utilizza le seguenti porte TCP bidirezionali predefinite:
+
+|===
+
+
+| *Numero di porta predefinito* | *Descrizione* 
+
+
+ a| 
+9083
+ a| 
+Quando questa opzione è attivata, il provider VASA e l'adattatore di replica dello storage (SRA) utilizzano questa porta per comunicare con il server vCenter. Questa porta è necessaria anche per ottenere le impostazioni TCP/IP. Questa porta viene utilizzata per scaricare il pacchetto di supporto VP, accedere all'interfaccia utente Web-CLI e controllare la comunicazione del percorso da VMware a VP.
+
+
+
+ a| 
+443
+ a| 
+A seconda di come sono state configurate le credenziali, VMware vCenter Server e i sistemi storage sono in attesa di comunicazioni sicure su questa porta. La porta viene utilizzata nell'architettura di comunicazione client-server. La porta 443 è attivata per impostazione predefinita per le connessioni sicure. Il client, che può essere qualsiasi client di automazione che utilizza l'API REST, avvia la connessione al server e gli endpoint si scambiano i dati.
+
+
+
+ a| 
+8143
+ a| 
+VSC è in attesa di comunicazioni sicure su questa porta. La porta viene utilizzata nell'architettura di comunicazione client-server. Il client, che può essere qualsiasi client di automazione che utilizza l'API REST, avvia la connessione al server e gli endpoint si scambiano i dati. Questa porta è abilitata per i servizi VSC e per l'esportazione dei log del server VSC. La pagina register.html è ospitata su questa porta. Il RESTO della swap è esposto su questa porta.
+
+|===
+
+NOTE: Prima di implementare gli strumenti ONTAP, è necessario aver attivato il protocollo ICMP (Internet Control message Protocol).
+
+Se ICMP è disattivato, la configurazione iniziale degli strumenti ONTAP non riesce e VSC non può avviare i servizi VSC e VASA dopo l'implementazione. Dopo l'implementazione, è necessario attivare manualmente i servizi VSC e VASA Provider.

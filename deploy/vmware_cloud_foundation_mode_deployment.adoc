@@ -1,0 +1,249 @@
+---
+permalink: deploy/vmware_cloud_foundation_mode_deployment.html 
+sidebar: sidebar 
+keywords:  
+summary: I tool ONTAP per VMware vSphere possono essere implementati in un ambiente di base cloud. 
+---
+= Modalità di implementazione di VMware Cloud Foundation per gli strumenti ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I tool ONTAP per VMware vSphere possono essere implementati in un ambiente VMware Cloud Foundation (VCF). L'obiettivo principale dell'implementazione di VCF è utilizzare gli strumenti ONTAP in una configurazione cloud e creare container senza vCenter Server.
+
+La modalità VCF consente di creare container per lo storage senza la necessità di un vCenter Server. Il provider VASA viene attivato per impostazione predefinita dopo l'implementazione degli strumenti ONTAP in modalità VCF. Una volta completata l'implementazione, è possibile aggiungere sistemi storage e creare container utilizzando le API REST. Viene introdotta una nuova API per generare il _appliance-api-token_ che autentica le chiamate API. Alcune delle API esistenti vengono modificate per includere l'intestazione _appliance-api-token_. Con la release 9.12 di ONTAP Tools, swagger non supporta le API 1.0. I puntatori che in precedenza erano su 1.0 sono stati spostati in 2.0 o 3.0 API.
+
+Le API disponibili per la modalità di implementazione VCF sono:
+
+|===
+
+
+| *API* | *Metodo HTTP* | *Nuovo/modificato* | *Intestazione sezione* 
+
+
+ a| 
+/2.0/admin/containers
+ a| 
+OTTIENI
+ a| 
+Novità
+ a| 
+Container
+
+
+
+ a| 
+/2.0/admin/containers
+ a| 
+POST
+ a| 
+Novità
+ a| 
+Container
+
+
+
+ a| 
+/2.0/vcf/user/login
+ a| 
+POST
+ a| 
+Novità
+ a| 
+Autenticazione dell'utente
+
+
+
+ a| 
+/3.0/storage/cluster
+ a| 
+OTTIENI
+ a| 
+Modificato
+ a| 
+Sistemi storage
+
+
+
+ a| 
+/3.0/storage/cluster
+ a| 
+POST
+ a| 
+Modificato
+ a| 
+Sistemi storage
+
+
+
+ a| 
+/2.0/storage/cluster/discover
+ a| 
+POST
+ a| 
+Modificato
+ a| 
+Sistemi storage
+
+
+
+ a| 
+/2.0/storage/profili-funzionalità
+ a| 
+OTTIENI
+ a| 
+Modificato
+ a| 
+Profilo di capacità dello storage
+
+
+
+ a| 
+/2.0/tasks/{id}
+ a| 
+OTTIENI
+ a| 
+Modificato
+ a| 
+Attività
+
+|===
+È possibile utilizzare gli archivi dati vVols solo in modalità di implementazione VCF. Per creare un container, è necessario utilizzare API REST personalizzate per l'implementazione di VCF. Una volta completata l'implementazione, è possibile accedere alle API REST dall'interfaccia Swagger. Durante la creazione di container in modalità VCF, è necessario fornire nomi di storage VM, aggregato e volume. È necessario utilizzare le API ONTAP per ottenere questi dettagli, poiché gli strumenti ONTAP OTTENGONO le API per queste risorse non vengono aggiornate.
+
+|===
+
+
+| *Oggetto di storage* | *API* 
+
+
+ a| 
+VM di storage
+ a| 
+api/svm/svm
+
+
+
+ a| 
+Aggregato
+ a| 
+storage/aggregati
+
+
+
+ a| 
+Volume
+ a| 
+storage/volumi
+
+|===
+Durante l'esecuzione dell'API di creazione dei container, è possibile aggiungere volumi esistenti al container. Tuttavia, è necessario assicurarsi che i valori di compressione e deduplica dei volumi esistenti corrispondano alle funzionalità di storage del container. La creazione della macchina virtuale non riesce quando i valori non corrispondono. La seguente tabella fornisce dettagli sui valori che i volumi esistenti devono avere per i profili di funzionalità dello storage corrispondenti.
+
+|===
+
+
+| *Profilo capacità storage container* | *Deduplica* | *Compressione* 
+
+
+ a| 
+Platinum
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_thick
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_Default (AFF_Default)
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_Tiering
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_Encrypted
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_Encrypted_Tiering
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_Encrypted_Min50
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+FAS_Default
+ a| 
+Sfondo
+ a| 
+Nessuno
+
+
+
+ a| 
+FAS_Max20
+ a| 
+Sfondo
+ a| 
+Nessuno
+
+
+
+ a| 
+Bronzo
+ a| 
+Nessuno
+ a| 
+Nessuno
+
+|===
+È possibile utilizzare l'API DELLA PATCH ONTAP per impostare i valori appropriati.
+
+`https://<machine_IP>/api/storage/volumes/{uuid}`
+
+L'implementazione VCF degli strumenti ONTAP consente solo la creazione di flussi di lavoro di container. Se si desidera utilizzare altri flussi di lavoro, come il provisioning di datastore, la creazione di profili di capacità dello storage o il disaster recovery, è necessario registrare gli strumenti ONTAP con vCenter Server utilizzando la pagina swagger. A partire dalla versione 9.12 degli strumenti ONTAP, la registrazione degli strumenti ONTAP con vCenter avviene dalla pagina swagger. Il limite degli strumenti ONTAP in modalità VCF è che non è possibile configurare SRA per il disaster recovery fino a quando non si registra il plug-in. Quando si implementano gli strumenti ONTAP senza la modalità VCF, la registrazione viene eseguita automaticamente.
+
+
+NOTE: Il file Register.html verrà rimosso nelle prossime versioni dei tool ONTAP.
+
+image::../media/VCF_deployment.png[Workflow di implementazione di VMware Cloud Foundation]
+
+link:../deploy/task_deploy_ontap_tools.html["Come implementare gli strumenti ONTAP"]

@@ -1,0 +1,32 @@
+---
+permalink: configure/concept_considerations_for_creating_and_editing_storage_capability_profiles.html 
+sidebar: sidebar 
+keywords:  
+summary: È necessario conoscere le considerazioni per la creazione e la modifica dei profili delle funzionalità di storage. 
+---
+= Considerazioni per la creazione e la modifica dei profili di funzionalità dello storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Di seguito sono riportate le considerazioni per la creazione e la modifica dei profili delle funzionalità di storage.
+
+* È possibile configurare gli IOPS min solo sui sistemi AFF.
+* È possibile configurare le metriche QoS a livello di datastore di un volume virtuale (Vol).
++
+Questa funzionalità offre una maggiore flessibilità nell'assegnazione di diverse metriche QoS per diversi VMDK della stessa macchina virtuale che viene fornita su un datastore virtuale.
+
+* È possibile configurare i profili delle funzionalità di storage per gli archivi dati FAS e AFF.
++
+Per i sistemi FAS AFF, è possibile configurare la riserva di spazio in modo che sia spessa o sottile.
+
+* È possibile utilizzare i profili di capacità dello storage per fornire la crittografia per i datastore.
+* Non è possibile modificare i profili di capacità dello storage esistenti (creati prima della versione 7.2) dopo l'aggiornamento da una versione precedente dei tool ONTAP per VMware vSphere all'ultima versione dei tool ONTAP.
++
+I profili delle funzionalità di storage legacy vengono conservati per garantire la compatibilità con le versioni precedenti. Se i modelli predefiniti non sono in uso, durante l'aggiornamento alla versione più recente dei tool ONTAP, i modelli esistenti vengono sovrascritti per riflettere le nuove metriche di QoS correlate alle performance dei profili di capacità dello storage.
+
+* Non è possibile modificare o utilizzare i profili delle funzionalità di storage legacy per eseguire il provisioning di nuovi datastore virtuali o policy di storage delle macchine virtuali.
+* Per tutti i nuovi datastore, è necessario utilizzare nuovi profili di funzionalità storage.
+

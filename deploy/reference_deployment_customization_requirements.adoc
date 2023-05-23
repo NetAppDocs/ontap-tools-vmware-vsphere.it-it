@@ -1,0 +1,58 @@
+---
+permalink: deploy/reference_deployment_customization_requirements.html 
+sidebar: sidebar 
+keywords:  
+summary: È necessario considerare alcune limitazioni durante la personalizzazione degli strumenti ONTAP di implementazione. 
+---
+= Considerazioni sulla personalizzazione dell'implementazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario considerare alcune limitazioni durante la personalizzazione degli strumenti ONTAP di implementazione.
+
+
+
+== Password utente amministratore dell'appliance
+
+Non utilizzare spazi nella password dell'amministratore.
+
+
+
+== Credenziali della console di manutenzione dell'appliance
+
+È necessario accedere alla console di manutenzione utilizzando il nome utente "`maint`". È possibile impostare la password per l'utente "`maint`" durante l'implementazione. È possibile utilizzare il menu Configurazione applicazione della console di manutenzione degli strumenti ONTAP per modificare la password.
+
+
+
+== Credenziali dell'amministratore di vCenter Server
+
+È possibile impostare le credenziali di amministratore per vCenter Server durante l'implementazione degli strumenti ONTAP.
+
+Se la password per il server vCenter cambia, è possibile aggiornare la password per l'amministratore utilizzando il seguente URL://<IP>:8143/Register.html dove l'indirizzo IP è costituito dagli strumenti ONTAP forniti durante l'implementazione.
+
+
+
+== Indirizzo IP del server vCenter
+
+* Specificare l'indirizzo IP (IPv4 o IPv6) dell'istanza del server vCenter a cui si desidera registrare gli strumenti ONTAP.
++
+Il tipo di certificati VSC e VASA generati dipende dall'indirizzo IP (IPv4 o IPv6) fornito durante l'implementazione. Durante l'implementazione degli strumenti ONTAP, se non sono stati immessi dettagli IP statici e DHCP, la rete fornisce indirizzi IPv4 e IPv6.
+
+* L'indirizzo IP degli strumenti ONTAP utilizzato per la registrazione con vCenter Server dipende dal tipo di indirizzo IP del server vCenter (IPv4 o IPv6) inserito nella procedura guidata di implementazione.
++
+I certificati VSC e VASA verranno generati utilizzando lo stesso tipo di indirizzo IP utilizzato durante la registrazione di vCenter Server.
+
++
+
+NOTE: : IPv6 è supportato solo con vCenter Server 6.7 e versioni successive.
+
+
+
+
+
+== Proprietà di rete dell'appliance
+
+Se non si utilizza DHCP, specificare un nome host DNS valido (non qualificato), l'indirizzo IP statico per gli strumenti ONTAP e gli altri parametri di rete. Tutti questi parametri sono necessari per un'installazione e un funzionamento corretti.

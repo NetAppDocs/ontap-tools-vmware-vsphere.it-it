@@ -1,0 +1,14 @@
+---
+permalink: deploy/concept_deploy_or_upgrade_ontap_tools.html 
+sidebar: sidebar 
+keywords: deploying virtual appliance 
+summary: 'È necessario scaricare e implementare gli strumenti ONTAP nell"ambiente VMware vSphere, quindi configurare le applicazioni richieste in base alle attività che si desidera eseguire utilizzando VSC, provider VASA e SRA.' 
+---
+= Implementare o aggiornare i tool ONTAP® per VMware vSphere
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario scaricare e implementare gli strumenti ONTAP nell'ambiente VMware vSphere, quindi configurare le applicazioni richieste in base alle attività che si desidera eseguire utilizzando VSC, provider VASA e SRA.

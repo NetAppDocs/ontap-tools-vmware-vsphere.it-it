@@ -1,0 +1,53 @@
+---
+permalink: deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le release 9.x dei tool ONTAP per VMware vSphere supportano l"aggiornamento in-place alla versione più recente.' 
+---
+= Workflow di implementazione per gli utenti esistenti degli strumenti ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le release 9.x dei tool ONTAP per VMware vSphere supportano l'aggiornamento in-place alla versione più recente.
+
+Le versioni precedenti di singole applicazioni come Virtual Storage Console 6.x, Storage Replication Adapter 2.x, 3.x, 4.x e VASA Provider 6.x utilizzano un processo di aggiornamento diverso. Se nel programma di installazione sono installate queste versioni legacy di VSC, VASA Provider o SRA, eseguire le seguenti operazioni:
+
+. Implementare la versione più recente dei tool ONTAP.
+. Eseguire la migrazione dei dati di configurazione esistenti.
++
+I dati di configurazione includono le credenziali del sistema di storage e le preferenze presenti in `kaminoprefs.xml` e. `vscPreferences.xml` file.
+
+
+
+link:../configure/reference_set_ipv4_or_ipv6.html["Impostare IPv4 o IPv6 utilizzando il file delle preferenze"]
+
+In molti casi, potrebbe non essere necessario migrare i dati di configurazione. Tuttavia, se i file delle preferenze sono stati personalizzati in precedenza, potrebbe essere necessario esaminarli e apportare modifiche simili ai nuovi strumenti ONTAP implementati. È possibile aggiungere i sistemi storage ai tool ONTAP appena implementati e specificare le credenziali man mano che vengono aggiunti.
+
+Se si esegue l'aggiornamento dal provider VASA 6.X, è necessario annullare la registrazione del provider VASA prima di eseguire l'aggiornamento. Per ulteriori informazioni, consultare la documentazione relativa alla versione corrente.
+
+Se si esegue l'aggiornamento da SRA 4.0 o versioni precedenti:
+
+* Se si utilizza SRA 4.0P1, è necessario prima eseguire l'aggiornamento a SRA9.6, quindi eseguire un aggiornamento in-place della release SRA 9.6. In seguito, è possibile eseguire l'aggiornamento alla versione più recente dei tool ONTAP.
++
+link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["Effettua l'aggiornamento alla versione più recente dei tool ONTAP"]
+
+* Se si utilizza SRA 2.1 o 3.0, è necessario prima annotare i dettagli della configurazione del sito esistente.
++
+Anche l'adattatore di replica dello storage (SRA) 4.0 per le release di ONTAP utilizza il provider VASA, pertanto è necessario annullare la registrazione del provider VASA e implementare la versione più recente dei tool ONTAP. La versione precedente del server (`.ova`) può essere rimosso al termine dell'aggiornamento.
+
+
+
+Se si dispone dell'implementazione del provider VASA, dopo l'aggiornamento dall'installazione esistente, è necessario configurare le dimensioni della memoria per gli strumenti ONTAP in modo che siano 12 GB utilizzando `Edit Settings` opzione. È inoltre necessario modificare la prenotazione della memoria virtuale. La macchina virtuale deve essere spenta per modificare le dimensioni della memoria.
+
+Se si dispone della versione 7.2 o 7.2.1 dell'appliance virtuale per VSC, VASA Provider e SRA, non è possibile eseguire direttamente l'aggiornamento alla versione 9.7P1 o successiva dell'appliance unificata. È necessario prima aggiornare la configurazione esistente alla versione 9.7 dell'appliance virtuale, quindi eseguire l'aggiornamento alla versione più recente.
+
+Per eseguire l'aggiornamento ai tool ONTAP 9.10 e versioni successive, è necessario eseguire l'appliance virtuale 9.7P1 o versioni successive. L'aggiornamento da una versione precedente alla 9.7P1 dell'appliance virtuale non è supportato.
+
+Se si intende implementare la versione più recente dei tool ONTAP, è necessario consultare l'argomento link:../deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html["Requisiti di spazio e dimensionamento per gli strumenti ONTAP"]. L'argomento link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["Effettua l'aggiornamento alla versione più recente dei tool ONTAP"] contiene informazioni sull'esecuzione di un aggiornamento in-place.
+
+*Informazioni correlate*
+
+https://mysupport.netapp.com/site/tools[]

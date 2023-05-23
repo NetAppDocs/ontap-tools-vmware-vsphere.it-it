@@ -1,0 +1,44 @@
+---
+permalink: manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile configurare gli strumenti ONTAP per abilitare l"accesso SSH per l"utente di DIAG.' 
+---
+= Configurare l'accesso remoto alla diagnostica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare gli strumenti ONTAP per abilitare l'accesso SSH per l'utente di DIAG.
+
+*Cosa ti serve*
+
+L'estensione del provider VASA deve essere abilitata per l'istanza di vCenter Server.
+
+*A proposito di questa attività*
+
+L'utilizzo di SSH per accedere all'account utente DIAG presenta le seguenti limitazioni:
+
+* È consentito un solo account di accesso per ogni attivazione di SSH.
+* L'accesso SSH all'account utente DIAG viene disattivato quando si verifica una delle seguenti condizioni:
++
+** Il tempo scade.
++
+La sessione di accesso rimane valida solo fino alla mezzanotte del giorno successivo.
+
+** Si accede nuovamente come utente di DIAG utilizzando SSH.
+
+
+
+
+*Fasi*
+
+. Dal server vCenter, aprire una console per il provider VASA.
+. Accedere come utente di manutenzione.
+. Invio `4` Per selezionare Support and Diagnostics (supporto e diagnostica).
+. Invio `3` Per selezionare Enable remote Diagnostics access (attiva accesso di diagnostica remota).
+. Invio `y` Nella finestra di dialogo Confirmation (Conferma) per abilitare l'accesso remoto alla diagnostica.
+. Inserire una password per l'accesso remoto alla diagnostica.
+

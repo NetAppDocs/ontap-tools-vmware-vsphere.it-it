@@ -1,0 +1,33 @@
+---
+section: concepts
+title: Concetti
+entries:
+- title: Panoramica sui tool ONTAP
+  url: "/concepts/concept_virtual_storage_console_overview.html"
+- title: Configurazioni del provider VASA per vVol
+  url: "/concepts/concept_configure_vvols_datastores.html"
+- title: Storage Replication Adapter per il disaster recovery
+  url: "/concepts/concept_manage_disaster_recovery_setup_using_srm.html"
+- title: Controllo degli accessi in base al ruolo
+  entries:
+  - title: Panoramica del controllo degli accessi basato sui ruoli per gli strumenti
+      ONTAP
+    url: "/concepts/concept_vcenter_server_role_based_access_control_features_in_vsc_for_vmware_vsphere.html"
+  - title: Componenti delle autorizzazioni vCenter Server
+    url: "/concepts/reference_components_that_make_up_vcenter_server_permissions.html"
+  - title: Punti chiave relativi all'assegnazione e alla modifica delle autorizzazioni
+      per vCenter Server
+    url: "/concepts/reference_key_points_about_assigning_and_modifying_permissions.html"
+  - title: Ruoli standard forniti con gli strumenti ONTAP
+    url: "/concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html"
+  - title: Privilegi richiesti per le attività VSC
+    url: "/concepts/concept_privileges_required_for_vsc_tasks.html"
+  - title: Autorizzazioni per i sistemi storage ONTAP e gli oggetti vSphere
+    url: "/concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html"
+  - title: Come configurare il controllo degli accessi basato sui ruoli per gli strumenti
+      ONTAP
+    url: "/concepts/concept_how_to_configure_data_ontap_role_based_access_control_for_vsc_for_vmware_vsphere.html"
+- title: Configurare l'alta disponibilità per gli strumenti ONTAP
+  url: "/concepts/concept_configure_high_availability_for_ontap_tools_for_vmware_vsphere.html"
+- title: Configurazioni MetroCluster supportate dai tool ONTAP
+  url: "/concepts/reference_metrocluster_configurations_supported_by_ontap_tools_for_vmware_vsphere.html"

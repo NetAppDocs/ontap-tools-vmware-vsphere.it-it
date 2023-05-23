@@ -1,0 +1,12 @@
+---
+permalink: manage/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Guida all'amministrazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

@@ -1,0 +1,66 @@
+---
+permalink: concepts/concept_how_to_configure_data_ontap_role_based_access_control_for_vsc_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: Se si desidera utilizzare il controllo degli accessi basato sui ruoli con i tool ONTAP® per ONTAP vSphere, è necessario configurare il controllo degli accessi basato sui ruoli nel sistema storage. È possibile creare uno o più account utente personalizzati con privilegi di accesso limitati con la funzione RBAC di ONTAP. 
+---
+= Come configurare il controllo degli accessi basato sui ruoli di ONTAP per i tool ONTAP per VMware vSphere
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si desidera utilizzare il controllo degli accessi basato sui ruoli con gli strumenti ONTAP per VMware vSphere, è necessario configurare il controllo degli accessi basato sui ruoli (RBAC) di ONTAP sul sistema storage. È possibile creare uno o più account utente personalizzati con privilegi di accesso limitati con la funzione RBAC di ONTAP.
+
+VSC e SRA possono accedere ai sistemi storage a livello di cluster o di SVM (Storage Virtual Machine). Se si aggiungono sistemi storage a livello di cluster, è necessario fornire le credenziali dell'utente amministratore per fornire tutte le funzionalità richieste. Se si aggiungono i sistemi storage aggiungendo direttamente i dettagli SVM, è necessario tenere presente che l'utente "`vsadmin`" non dispone di tutti i ruoli e le funzionalità necessari per eseguire determinate attività.
+
+IL provider VASA può accedere ai sistemi storage solo a livello di cluster. Se il provider VASA è richiesto per un controller storage specifico, il sistema storage deve essere aggiunto a VSC a livello di cluster anche se si utilizza VSC o SRA.
+
+Per creare un nuovo utente e connettere un cluster o una SVM agli strumenti ONTAP, eseguire le seguenti operazioni:
+
+* Creare un ruolo di amministratore del cluster o di SVM utilizzando Gestione di sistema di ONTAP 9.8P1 o versione successiva. Vedere link:../configure/task_configure_user_role_and_privileges.html["Configurare i ruoli e i privilegi degli utenti"] per ulteriori informazioni.
+* Creare utenti con il ruolo assegnato e il set di applicazioni appropriato utilizzando ONTAP
++
+Queste credenziali del sistema storage sono necessarie per configurare i sistemi storage per VSC. È possibile configurare i sistemi storage per VSC immettendo le credenziali in VSC. Ogni volta che si accede a un sistema storage con queste credenziali, si disporranno delle autorizzazioni per le funzioni VSC configurate in ONTAP durante la creazione delle credenziali.
+
+* Aggiungere il sistema storage a VSC e fornire le credenziali dell'utente appena creato
+
+
+
+
+== Ruoli VSC
+
+VSC classifica i privilegi ONTAP nel seguente set di ruoli VSC:
+
+* Discovery (rilevamento)
++
+Attiva il rilevamento di tutti i controller di storage collegati
+
+* Creare storage
++
+Consente la creazione di volumi e LUN (Logical Unit Number)
+
+* Modificare lo storage
++
+Consente il ridimensionamento e la deduplica dei sistemi storage
+
+* Distruggere lo storage
++
+Consente la distruzione di volumi e LUN
+
+
+
+
+
+== Ruoli del provider VASA
+
+È possibile creare solo la gestione basata su policy a livello di cluster. Questo ruolo consente la gestione dello storage basata su policy utilizzando i profili delle funzionalità di storage.
+
+
+
+== Ruoli SRA
+
+SRA classifica i privilegi ONTAP in un ruolo SAN o NAS a livello di cluster o SVM. Ciò consente agli utenti di eseguire operazioni SRM.
+
+Quando si aggiunge il cluster a VSC, VSC esegue una convalida iniziale dei privilegi dei ruoli RBAC di ONTAP. Se è stato aggiunto un IP di storage SVM diretto, VSC non esegue la convalida iniziale. VSC controlla e applica i privilegi in un secondo momento nel flusso di lavoro delle attività.

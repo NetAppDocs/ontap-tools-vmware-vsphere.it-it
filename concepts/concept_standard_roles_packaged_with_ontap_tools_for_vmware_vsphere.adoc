@@ -1,0 +1,88 @@
+---
+permalink: concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Per semplificare l"utilizzo dei privilegi di vCenter Server e del controllo degli accessi basato sui ruoli (RBAC), Virtual Storage Console fornisce ruoli VSC standard che consentono di eseguire le attività VSC principali. Esiste anche un ruolo di sola lettura che consente di visualizzare le informazioni VSC, ma non di eseguire alcuna attività.' 
+---
+= Ruoli standard forniti con gli strumenti ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per semplificare l'utilizzo dei privilegi di vCenter Server e del RBAC (Role-Based Access Control), Virtual Storage Console (VSC) fornisce ruoli VSC standard che consentono di eseguire attività VSC principali. Esiste anche un ruolo di sola lettura che consente di visualizzare le informazioni VSC, ma non di eseguire alcuna attività.
+
+I ruoli VSC standard dispongono sia dei privilegi specifici di VSC che dei privilegi nativi di vCenter Server necessari per eseguire le attività VSC. Inoltre, i ruoli sono configurati in modo da disporre dei privilegi richiesti per tutte le versioni supportate di vCenter Server.
+
+In qualità di amministratore, è possibile assegnare questi ruoli agli utenti in base alle esigenze.
+
+
+NOTE: Quando si aggiorna VSC alla versione più recente, i ruoli standard vengono automaticamente aggiornati per funzionare con la nuova versione di VSC.
+
+È possibile visualizzare i ruoli standard di VSC facendo clic su *Roles* nella home page di vSphere Client.
+
+I ruoli forniti da VSC consentono di eseguire le seguenti attività:
+
+|===
+
+
+| *Ruolo* | *Descrizione* 
+
+
+ a| 
+Amministratore di VSC
+ a| 
+Fornisce tutti i privilegi nativi di vCenter Server e i privilegi specifici di VSC necessari per eseguire tutte le attività di VSC.
+
+
+
+ a| 
+VSC di sola lettura
+ a| 
+Fornisce l'accesso in sola lettura a VSC. Questi utenti non possono eseguire alcuna azione VSC controllata dall'accesso.
+
+
+
+ a| 
+Provisioning VSC
+ a| 
+Fornisce tutti i privilegi nativi di vCenter Server e i privilegi specifici di VSC necessari per il provisioning dello storage. È possibile eseguire le seguenti operazioni:
+
+* Creare nuovi datastore
+* Distruggere i datastore
+* Visualizza informazioni sui profili delle funzionalità di storage
+
+
+|===
+
+
+== Linee guida per l'utilizzo dei ruoli standard VSC
+
+Quando si lavora con gli strumenti ONTAP standard per i ruoli di VMware vSphere, è necessario seguire alcune linee guida.
+
+Non modificare direttamente i ruoli standard. In tal caso, VSC sovrascriverà le modifiche ogni volta che si aggiorna VSC. Il programma di installazione aggiorna le definizioni dei ruoli standard ogni volta che si aggiorna VSC. In questo modo si garantisce che i ruoli siano aggiornati per la versione di VSC e per tutte le versioni supportate di vCenter Server.
+
+Tuttavia, è possibile utilizzare i ruoli standard per creare ruoli personalizzati in base all'ambiente. A tale scopo, è necessario copiare il ruolo standard VSC e quindi modificare il ruolo copiato. Creando un nuovo ruolo, è possibile mantenere questo ruolo anche quando si riavvia o si aggiorna il servizio VSC Windows.
+
+Di seguito sono riportati alcuni dei modi in cui è possibile utilizzare i ruoli standard di VSC:
+
+* Utilizzare i ruoli VSC standard per tutte le attività VSC.
++
+In questo scenario, i ruoli standard forniscono tutti i privilegi di cui un utente ha bisogno per eseguire le attività VSC.
+
+* Combina i ruoli per espandere le attività che un utente può eseguire.
++
+Se i ruoli VSC standard forniscono una granularità eccessiva per l'ambiente, è possibile espandere i ruoli creando gruppi di livello superiore che contengono più ruoli.
+
++
+Se un utente deve eseguire altre attività non VSC che richiedono ulteriori privilegi nativi di vCenter Server, è possibile creare un ruolo che fornisca tali privilegi e aggiungerlo anche al gruppo.
+
+* Crea ruoli più specifici.
++
+Se l'azienda richiede l'implementazione di ruoli più restrittivi rispetto ai ruoli VSC standard, è possibile utilizzare i ruoli VSC per creare nuovi ruoli.
+
++
+In questo caso, clonare i ruoli VSC necessari e modificare il ruolo clonato in modo che disponga solo dei privilegi richiesti dall'utente.
+
+

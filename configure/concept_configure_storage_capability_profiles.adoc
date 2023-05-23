@@ -1,0 +1,65 @@
+---
+permalink: configure/concept_configure_storage_capability_profiles.html 
+sidebar: sidebar 
+keywords: storage capability profiles 
+summary: IL provider VASA per ONTAP consente di creare profili di funzionalità storage e di mapparli allo storage. In questo modo, è possibile mantenere la coerenza dello storage. È inoltre possibile utilizzare il provider VASA per verificare la conformità tra lo storage e i profili di funzionalità dello storage. 
+---
+= Panoramica dei profili delle funzionalità di storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+IL provider VASA per ONTAP consente di creare profili di funzionalità storage e di mapparli allo storage. In questo modo è possibile mantenere la coerenza dello storage. È inoltre possibile utilizzare il provider VASA per verificare la conformità tra lo storage e i profili di funzionalità dello storage.
+
+Una funzionalità di storage è un insieme di attributi del sistema di storage che identifica un livello specifico di performance dello storage, efficienza dello storage e altre funzionalità, come la crittografia per l'oggetto di storage associato alla funzionalità dello storage.
+
+Per i datastore tradizionali, è possibile utilizzare un profilo di capacità dello storage per creare datastore in modo coerente con gli attributi comuni e assegnare loro i criteri QoS. Durante il provisioning, VSC visualizza cluster, SVM e aggregati che corrispondono al profilo di funzionalità dello storage. È possibile generare un profilo di capacità dello storage dagli archivi dati tradizionali esistenti utilizzando l'opzione *GLOBAL AUTO-GENERATE PROFILES* dal menu Storage Mapping (mappatura dello storage). Una volta creato il profilo, è possibile utilizzare VSC per monitorare la conformità degli archivi dati con il profilo.
+
+
+NOTE: Gli archivi dati vVol non sono supportati su SVM diretta.
+
+Se utilizzata con datastore vVols, la procedura guidata di provisioning può utilizzare più profili di funzionalità storage per creare diversi volumi FlexVol nell'archivio dati. È possibile utilizzare il criterio di storage delle macchine virtuali per creare automaticamente i vVol per una macchina virtuale nei volumi FlexVol appropriati, come definito. Ad esempio, è possibile creare profili per classi di storage comuni (ad esempio per limiti di performance e altre funzionalità come crittografia o FabricPool). In seguito, è possibile creare policy di storage delle macchine virtuali in vCenter Server che rappresentino le classi di business delle macchine virtuali e collegarle al profilo di capacità dello storage appropriato per nome (ad esempio produzione, test, risorse umane).
+
+Se utilizzato con vVol, il profilo di capacità dello storage viene utilizzato anche per impostare le prestazioni dello storage per la singola macchina virtuale e posizionarlo sul volume FlexVol nel datastore vVol che soddisfa al meglio i requisiti di performance. È possibile specificare una policy QoS con IOPS minimi e/o massimi per le performance. È possibile utilizzare le policy predefinite quando si esegue il provisioning iniziale di una macchina virtuale o modificare la policy di storage della macchina virtuale in un secondo momento, se i requisiti di business cambiano. I profili di funzionalità storage predefiniti per questa release di strumenti ONTAP:
+
+* AFF_thick
+* FAS_MAX20
+* FAS_Default
+* AFF_Default (AFF_Default)
+* AFF_Tiering
+* AFF_Encrypted
+* AFF_Encrypted_Tiering
+* AFF_Encrypted_Min50
+* Platinum
+* Bronzo
+
+
+VCenter Server associa quindi la funzionalità di storage di un LUN o di un volume al datastore fornito su quel LUN o volume. In questo modo è possibile eseguire il provisioning di una macchina virtuale in un datastore che corrisponda al profilo di storage della macchina virtuale e garantire che tutti gli archivi dati di un cluster di datastore dispongano degli stessi livelli di servizio di storage.
+
+Con gli strumenti ONTAP, puoi configurare ogni datastore di volume virtuale (vVol) con un nuovo profilo di funzionalità storage che supporta il provisioning di macchine virtuali con requisiti IOPS variabili sullo stesso datastore vVol. Durante l'esecuzione del workflow di provisioning delle macchine virtuali con requisiti IOPS, tutti i datastore vVols sono elencati nell'elenco dei datastore compatibili.
+
+
+
+== Considerazioni per la creazione e la modifica dei profili di funzionalità dello storage
+
+È necessario conoscere le considerazioni per la creazione e la modifica dei profili delle funzionalità di storage.
+
+* È possibile configurare gli IOPS min solo sui sistemi AFF.
+* È possibile configurare le metriche QoS a livello di datastore di un volume virtuale (vVol).
++
+Questa funzionalità offre una maggiore flessibilità nell'assegnazione di diverse metriche QoS per diversi VMDK della stessa macchina virtuale che viene fornita su un datastore virtuale.
+
+* È possibile configurare i profili delle funzionalità di storage per gli archivi dati FAS e AFF.
++
+Per i sistemi FAS e AFF, è possibile configurare la riserva di spazio in modo che sia spessa o sottile.
+
+* È possibile utilizzare i profili di capacità dello storage per fornire la crittografia per i datastore.
+* Non è possibile modificare i profili di capacità dello storage esistenti (creati prima della versione 7.2) dopo l'aggiornamento da una versione precedente dei tool ONTAP per VMware vSphere all'ultima versione dei tool ONTAP.
++
+I profili delle funzionalità di storage legacy vengono conservati per garantire la compatibilità con le versioni precedenti. Se i modelli predefiniti non sono in uso, durante l'aggiornamento alla versione più recente dei tool ONTAP, i modelli esistenti vengono sovrascritti per riflettere le nuove metriche QoS e le policy di tiering correlate alle performance dei profili di capacità dello storage.
+
+* Non è possibile modificare o utilizzare i profili delle funzionalità di storage legacy per eseguire il provisioning di nuovi datastore virtuali o policy di storage delle macchine virtuali.
+* Per tutti i nuovi datastore, è necessario utilizzare nuovi profili di funzionalità storage.
+

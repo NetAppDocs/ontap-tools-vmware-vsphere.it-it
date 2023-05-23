@@ -1,0 +1,28 @@
+---
+permalink: configure/task_assign_qos_policies.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Il provisioning degli archivi dati FlexGroup non supporta l"assegnazione di profili di funzionalità storage agli archivi dati. Tuttavia, è possibile assegnare policy di qualità del servizio alle macchine virtuali create su datastore supportati da FlexGroup.' 
+---
+= Assegnare policy QoS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il provisioning degli archivi dati FlexGroup non supporta l'assegnazione di profili di funzionalità storage agli archivi dati. Tuttavia, è possibile assegnare policy di qualità del servizio alle macchine virtuali create su datastore supportati da FlexGroup.
+
+*A proposito di questa attività*
+
+Le policy di QoS possono essere applicate a livello di macchina virtuale o datastore. Per configurare le soglie di throughput (IOPS max e min), è necessario che un datastore configuri le policy di QoS. Quando si imposta la qualità del servizio su un datastore, questa viene applicata alle macchine virtuali che risiedono nel datastore e non al volume FlexGroup. Tuttavia, se si imposta la QoS su tutte le macchine virtuali in un datastore, tutte le singole impostazioni di QoS per le macchine virtuali vengono sovrascritte. Questo vale solo per le macchine virtuali disponibili nell'archivio dati e non per le macchine virtuali migrate o aggiunte. Se si desidera applicare la QoS alle macchine virtuali appena aggiunte o migrate di un particolare datastore, è necessario impostare manualmente i valori di QoS.
+
+
+NOTE: Non è possibile applicare le impostazioni di QoS a livello di datastore o macchina virtuale per gli archivi di dati che vengono forniti sulle macchine virtuali a storage diretto perché ONTAP non supporta QoS a livello di gestione delle macchine virtuali di storage.
+
+*Fasi*
+
+. Nella home page degli strumenti ONTAP, fare clic su *Menu* > *host e cluster*.
+. Fare clic con il pulsante destro del mouse sull'archivio dati o sulla macchina virtuale desiderata e fare clic su *NetApp ONTAP Tools* > *Assegna QoS*.
+. Nella finestra di dialogo Assign QoS (Assegna QoS), inserire i valori IOPS richiesti e fare clic su *Apply* (Applica).
+

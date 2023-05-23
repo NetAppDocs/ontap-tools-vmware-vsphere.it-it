@@ -1,0 +1,18 @@
+---
+permalink: configure/task_update_certificate.html 
+sidebar: sidebar 
+keywords:  
+summary: È necessario aggiornare il certificato alla scadenza del certificato o quando il certificato viene modificato manualmente. Quando il certificato del client o del cluster scade o non corrisponde, la comunicazione con il sistema ONTAP viene interrotta. 
+---
+= Aggiornare il certificato
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario aggiornare il certificato quando il certificato del client o del cluster sta per scadere o è scaduto o quando il certificato del cluster viene modificato manualmente. Quando il certificato del client o del cluster scade o non corrisponde, la comunicazione con il sistema ONTAP viene interrotta.
+
+Il certificato del cluster è il certificato del server generato dall'amministratore dello storage sul lato ONTAP. Il certificato client può essere generato negli strumenti ONTAP. Alla scadenza del certificato del cluster, l'amministratore dello storage deve generare il nuovo certificato sul lato ONTAP. La finestra Modifica sistema di storage ha recuperato automaticamente il certificato del cluster dallo storage ONTAP ed è necessario autorizzare il certificato del cluster.
+
+Quando il certificato sta per scadere o è già scaduto, seguire la procedura descritta in link:../configure/task_modify_storage_system.html["Modificare i sistemi storage"] per aggiornare il certificato.

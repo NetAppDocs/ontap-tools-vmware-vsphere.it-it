@@ -1,0 +1,48 @@
+---
+permalink: configure/task_register_oncommand_api_services_with_ontap_tools.html 
+sidebar: sidebar 
+keywords: virtual volume datastores 
+summary: Se si utilizza ONTAP 9.6 o versioni precedenti, la dashboard vVol consente di visualizzare i dettagli dei datastore e delle macchine virtuali di VMware volumi virtuali solo se sono stati registrati servizi API OnCommand per il provider VASA per ottenere i dati per i report di vVol VM e datastore. 
+---
+= Registrare i servizi API di OnCommand con gli strumenti ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si utilizza ONTAP 9.6 o versioni precedenti, la dashboard di vVol consente di visualizzare i dettagli dei datastore e delle macchine virtuali di VMware Virtual Volumes (vVol) solo se sono stati registrati i servizi API di OnCommand per il provider VASA per ottenere i dati per i report di vVol VM e datastore.
+
+*Cosa ti serve*
+
+È necessario aver scaricato i servizi API di OnCommand 2.1 o versioni successive dal sito del supporto NetApp.
+
+
+NOTE: La dashboard di vVol visualizza le metriche delle performance solo quando i datastore E le macchine virtuali DI SAN vVol sono configurati utilizzando ONTAP 9.7 o versione successiva.
+
+*Fasi*
+
+. Dalla home page degli strumenti di ONTAP, fare clic su *Impostazioni*.
+. Fare clic su *Manage Extension* (Gestisci estensione) nella scheda Administrative Settings (Impostazioni amministrative).
+. Utilizzare il dispositivo di scorrimento Registra servizi API OnCommand per attivare i servizi API OnCommand.
+. Immettere l'indirizzo IP, la porta di servizio e le credenziali per i servizi API OnCommand.
++
+È inoltre possibile utilizzare la finestra di dialogo Manage VASA Provider Extensions (Gestisci estensioni provider VASA) per le seguenti modifiche:
+
++
+** Per aggiornare la registrazione dei servizi API di OnCommand in caso di modifica delle credenziali.
+** Per annullare la registrazione dei servizi API di OnCommand quando non è più necessaria la dashboard di vVol.
++
+Deselezionare la casella di controllo Registra servizi API OnCommand per rimuovere la registrazione dei servizi API OnCommand per il provider VASA.
+
+
+
+. Fare clic su *Apply* (Applica).
++
+La dashboard vVol visualizza le metriche per gli archivi dati DI ONTAP 9.6 o versioni precedenti DI SAN vVol solo dopo il completamento della registrazione dei servizi API di OnCommand.
+
+
+
+*Informazioni correlate*
+
+https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"]

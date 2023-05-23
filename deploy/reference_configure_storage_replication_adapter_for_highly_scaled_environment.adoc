@@ -1,0 +1,76 @@
+---
+permalink: deploy/reference_configure_storage_replication_adapter_for_highly_scaled_environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È necessario configurare gli intervalli di timeout dello storage in base alle impostazioni consigliate per Storage Replication Adapter (SRA) per ottenere prestazioni ottimali in ambienti altamente scalabili.' 
+---
+= Configurare Storage Replication Adapter per ambienti altamente scalabili
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario configurare gli intervalli di timeout dello storage in base alle impostazioni consigliate per Storage Replication Adapter (SRA) in modo da ottenere prestazioni ottimali in ambienti altamente scalabili.
+
+
+
+== Impostazioni del provider di storage
+
+Impostare i seguenti valori di timeout su SRM per l'ambiente in scala:
+
+|===
+
+
+| Impostazioni avanzate | Valori di timeout 
+
+
+ a| 
+StorageProvider.roggatureTimeout
+ a| 
+Aumentare il valore dell'impostazione da 900 secondi a 12000 secondi.
+
+
+
+ a| 
+StorageProvider.hostRescanDelaySec
+ a| 
+60
+
+
+
+ a| 
+StorageProvider.hostRescanRepeatCnt
+ a| 
+20
+
+
+
+ a| 
+StorageProvider.hostRescanTimeoutSec
+ a| 
+Impostare un valore alto (ad esempio: 99999)
+
+|===
+Attivare anche l'opzione StorageProvider.autoResignatureMode.
+
+Per ulteriori informazioni sulla modifica delle impostazioni dello Storage Provider, consultare la documentazione di VMware.
+
+https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["Documentazione VMware vSphere: Modifica delle impostazioni dello Storage Provider"]
+
+
+
+== Impostazioni di storage
+
+È necessario impostare il valore dell'intervallo di timeout storage.commandTimeout e storage.maxConcurrentCommandCnt per ambienti altamente scalabili su 99,999 secondi.
+
+
+NOTE: L'intervallo di timeout specificato è il valore massimo. Non è necessario attendere il raggiungimento del timeout massimo. La maggior parte dei comandi termina entro l'intervallo di timeout massimo impostato.
+
+È inoltre necessario impostare il tempo massimo per l'esecuzione di una singola operazione nel file vvol.properties: offtap.operation.timeout.period.seconds=86400.
+
+https://kb.netapp.com/mgmt/OTV/SRA/NetApp_Storage_Replication_Adapter_4.0%2F%2F7.X_for_ONTAP_Sizing_Guide["Risposta della Knowledge base di NetApp 1001111: Guida al dimensionamento di NetApp Storage Replication Adapter 4.0/7.X per ONTAP"]
+
+La documentazione VMware sulla modifica delle impostazioni DEL provider SAN contiene ulteriori informazioni.
+
+https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["Documentazione di VMware Site Recovery Manager: Modifica delle impostazioni di storage"]

@@ -1,0 +1,31 @@
+---
+permalink: manage/reference_verify_vvols_dashboard_data_requirements.html 
+sidebar: sidebar 
+keywords: vVol dashboard 
+summary: È necessario verificare alcuni requisiti importanti della dashboard vVol per visualizzare i dettagli dinamici dei datastore e delle macchine virtuali VMware Virtual Volumes. 
+---
+= Requisiti dei dati della dashboard di vVol
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario verificare alcuni requisiti importanti della dashboard vVols per visualizzare i dettagli dinamici dei datastore e delle macchine virtuali VMware Virtual Volumes (vVols).
+
+La seguente tabella presenta una panoramica di cosa si dovrebbe verificare se la dashboard vVols non visualizza le metriche delle performance per gli archivi dati E le macchine virtuali SAN vVols con provisioning.
+
+|===
+| *Considerazioni* | *Descrizione* 
+
+
+ a| 
+Sistema storage
+ a| 
+* Si utilizza ONTAP 9.7 o versione successiva.
+* Si stanno utilizzando le credenziali appropriate per il sistema di storage.
+* Il sistema storage è attivo e accessibile.
+* La macchina virtuale selezionata deve utilizzare almeno un datastore vVol e le operazioni di i/o vengono eseguite sul disco della macchina virtuale.
+
+
+|===

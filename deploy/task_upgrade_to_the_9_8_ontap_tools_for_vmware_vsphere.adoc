@@ -1,0 +1,105 @@
+---
+permalink: deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords: Virtual Storage Console, Storage Replication Adapter 
+summary: È possibile eseguire un aggiornamento in-place alla versione più recente dei tool ONTAP dalla configurazione esistente della versione 9.10 o successiva seguendo le istruzioni fornite qui. 
+---
+= Effettua l'aggiornamento alla versione più recente dei tool ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire un aggiornamento in-place alla versione più recente dei tool ONTAP dalla versione 9.10 o successiva, seguendo le istruzioni fornite qui.
+
+*Cosa ti serve*
+
+* È necessario aver scaricato il file _.iso_ per la versione più recente dei tool ONTAP.
+* È necessario aver riservato almeno 12 GB di RAM affinché gli strumenti ONTAP funzionino in modo ottimale dopo l'aggiornamento.
+* È necessario pulire la cache del browser del client vSphere.
++
+link:../deploy/task_clean_the_vsphere_cached_downloaded_plug_in_packages.html["Cancellare i pacchetti di plug-in scaricati dalla cache di vSphere"]
+
+
+
+Se necessario, attenersi alla seguente procedura per validare il file _.iso_. Questo è un passaggio facoltativo:
+
+. Estrarre la chiave pubblica dal certificato di firma del codice emesso da Entrust (OTV_ISO_CERT.pem) openssl x509 -in OTV_ISO_CERT.pem -pubkey -noout > csc-prod-OTV-SRA-TGZ.pub
+. Verificare la firma nel digest utilizzando la chiave pubblica (questo passaggio dovrebbe avvenire nel sistema dell'utente finale prima di installare il file binario. Il bundle di certificati deve essere incluso nel pacchetto di implementazione)
++
+openssl dgst -sha256 -verify csc-prod-OTV-SRA-TGZ.pub -Signature netapp-ontap-tools-for-vmware-vsphere-9.12-9327-upgrade-iso.sig netapp-ontap-tools-for-vmware-vsphere-9.12-9327-upgrade.iso
+
+
+
+Lo stato del provider VASA dall'implementazione esistente viene mantenuto dopo l'aggiornamento. Dopo l'aggiornamento, attivare o disattivare manualmente il provider VASA in base alle proprie esigenze. Tuttavia, è meglio abilitare il provider VASA anche se i volumi virtuali VMware (vVol) non sono in uso, in quanto abilita i profili di funzionalità dello storage per il provisioning tradizionale del datastore e gli allarmi dello storage.
+
+
+NOTE: È possibile eseguire un aggiornamento in-place alla versione più recente dei tool ONTAP solo dalla versione 9.10 o successiva.
+
+
+NOTE: Come parte degli strumenti di ONTAP 9.12 upgrade, tutti i processi di autenticazione e comunicazione dei sistemi storage vengono modificati dall'autenticazione di base all'autenticazione basata su certificati mediante l'attendibilità automatica dei certificati di storage ONTAP. Non è richiesta alcuna azione da parte dell'utente.
+
+L'aggiunta di un sistema storage senza autenticazione del certificato è limitata.
+
+Se il sistema storage viene aggiunto con un utente con ambito cluster personalizzato creato utilizzando il file json e si desidera eseguire l'aggiornamento alla versione 9.12, eseguire i seguenti comandi sulla CLI ONTAP prima dell'aggiornamento per abilitare la comunicazione basata su certificato tra gli strumenti ONTAP per VMware vSphere e ONTAP:
+
+. _security login role create -role <role-name> -cmddirname "security login show" -access all_
+. _security login role create -role <role-name> -cmddirname "security certificate show" -access all_
+. _security login role create -role <role-name> -cmddirname "security certificate install" -access all_
+
+
+Se il sistema di storage viene aggiunto con un utente SVM scoped personalizzato utilizzando il file json e si desidera eseguire l'aggiornamento alla versione 9.12, Quindi, eseguire i seguenti comandi sulla CLI ONTAP con accesso di amministratore del cluster prima dell'aggiornamento per abilitare la comunicazione basata su certificato tra gli strumenti ONTAP per VMware vSphere e ONTAP:
+
+. _security login role create -role <role-name> -cmddirname "security certificate install" -access all -vserver <vserver-name>_
+. _security login role create -role <role-name> -cmddirname "security certificate show" -access all -vserver <vserver-name>_
+
+
+*Fasi*
+
+. Montare il file _.iso_ scaricato negli strumenti ONTAP:
++
+.. Fare clic su *Edit Settings* (Modifica impostazioni) > *DVD/CD-ROM Drive* (unità DVD/CD-ROM).
+.. Selezionare *Datastore ISO* file dall'elenco a discesa.
+.. Individuare e selezionare il file _.iso_ scaricato, quindi selezionare la casella di controllo *Connetti all'accensione*.
+
+
+. Accedere alla scheda Riepilogo dei tool ONTAP implementati.
+. Fare clic su *image:../media/launch_maintenance_console.gif[""]* per avviare la console di manutenzione.
+. Al prompt "`Main Menu`", immettere l'opzione `2` Per *Configurazione di sistema*, quindi immettere l'opzione `8` Per *Upgrade*.
++
+Al termine dell'aggiornamento, gli strumenti di ONTAP vengono riavviata. Gli strumenti ONTAP sono registrati nel server vCenter con lo stesso indirizzo IP di prima dell'aggiornamento.
+
+. Se si desidera che gli strumenti ONTAP siano registrati con il server vCenter con l'indirizzo IPv6, è necessario eseguire le seguenti operazioni:
++
+.. Annullare la registrazione degli strumenti ONTAP.
+.. Registrare l'indirizzo IPv6 degli strumenti ONTAP su vCenter Server utilizzando la pagina *Registra*.
+.. Rigenerare i certificati VSC e VASA Provider dopo la registrazione.
+
+
++
+
+IMPORTANT: IPv6 è supportato solo con vCenter Server 6.7 e versioni successive.
+
+. Disconnettersi e accedere nuovamente al client vSphere per visualizzare i tool ONTAP implementati.
++
+.. Disconnettersi dal client Web vSphere o dal client vSphere esistente e chiudere la finestra.
+.. Accedere al client vSphere.
++
+L'aggiornamento del plug-in nel client vSphere potrebbe richiedere alcuni minuti.
+
+
+
+
+
+[NOTE]
+====
+* Se si esegue l'aggiornamento dalla versione 7.0 di ONTAP Tools alla versione più recente di ONTAP Tools, è necessario creare prima profili di capacità di storage prima di tentare di modificare un criterio di storage VM esistente, altrimenti potrebbe verificarsi un errore che indica valori errati o mancanti.
+* Se si esegue l'aggiornamento da una versione precedente alla versione più recente dei tool ONTAP, si scopre che il `vvol.rebalance.threshold` proprietà mancante nel file `vvol.properties.
++
+Il valore predefinito della proprietà è impostato su 85%.
+
+* Dopo aver eseguito l'aggiornamento alla versione più recente dei tool ONTAP con FIPS attivato, ma si dispone di una versione precedente di vCenter in cui FIPS non è supportato, l'implementazione funzionerà comunque. Tuttavia, se si aggiorna vCenter alla versione più recente supportata da FIPS e si dispone di una versione precedente dei tool ONTAP, l'implementazione funzionerà solo se FIPS è disattivato su vCenter.
+
+
+====

@@ -1,0 +1,79 @@
+---
+section: configure
+title: Configurare gli strumenti ONTAP
+entries:
+- title: Workflow per la configurazione degli strumenti ONTAP
+  url: "/configure/concept_workflow_for_configuring_the_unified_appliance.html"
+- title: Configurare le impostazioni ESXi
+  entries:
+  - title: Configurare le impostazioni di multipathing e timeout del server ESXi
+    url: "/configure/task_configure_esx_server_multipathing_and_timeout_settings.html"
+  - title: I valori degli host ESXi vengono impostati utilizzando gli strumenti ONTAP
+    url: "/configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html"
+- title: Configurare i sistemi operativi guest
+  entries:
+  - title: Configurare gli script del sistema operativo guest
+    url: "/configure/reference_configure_guest_operating_system_scripts.html"
+  - title: Impostare i valori di timeout per i sistemi operativi guest di Windows
+    url: "/configure/task_run_the_gos_timeout_scripts_for_windows.html"
+  - title: Impostare i valori di timeout per i sistemi operativi guest Solaris
+    url: "/configure/task_run_the_gos_timeout_scripts_for_solaris.html"
+  - title: Impostare i valori di timeout per i sistemi operativi guest Linux
+    url: "/configure/task_run_the_gos_timeout_scripts_for_rhel4_or_sles9.html"
+- title: Requisiti per la registrazione di VSC in un ambiente con più vCenter Server
+  url: "/configure/concept_requirements_for_registering_vsc_in_multiple_vcenter_servers_environment.html"
+- title: Configurare il file delle preferenze degli strumenti ONTAP
+  entries:
+  - title: Impostare IPv4 o IPv6 utilizzando il file delle preferenze
+    url: "/configure/reference_set_ipv4_or_ipv6.html"
+  - title: Aggiungere sottoreti diverse
+    url: "/configure/add_different_subnets.html"
+  - title: Attiva il montaggio del datastore su diverse subnet
+    url: "/configure/task_enable_datastore_mounting_across_different_subnets.html"
+  - title: Rigenerare un certificato SSL per vsc
+    url: "/configure/task_regenerate_an_ssl_certificate_for_vsc.html"
+- title: Configurare i sistemi storage
+  entries:
+  - title: Panoramica del sistema storage per gli strumenti ONTAP
+    url: "/configure/concept_configure_storage_systems_for_ontap_tools_for_vmware_vsphere.html"
+  - title: Impostare le credenziali predefinite per i sistemi storage
+    url: "/configure/task_set_default_credentials_for_storage_systems.html"
+  - title: Aggiungere sistemi storage
+    url: "/configure/task_add_storage_systems.html"
+  - title: Modificare i sistemi storage
+    url: "/configure/task_modify_storage_system.html"
+  - title: Aggiornare il certificato
+    url: "/configure/task_update_certificate.html"
+  - title: Rilevamento di host e sistemi storage
+    url: "/configure/task_discover_storage_systems_and_hosts.html"
+  - title: Aggiornare il display del sistema di storage
+    url: "/configure/task_refresh_the_storage_system_display.html"
+  - title: Configurare le soglie di allarme
+    url: "/configure/task_configure_alarm_thresholds.html"
+- title: Configurare i ruoli e i privilegi degli utenti
+  url: "/configure/task_configure_user_role_and_privileges.html"
+- title: Configurare i profili delle funzionalità di storage
+  entries:
+  - title: Panoramica dei profili delle funzionalità di storage
+    url: "/configure/concept_configure_storage_capability_profiles.html"
+  - title: Creazione di profili di funzionalità storage
+    url: "/configure/task_create_storage_capability_profiles.html"
+  - title: Generare automaticamente i profili di capacità dello storage
+    url: "/configure/task_automatically_generating_scps.html"
+- title: Configurare gli archivi dati
+  entries:
+  - title: Provisioning di datastore tradizionali
+    url: "/configure/task_provision_datastores.html"
+  - title: Mappare i datastore ai profili di capacità dello storage
+    url: "/configure/task_map_storage_to_storage_capability_profiles.html"
+  - title: Assegnare policy QoS
+    url: "/configure/task_assign_qos_policies.html"
+  - title: Verificare la conformità del datastore con il profilo di funzionalità dello
+      storage mappato
+    url: "/configure/task_check_for_datastore_compliance_with_the_mapped_storage_capability_profile.html"
+  - title: Provisioning degli archivi dati vVol
+    url: "/configure/task_provision_vvols_datastores.html"
+  - title: Ribilanciare gli archivi dati vVol
+    url: "/configure/reference_rebalance_vvols_datastore.html"
+  - title: Elimina datastore vVol
+    url: "/configure/reference_delete_vvols.html"

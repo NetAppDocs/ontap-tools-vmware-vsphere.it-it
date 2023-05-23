@@ -1,0 +1,51 @@
+---
+permalink: configure/task_refresh_the_storage_system_display.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare la funzionalità di aggiornamento fornita dai tool ONTAP® per VMware vSphere per aggiornare le informazioni sui sistemi di storage e forzare la rilevazione dei sistemi di storage da parte della console di storage virtuale. 
+---
+= Aggiornare il display del sistema di storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la funzionalità di aggiornamento fornita dai tool ONTAP® per VMware vSphere per aggiornare le informazioni sui sistemi storage e forzare la VSC (Virtual Storage Console) a rilevare i sistemi storage.
+
+*A proposito di questa attività*
+
+Il `refresh` questa opzione è utile se si modificano le credenziali predefinite per i sistemi di storage dopo la ricezione di un errore di autenticazione. È sempre necessario eseguire un'operazione di aggiornamento se le credenziali del sistema di storage sono state modificate dopo che il sistema di storage ha segnalato un `Authentication Failure Status`. Durante l'operazione di aggiornamento, VSC tenta di connettersi al sistema di storage utilizzando le nuove credenziali.
+
+A seconda della configurazione del sistema, il completamento di questa attività può richiedere molto tempo.
+
+*Fasi*
+
+. Nella home page di VMware vSphere Client, fare clic su *Storage*.
+. Avviare l'aggiornamento:
++
+|===
+
+
+| *Se questa posizione è...* | *Fare clic su...* 
+
+
+ a| 
+Virtual Storage Console
+ a| 
+Icona *RISCOPRI TUTTO*.
+
+
+
+ a| 
+Data center
+ a| 
+Fare clic con il pulsante destro del mouse sul data center, quindi fare clic su *NetApp ONTAP Tools* > *Aggiorna dati host e storage*.
+
+|===
+. Nella finestra di dialogo Update host and Storage Data (Aggiorna dati host e storage), fare clic su *OK*.
++
+Il rilevamento potrebbe richiedere alcuni minuti a seconda del numero di host e sistemi storage nel data center. Questa operazione di rilevamento funziona in background.
+
+. Fare clic su *OK* nella finestra di dialogo Success (operazione riuscita).
+

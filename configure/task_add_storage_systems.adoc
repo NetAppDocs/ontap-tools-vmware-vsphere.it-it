@@ -1,0 +1,68 @@
+---
+permalink: configure/task_add_storage_systems.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile aggiungere manualmente il sistema di storage alla Virtual Storage Console (VSC).' 
+---
+= Aggiungere sistemi storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiungere manualmente il sistema di storage a Virtual Storage Console (VSC).
+
+
+NOTE: Se il cluster ONTAP è abilitato per SAML, la comunicazione con ONTAP viene eseguita con l'autenticazione di base.
+
+*A proposito di questa attività*
+
+Ogni volta che si avvia Virtual Storage Console (VSC) o si seleziona l'opzione *RISCOPRI tutto*, VSC rileva automaticamente i sistemi di storage disponibili.
+
+
+NOTE: Gli archivi dati vVol non sono supportati su SVM diretta.
+
+*Fasi*
+
+. Aggiungere un sistema storage a VSC utilizzando una delle opzioni disponibili nella home page degli strumenti di ONTAP:
++
+** Fare clic su *Storage Systems* > *Add*. oppure
+** Fare clic su *Panoramica* > *Guida introduttiva*, quindi fare clic sul pulsante *AGGIUNGI* in Aggiungi sistema di storage.
+
+
+. Nella finestra di dialogo *Add Storage System* (Aggiungi sistema di storage), immettere l'indirizzo IP di gestione e le credenziali del sistema di storage.
++
+Quando si aggiunge un sistema storage, qualsiasi comunicazione tra il plug-in degli strumenti ONTAP e il sistema storage deve essere autenticata reciprocamente.
+
++
+È inoltre possibile aggiungere sistemi storage utilizzando l'indirizzo IPv6 del cluster o SVM.
+
++
+Quando si aggiunge storage dalla pagina VSC Storage System, specificare l'istanza di vCenter Server in cui si trova lo storage. La finestra di dialogo Add Storage System (Aggiungi sistema di storage) fornisce un elenco a discesa delle istanze di vCenter Server disponibili. VSC non visualizza questa opzione se si aggiunge storage a un data center già associato a un'istanza di vCenter Server.
+
++
+NOTA:
+
++
+** A partire dalla release 9.12 di ONTAP Tools, tutte le comunicazioni dei sistemi storage ONTAP avvengono tramite autenticazione basata su certificati.
+** Le azioni tradizionali del datastore come Delete (Elimina), Resize (Ridimensiona) e Mount (attiva) non sono consentite quando il certificato del client o del cluster non è valido.
+** Le azioni del datastore vVol come Expand Storage, Mount datastore non sono consentite quando il certificato del client o del cluster non è valido.
+** Azioni come Elimina, Rimuovi archiviazione e Modifica proprietà sono consentite in quanto queste azioni non richiedono la comunicazione ONTAP.
+** Per aggiungere un sistema storage con un utente con ambito SVM, l'amministratore del cluster del sistema storage deve modificare l'utente e aggiungere il metodo di autenticazione *certificato* alle applicazioni HTTP e ONTAPI.
++
+Nelle opzioni avanzate, esistono due modi per caricare il certificato del cluster ONTAP*:
+
++
+... *Recupero automatico* - recupera automaticamente i certificati.
+... *Upload manuale* - è necessario accedere manualmente alla posizione in cui si trova il certificato e caricarlo.
+
+
+
+
+. Fare clic su *OK* dopo aver aggiunto tutte le informazioni richieste.
++
+Viene visualizzata la finestra a comparsa autorizza certificato cluster.
+
+. Fare clic su *Mostra certificato* per visualizzare i dettagli del certificato. Fare clic su *Sì* per aggiungere il sistema di storage
+

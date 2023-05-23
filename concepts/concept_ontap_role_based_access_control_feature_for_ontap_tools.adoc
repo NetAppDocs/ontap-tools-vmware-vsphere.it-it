@@ -1,0 +1,80 @@
+---
+permalink: concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Il controllo degli accessi basato sui ruoli di ONTAP consente di controllare l"accesso a sistemi storage specifici e le azioni che un utente può eseguire su tali sistemi storage. Nei tool ONTAP® per VMware vSphere, ONTAP RBAC funziona con vCenter Server RBAC per determinare quali attività possono essere eseguite da un utente specifico sugli oggetti di un sistema storage specifico.' 
+---
+= Autorizzazioni per i sistemi storage ONTAP e gli oggetti vSphere
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il RBAC (Role-Based Access Control) di ONTAP consente di controllare l'accesso a specifici sistemi storage e le azioni che un utente può eseguire su tali sistemi storage. Negli strumenti ONTAP® per VMware vSphere, ONTAP RBAC funziona con vCenter Server RBAC per determinare quali attività di Virtual Storage Console (VSC) un utente specifico può eseguire sugli oggetti di un sistema storage specifico.
+
+VSC utilizza le credenziali (nome utente e password) impostate in VSC per autenticare ciascun sistema storage e determinare quali operazioni storage possono essere eseguite su tale sistema. VSC utilizza un set di credenziali per ciascun sistema storage. Queste credenziali determinano quali attività VSC possono essere eseguite su quel sistema di storage; in altre parole, le credenziali sono per VSC, non per un singolo utente VSC.
+
+ONTAP RBAC si applica solo all'accesso ai sistemi storage e all'esecuzione di task VSC correlati allo storage, come il provisioning di macchine virtuali. Se non si dispone dei privilegi RBAC ONTAP appropriati per uno specifico sistema di storage, non è possibile eseguire attività su un oggetto vSphere ospitato su tale sistema di storage. È possibile utilizzare ONTAP RBAC insieme ai privilegi specifici di VSC per controllare quali attività di VSC possono essere eseguite da un utente:
+
+* Monitoraggio e configurazione degli oggetti storage o vCenter Server che risiedono su un sistema storage
+* Provisioning di oggetti vSphere residenti su un sistema storage
+
+
+L'utilizzo di ONTAP RBAC con i privilegi specifici di VSC offre un livello di sicurezza orientato allo storage che l'amministratore dello storage può gestire. Di conseguenza, si dispone di un controllo degli accessi più dettagliato rispetto a quello supportato da solo da ONTAP RBAC o da solo da vCenter Server RBAC. Ad esempio, con vCenter Server RBAC, è possibile consentire a vCenterUserB di eseguire il provisioning di un datastore sullo storage NetApp, impedendo al contempo a vCenterUserA di eseguire il provisioning dei datastore. Se le credenziali del sistema di storage per un sistema di storage specifico non supportano la creazione di storage, né vCenterUserB né vCenterUserA possono eseguire il provisioning di un datastore su tale sistema di storage.
+
+Quando si avvia un'attività VSC, VSC verifica innanzitutto se si dispone dell'autorizzazione vCenter Server corretta per tale attività. Se l'autorizzazione vCenter Server non è sufficiente per consentire l'esecuzione dell'attività, VSC non deve controllare i privilegi ONTAP per il sistema di storage in quanto non è stato superato il controllo di protezione iniziale di vCenter Server. Di conseguenza, non è possibile accedere al sistema di storage.
+
+Se l'autorizzazione del server vCenter è sufficiente, VSC verifica i privilegi RBAC di ONTAP (il proprio ruolo ONTAP) associati alle credenziali del sistema di storage (nome utente e password) Per determinare se si dispone di privilegi sufficienti per eseguire le operazioni di storage richieste dall'attività VSC sul sistema di storage in questione. Se si dispone dei privilegi ONTAP corretti, è possibile accedere al sistema di storage ed eseguire l'attività VSC. I ruoli ONTAP determinano le attività VSC che è possibile eseguire sul sistema di storage.
+
+A ciascun sistema storage è associato un set di privilegi ONTAP.
+
+L'utilizzo di ONTAP RBAC e vCenter Server RBAC offre i seguenti vantaggi:
+
+* Sicurezza
++
+L'amministratore può controllare quali utenti possono eseguire le attività a livello di oggetto vCenter Server e a livello di sistema di storage.
+
+* Informazioni di audit
++
+In molti casi, VSC fornisce un audit trail sul sistema storage che consente di tenere traccia degli eventi all'utente di vCenter Server che ha eseguito le modifiche dello storage.
+
+* Usabilità
++
+È possibile conservare tutte le credenziali del controller in un'unica posizione.
+
+
+
+
+
+== Ruoli ONTAP consigliati quando si utilizzano gli strumenti ONTAP per VMware vSphere
+
+È possibile impostare diversi ruoli ONTAP consigliati per lavorare con i tool ONTAP® per VMware vSphere e RBAC (role-based access control). Questi ruoli contengono i privilegi di ONTAP necessari per eseguire le operazioni di storage necessarie eseguite dalle attività della console di storage virtuale (VSC).
+
+Per creare nuovi ruoli utente, è necessario accedere come amministratore nei sistemi storage che eseguono ONTAP. È possibile creare ruoli ONTAP utilizzando Gestione di sistema di ONTAP 9.8P1 o versioni successive. Vedere link:../configure/task_configure_user_role_and_privileges.html["Configurare i ruoli e i privilegi degli utenti"] per ulteriori informazioni.
+
+A ciascun ruolo di ONTAP è associata una coppia di nome utente e password, che costituiscono le credenziali del ruolo. Se non si effettua l'accesso utilizzando queste credenziali, non è possibile accedere alle operazioni di storage associate al ruolo.
+
+Come misura di sicurezza, i ruoli ONTAP specifici del VSC sono ordinati gerarchicamente. Ciò significa che il primo ruolo è il ruolo più restrittivo e dispone solo dei privilegi associati al set più semplice di operazioni di storage VSC. Il ruolo successivo include sia i propri privilegi che tutti i privilegi associati al ruolo precedente. Ogni ruolo aggiuntivo è meno restrittivo per quanto riguarda le operazioni di storage supportate.
+
+Di seguito sono riportati alcuni dei ruoli RBAC ONTAP consigliati quando si utilizza VSC. Dopo aver creato questi ruoli, è possibile assegnare i ruoli agli utenti che devono eseguire attività correlate allo storage, ad esempio il provisioning delle macchine virtuali.
+
+. Discovery (rilevamento)
++
+Questo ruolo consente di aggiungere sistemi storage.
+
+. Creare storage
++
+Questo ruolo consente di creare storage. Questo ruolo include anche tutti i privilegi associati al ruolo Discovery.
+
+. Modificare lo storage
++
+Questo ruolo consente di modificare lo storage. Questo ruolo include anche tutti i privilegi associati al ruolo Discovery e al ruolo Create Storage.
+
+. Distruggere lo storage
++
+Questo ruolo consente di distruggere lo storage. Questo ruolo include anche tutti i privilegi associati al ruolo Discovery, al ruolo Create Storage e al ruolo Modify Storage.
+
+
+
+Se si utilizza il provider VASA per ONTAP, è necessario impostare anche un ruolo di gestione basato su policy (PBM). Questo ruolo consente di gestire lo storage utilizzando le policy di storage. Questo ruolo richiede anche la configurazione del ruolo "`DDiscovery`".

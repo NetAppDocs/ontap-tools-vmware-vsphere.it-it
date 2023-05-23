@@ -1,0 +1,61 @@
+---
+permalink: configure/task_enable_datastore_mounting_across_different_subnets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se si utilizza iSCSI o NFS e la subnet è diversa tra gli host ESXi e il sistema di storage, è necessario modificare i tool ONTAP per i file delle preferenze di VMware vSphere. Se non si modifica il file delle preferenze, il provisioning del datastore non viene eseguito perché la Virtual Storage Console (VSC) non è in grado di montare il datastore.' 
+---
+= Attiva il montaggio del datastore su diverse subnet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si utilizza iSCSI o NFS e la subnet è diversa tra gli host ESXi e il sistema di storage, è necessario modificare i tool ONTAP per i file delle preferenze di VMware vSphere. Se non si modifica il file delle preferenze, il provisioning del datastore non viene eseguito perché la Virtual Storage Console (VSC) non può montare il datastore.
+
+*A proposito di questa attività*
+
+Quando il provisioning del datastore non riesce, VSC registra i seguenti messaggi di errore:
+
+'Impossibile continuare. Nessun indirizzo ip trovato quando si fanno riferimenti incrociati agli indirizzi ip del kernel sul controller. Impossibile trovare una rete corrispondente al volume di montaggio NFS su questi host".
+
+*Fasi*
+
+. Accedere all'istanza di vCenter Server.
+. Avviare la console di manutenzione utilizzando la macchina virtuale dell'appliance unificata.
++
+link:../manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html["Console di manutenzione degli strumenti ONTAP per VMware vSphere"]
+
+. Invio `4` Per accedere all'opzione Support and Diagnostics (supporto e diagnostica).
+. Invio `2` Per accedere all'opzione Access Diagnostic Shell.
+. Invio `vi /opt/netapp/vscserver/etc/kamino/kaminoprefs.xml` per aggiornare `kaminoprefs.xml` file.
+. Aggiornare `kaminoprefs.xml` file.
++
+|===
+
+
+| *Se si utilizza...* | *Eseguire questa operazione...* 
+
+
+ a| 
+ISCSI
+ a| 
+Modificare il valore della chiave di immissione `default.allow.iscsi.mount.networks` Da TUTTO al valore delle reti host ESXi.
+
+
+
+ a| 
+NFS
+ a| 
+Modificare il valore della chiave di immissione `default.allow.nfs.mount.networks` Da TUTTO al valore delle reti host ESXi.
+
+|===
++
+Il file delle preferenze include valori di esempio per queste chiavi di immissione.
+
++
+
+NOTE: Il valore "`ALL`" non indica tutte le reti. Il valore "`ALL`" consente di utilizzare tutte le reti corrispondenti, tra l'host e il sistema di storage, per il montaggio degli archivi dati. Quando si specificano le reti host, è possibile attivare il montaggio solo attraverso le subnet specificate.
+
+. Salvare e chiudere `kaminoprefs.xml` file.
+

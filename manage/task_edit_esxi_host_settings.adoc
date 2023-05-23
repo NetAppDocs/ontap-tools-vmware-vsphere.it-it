@@ -1,0 +1,65 @@
+---
+permalink: manage/task_edit_esxi_host_settings.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile utilizzare la dashboard dei tool ONTAP per VMware vSphere per modificare le impostazioni dell"host ESXi.' 
+---
+= Modificare le impostazioni degli host ESXi utilizzando gli strumenti ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la dashboard dei tool ONTAP per VMware vSphere per modificare le impostazioni dell'host ESXi.
+
+*Cosa ti serve*
+
+È necessario aver configurato un sistema host ESXi per l'istanza di vCenter Server.
+
+In caso di problemi con le impostazioni dell'host ESXi, il problema viene visualizzato nel portlet dei sistemi host ESXi della dashboard. Fare clic sul problema per visualizzare il nome host o l'indirizzo IP dell'host ESXi che ha il problema.
+
+*Fasi*
+
+. Dalla home page del client vSphere, fare clic su *ONTAP tools*.
+. Modificare le impostazioni dell'host ESXi.
++
+|===
+
+
+| *Se si desidera modificare le impostazioni dell'host ESXi da...* | *Eseguire questa operazione...* 
+
+
+ a| 
+Problemi visualizzati
+ a| 
+.. Fare clic sul problema nel portlet sistemi host ESXi.
+.. Fare clic sui nomi host ESXi per i quali si desidera modificare le impostazioni.
+.. Fare clic con il pulsante destro del mouse sul nome host di ESXi, quindi fare clic su *NetApp ONTAP Tools* > *Set Recommended Values* (Strumenti NetApp per la protezione dei dati*).
+.. Modificare le impostazioni richieste, quindi fare clic su *OK*.
+
+
+
+
+ a| 
+Pagina iniziale del client vSphere
+ a| 
+.. Fare clic su *Menu* > *host e cluster*.
+.. Fare clic con il pulsante destro del mouse sull'host ESXi desiderato e selezionare *NetApp ONTAP Tools* > *Set Recommended Value* (Strumenti NetApp per la gestione dei dati).
+.. Fare clic su *OK*.
+
+
+
+
+ a| 
+Portlet dei sistemi host ESXi
+ a| 
+.. Fare clic sulla scheda *Dashboard tradizionale* nella sezione Panoramica di VSC.
+.. Fare clic su *Edit ESXi host Settings* (Modifica impostazioni host ESXi).
+.. Selezionare il nome host ESXi nella scheda host settings and status (Impostazioni host e stato) per cui si desidera modificare le impostazioni, quindi fare clic su *NEXT* (AVANTI).
+.. Selezionare le impostazioni desiderate nella scheda Recommended host settings (Impostazioni host consigliate), quindi fare clic su *Next* (Avanti).
+.. Esaminare la selezione nella scheda Summary (Riepilogo), quindi fare clic su *FINISH* (FINE).
+
+
+|===
+

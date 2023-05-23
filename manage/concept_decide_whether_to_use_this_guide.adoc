@@ -1,0 +1,38 @@
+---
+permalink: manage/concept_decide_whether_to_use_this_guide.html 
+sidebar: sidebar 
+keywords: scope of guide 
+summary: 'Puoi utilizzare questa guida per trovare rapidamente informazioni sulle attività che richiedono il provisioning e l"ottimizzazione dello storage e il monitoraggio di datastore e macchine virtuali.' 
+---
+= Decidere se utilizzare questa guida
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi utilizzare questa guida per trovare rapidamente informazioni sulle attività che richiedono il provisioning e l'ottimizzazione dello storage e il monitoraggio di datastore e macchine virtuali.
+
+Le informazioni contenute in questa guida sono destinate all'utente VSC e non all'amministratore di sistema. Questa guida fornisce informazioni su tutte le attività post-implementazione per i tool ONTAP® per VMware vSphere.
+
+*Requisiti per l'utilizzo di questa guida*
+
+Questa guida si basa sui seguenti presupposti:
+
+* VSC è stato installato e configurato.
+* Le funzioni necessarie per le attività che si stanno eseguendo sono state installate.
++
+Queste funzionalità potrebbero includere il plug-in NFS per VMware VAAI, il provider VASA per ONTAP e l'adattatore di replica dello storage.
+
+* VSC ha scoperto tutti i sistemi storage in uso.
+* È stato impostato il RBAC (Role-Based Access Control) per vCenter Server e ONTAP.
++
+Se non si dispone di tutti i privilegi e le autorizzazioni necessari, l'attività che si sta eseguendo potrebbe funzionare durante la procedura guidata, ma non riuscire ancora a completare correttamente.
+
+
+
+La maggior parte delle attività presentate in questa guida richiede anche l'esecuzione di una sola operazione alla volta sul datastore o sulla macchina virtuale di destinazione.
+
+Per domande su VSC o per condividere informazioni con altri utenti VSC, visitare il NetApp Communities Forum.
+
+https://community.netapp.com/t5/Products-and-Services/ct-p/products-and-solutions["NetApp Community: Virtual Storage Console per VMware vSphere"]

@@ -1,0 +1,42 @@
+---
+permalink: configure/reference_rebalance_vvols_datastore.html 
+sidebar: sidebar 
+keywords: vVols datastore,rebalancing 
+summary: 'Gli strumenti ONTAP supportano un comando per ribilanciare i volumi FlexVol nel data center. L"obiettivo principale è consentire un utilizzo uniforme dello spazio tra i volumi FlexVol. Gli strumenti ONTAP ridistribuiscono i vVol tra i volumi esistenti in base all"utilizzo dello spazio, al thin provisioning, al numero di LUN e ai profili di funzionalità dello storage.' 
+---
+= Ribilanciare gli archivi dati vVol
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli strumenti ONTAP supportano un comando per ribilanciare i volumi FlexVol nel data center. L'obiettivo principale è consentire un utilizzo uniforme dello spazio tra i volumi FlexVol. Gli strumenti ONTAP ridistribuiscono i vVol tra i volumi esistenti in base all'utilizzo dello spazio, al thin provisioning, al numero di LUN e ai profili di funzionalità dello storage.
+
+Il ribilanciamento del datastore vVols viene eseguito dallo spostamento del LUN o del file. I criteri presi in considerazione durante il ribilanciamento di vVol sono i seguenti:
+
+* Gli archivi dati NFS vVol non sono supportati
+* I volumi FlexVol esistenti non verranno ridimensionati e non verranno aggiunti nuovi volumi FlexVol
+* Vengono ribilanciati solo i volumi FlexVol con le stesse funzionalità di storage o attributi di volume
+* Per il ribilanciamento vengono presi in considerazione i volumi FlexVol con il massimo utilizzo dello spazio
+* Tutti i vVol associati a una macchina virtuale vengono spostati negli stessi volumi FlexVol
+* Viene mantenuto il limite di numero di LUN e file
+* Il ribilanciamento non viene eseguito se il delta tra l'utilizzo dello spazio dei volumi FlexVol è del 10%
+
+
+Il comando ribilanciamento rimuove i volumi FlexVol vuoti per fornire spazio ad altri datastore. Pertanto, il comando consente di rimuovere i volumi FlexVol indesiderati in modo che possano essere rimossi dall'archivio dati. Il comando intende spostare tutti i vVol associati a una macchina virtuale nello stesso volume FlexVol. Il comando esegue un controllo preliminare prima dell'avvio del ribilanciamento per ridurre al minimo gli errori. Tuttavia, anche con un controllo preliminare riuscito, l'operazione di ribilanciamento potrebbe non riuscire per uno o più vVol. In questo caso, non viene eseguito il rollback dell'operazione di ribilanciamento. Pertanto, i vVol associati a una macchina virtuale potrebbero essere posizionati su volumi FlexVol diversi e generare registri di avviso.
+
+[NOTE]
+====
+* Le operazioni di datastore parallelo e macchina virtuale non sono supportate.
+* È necessario eseguire l'operazione di riscoperta del cluster al termine di ogni operazione di ribilanciamento di vVol.
+* Durante l'operazione di ribilanciamento di vVol, se viene identificato un gran numero di datastore di vVol, l'operazione di trasferimento va in timeout dopo il valore predefinito impostato.
++
+** In tal caso, modificare il `vvol.properties` per impostare il valore su `offtap.operation.timeout.period.seconds=29700` E riavviare il servizio del provider VASA.
+
+
+* Se un volume FlexVol dispone di snapshot, durante l'operazione di ribilanciamento di vVol, i vVol non vengono ribilanciati correttamente a causa di dettagli insufficienti sull'utilizzo dello spazio.
+* È possibile impostare la proprietà del provider VASA _enable.update.vvol.through.Discovery_ su true per ottenere dati coerenti tra gli strumenti ONTAP e ONTAP, quando si verifica un timeout durante l'operazione di ribilanciamento del container.
+
+
+====

@@ -1,0 +1,41 @@
+---
+permalink: protect/task_configure_folder_mappings.html 
+sidebar: sidebar 
+keywords:  
+summary: È necessario mappare le cartelle sul sito protetto e sul sito di ripristino per consentire la comunicazione tra di esse. 
+---
+= Configurare le mappature delle cartelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario mappare le cartelle sul sito protetto e sul sito di ripristino per consentire la comunicazione tra di esse.
+
+*Cosa ti serve*
+
+È necessario aver collegato i siti protetti e di ripristino.
+
+*Fasi*
+
+. Accedere a vCenter Server e fare clic su *Site Recovery* > *Sites*.
+. Selezionare il sito protetto, quindi fare clic su *Gestisci*.
+. Nella scheda Gestisci, selezionare *Mapping cartelle*.
+. Fare clic su image:../media/new_folder_mappings.gif[""] per creare un nuovo mapping di cartelle.
++
+Viene visualizzata la procedura guidata Create Folder Mapping.
+
+. Nella procedura guidata Create Folder Mapping (Crea mappatura cartelle), eseguire le seguenti operazioni:
++
+.. Selezionare *prepara automaticamente mappature per cartelle con nomi corrispondenti* e fare clic su *Avanti*.
+.. Selezionare gli oggetti del data center richiesti per i siti protetti e di ripristino e fare clic su *Aggiungi mapping*.
+.. Fare clic su *Avanti* dopo aver creato correttamente le mappature.
+.. Selezionare l'oggetto utilizzato in precedenza per creare il mapping inverso, quindi fare clic su *fine*.
+
+
+
+
+*Risultato*
+
+La pagina Folder Mappings (Mapping cartelle) visualizza le risorse del sito protetto e le risorse del sito di ripristino. È possibile seguire la stessa procedura per le altre reti del proprio ambiente.

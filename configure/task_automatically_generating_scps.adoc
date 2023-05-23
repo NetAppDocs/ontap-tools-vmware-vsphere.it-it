@@ -1,0 +1,35 @@
+---
+permalink: configure/task_automatically_generating_scps.html 
+sidebar: sidebar 
+keywords:  
+summary: 'IL provider VASA per ONTAP consente di generare automaticamente profili di funzionalità storage per i datastore tradizionali esistenti. Quando si seleziona l"opzione di generazione automatica per un datastore, il provider VASA crea un profilo che contiene le funzionalità di storage utilizzate da tale datastore.' 
+---
+= Generare automaticamente i profili di capacità dello storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+IL provider VASA per ONTAP consente di generare automaticamente profili di funzionalità storage per i datastore tradizionali esistenti. Quando si seleziona l'opzione di generazione automatica per un datastore, il provider VASA crea un profilo che contiene le funzionalità di storage utilizzate da tale datastore.
+
+*Cosa ti serve*
+
+* È necessario aver registrato l'istanza del provider VASA con Virtual Storage Console (VSC).
+* VSC deve aver rilevato lo storage.
+
+
+*A proposito di questa attività*
+
+Dopo aver creato un profilo di capacità storage, è possibile modificarlo per includere ulteriori funzionalità. La procedura guidata Create storage capability profile fornisce informazioni sulle funzionalità che è possibile includere in un profilo.
+
+*Fasi*
+
+. Dalla home page dei tool NetApp ONTAP, fare clic su *mappatura dello storage*.
+. Selezionare l'archivio dati dall'elenco Available (disponibili).
+. Dal menu Actions (azioni), selezionare *Auto-generate* (genera automaticamente).
+. Al termine del processo di generazione automatica, aggiornare la schermata per visualizzare le informazioni sul nuovo profilo.
++
+Il nuovo profilo viene elencato nella colonna del profilo associato. Il nome del nuovo profilo si basa sulle risorse del profilo. Se necessario, è possibile rinominare il profilo.
+
+

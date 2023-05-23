@@ -1,0 +1,30 @@
+---
+permalink: manage/task_migrate_virtual_machines_with_older_storage_capability_profiles.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se si utilizza la versione più recente dei tool ONTAP per VMware vSphere, Quindi, è necessario migrare le macchine virtuali con il provisioning delle metriche QoS "MaxThroughput MBPS" o "MaxThroughput IOPS" nei nuovi datastore VVol con il provisioning delle metriche QoS "Max IOPS" dell"ultima versione dei tool ONTAP.' 
+---
+= Migrare le macchine virtuali con profili di funzionalità storage precedenti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si utilizza la versione più recente dei tool ONTAP per VMware vSphere, Quindi, è necessario migrare le macchine virtuali con il provisioning delle metriche QoS "`MaxThroughput MBPS`" o "`MaxThroughput IOPS`" nei nuovi datastore Vol con il provisioning delle metriche QoS "`MAX IOPS`" dell'ultima versione dei tool ONTAP.
+
+*A proposito di questa attività*
+
+Con la versione più recente dei tool ONTAP, puoi configurare le metriche di QoS per ogni macchina virtuale o disco di macchine virtuali (VMDK). Le metriche di QoS sono state precedentemente applicate a livello di volume ONTAP FlexVol e sono state condivise da tutte le macchine virtuali o VMDK fornite su quel volume FlexVol.
+
+A partire dalla versione 7.2 dei tool ONTAP, le metriche di QoS di una macchina virtuale non vengono condivise con altre macchine virtuali.
+
+
+NOTE: Non è necessario modificare i criteri di storage delle macchine virtuali esistenti in quanto potrebbero non essere conformi.
+
+*Fasi*
+
+. Creare datastore vVol utilizzando un nuovo profilo di capacità storage con il valore "`MAX IOPS`" richiesto.
+. Creare una policy di storage delle macchine virtuali, quindi mappare la nuova policy di storage delle macchine virtuali con il nuovo profilo di funzionalità di storage.
+. Migrare le macchine virtuali esistenti negli archivi dati VVol appena creati utilizzando la nuova policy di storage delle macchine virtuali.
+

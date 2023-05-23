@@ -1,0 +1,121 @@
+---
+permalink: configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile impostare timeout e altri valori sugli host ESXi utilizzando gli strumenti ONTAP per VMware vSphere per garantire le migliori performance e il failover corretto. I valori impostati da Virtual Storage Console sono basati su test interni NetApp. 
+---
+= I valori degli host ESXi vengono impostati utilizzando gli strumenti ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile impostare timeout e altri valori sugli host ESXi utilizzando gli strumenti ONTAP per VMware vSphere per garantire le migliori performance e il failover corretto. I valori impostati dagli strumenti ONTAP si basano su test interni NetApp.
+
+È possibile impostare i seguenti valori su un host ESXi:
+
+
+
+== Configurazione avanzata di ESXi
+
+* *VMFS3.HardwareAcceleratedLocking*
++
+Impostare questo valore su 1.
+
+* *VMFS3.EnableBlockDelete*
++
+Impostare questo valore su 0.
+
+
+
+
+
+== Impostazioni NFS
+
+* *Net.TcpipelHeapSize*
++
+Impostare questo valore su 32.
+
+* *Net.TcpipelHeapMax*
++
+Impostare questo valore su 1024 MB.
+
+* *NFS.MaxVolumes*
++
+Impostare questo valore su 256.
+
+* *NFS41.MaxVolumes*
++
+Impostare questo valore su 256.
+
+* *NFS.MaxQueueDepth*
++
+Impostare questo valore su 128 o superiore per evitare colli di bottiglia in coda.
+
+* *NFS.HeartbeatMaxFailures*
++
+Impostare questo valore su 10 per tutte le configurazioni NFS.
+
+* *NFS.HeartbeatFrequency*
++
+Impostare questo valore su 12 per tutte le configurazioni NFS.
+
+* *NFS.HeartbeatTimeout*
++
+Impostare questo valore su 5 per tutte le configurazioni NFS.
+
+
+
+
+
+== Impostazioni FC/FCoE
+
+* *Criterio di selezione del percorso*
++
+Impostare questo valore su "`RR`" (round robin) quando si utilizzano percorsi FC con ALUA.
+
++
+Impostare questo valore su "`FIXED`" per tutte le altre configurazioni.
+
++
+L'impostazione di questo valore su "`RR`" aiuta a fornire il bilanciamento del carico in tutti i percorsi attivi/ottimizzati. Il valore "`FIXED`" viene utilizzato per le configurazioni precedenti, non ALUA e aiuta a prevenire l'i/o del proxy
+
+* *Disk.QFullSampleSize*
++
+Impostare questo valore su 32 per tutte le configurazioni. L'impostazione di questo valore aiuta a prevenire gli errori di i/O.
+
+* *Disk.QFullThreshold*
++
+Impostare questo valore su 8 per tutte le configurazioni. L'impostazione di questo valore aiuta a prevenire gli errori di i/O.
+
+* *Timeout HBA FC Emulex*
++
+Utilizzare il valore predefinito.
+
+* *Timeout HBA FC QLogic*
++
+Utilizzare il valore predefinito.
+
+
+
+
+
+== Impostazioni iSCSI
+
+* *Criterio di selezione del percorso*
++
+Impostare questo valore su "`RR`" per tutti i percorsi iSCSI.
+
++
+L'impostazione di questo valore su "`RR`" aiuta a fornire il bilanciamento del carico in tutti i percorsi attivi/ottimizzati.
+
+* *Disk.QFullSampleSize*
++
+Impostare questo valore su 32 per tutte le configurazioni. L'impostazione di questo valore aiuta a prevenire gli errori di i/O.
+
+* *Disk.QFullThreshold*
++
+Impostare questo valore su 8 per tutte le configurazioni. L'impostazione di questo valore aiuta a prevenire gli errori di i/O.
+
+

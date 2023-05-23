@@ -1,0 +1,38 @@
+---
+permalink: concepts/concept_manage_disaster_recovery_setup_using_srm.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile creare e gestire la configurazione del disaster recovery nel server vCenter insieme a Site Recovery Manager (SRM) di VMware.' 
+---
+= Configurare la configurazione del disaster recovery
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare e gestire la configurazione del disaster recovery nel vCenter Server insieme a Site Recovery Manager (SRM) di VMware.
+
+IL provider VASA è ora integrato con le funzionalità di Storage Replication Adapter (SRA). Se nel data center sono stati configurati datastore vVols, per il ripristino dei datastore vVols non è necessario installare SRA separatamente per il disaster recovery. In Site Recovery Manager (SRM), è necessario associare i siti protetti e di ripristino. Una volta eseguita l'associazione del sito, la parte successiva della configurazione SRM prevede la configurazione di una coppia di array che consente a SRM di comunicare con il sistema storage per rilevare i dispositivi e la replica del dispositivo. Prima di poter configurare la coppia di array, è necessario creare una coppia di siti in SRM.
+
+Questa versione dei tool ONTAP offre un'opzione per utilizzare la configurazione sincrona di SnapMirror per il disaster recovery.
+
+
+NOTE: VMware Site Recovery Manager (SRM) non utilizza SRA per la gestione del disaster recovery dei datastore vVols. Il provider VASA viene invece utilizzato per la replica e il controllo di failover degli archivi dati vVol su ONTAP 9.7 e cluster successivi.
+
+Vedere link:../protect/task_enable_storage_replication_adapter.html["Abilitare Storage Replication Adapter"] sezione per la procedura.
+
+.attivazione della funzione quick_resync
+È possibile attivare il flag quick_resync per eseguire l'operazione di protezione e ripristino in SRA. Questo è valido solo per gli archivi dati supportati da volumi con relazione SnapMirror asincrona. il flag quick_resync consente di velocizzare il tempo di risync del volume di destinazione, in quanto la risync non comporta un overhead di efficienza dello storage prima del trasferimento di nuovi dati. Quick_resync non è attivato per impostazione predefinita. Si consiglia di attivare il flag quick_resync:
+
+* Quando l'origine della risincronizzazione non ha l'efficienza del volume attivata.
+* Quando si riduce il tempo di risincronizzazione, è più importante che preservare tutta l'efficienza dello storage possibile sulla rete.
+
+
+Per attivare il flag quick_resync, attenersi alla seguente procedura:
+
+.Fasi
+. Accedere al pannello di controllo da _https://<IP address>:9083_ e fare clic su interfaccia CLI basata su web.
+. Eseguire il comando `vp updateconfig -key=snapmirror.quick.resync.enabled -value=true`.
+. Eseguire il comando `vp reloadconfig`.
+
