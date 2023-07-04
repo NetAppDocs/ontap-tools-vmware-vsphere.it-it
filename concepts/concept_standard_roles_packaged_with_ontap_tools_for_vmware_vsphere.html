@@ -9,14 +9,14 @@
   <meta property="og:title" content="Ruoli standard forniti con gli strumenti ONTAP" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/it-it/ontap-tools-vmware-vsphere/concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html" />
-	<meta property="og:description" content="Per semplificare l"utilizzo dei privilegi di vCenter Server e del controllo degli accessi basato sui ruoli (RBAC), Virtual Storage Console fornisce ruoli VSC..." />
+	<meta property="og:description" content="Per semplificare l"utilizzo dei privilegi di vCenter Server e del controllo degli accessi basato sui ruoli, i tool ONTAP forniscono ruoli standard degli stru..." />
   <meta property="og:image" content="https://docs.netapp.com/it-it/ontap-tools-vmware-vsphere/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Per semplificare l"utilizzo dei privilegi di vCenter Server e del controllo degli accessi basato sui ruoli (RBAC), Virtual Storage Console fornisce ruoli VSC...">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Per semplificare l"utilizzo dei privilegi di vCenter Server e del controllo degli accessi basato sui ruoli, i tool ONTAP forniscono ruoli standard degli stru...">
   <meta name="keywords" content=" "><!-- Icons -->
   <link rel="icon" href="/it-it/ontap-tools-vmware-vsphere/images/favicon.ico" type="image/x-icon">
 
@@ -83,7 +83,7 @@
       head.appendChild(onetrustScript);
     }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
     addAdobeLaunch("launch-e9ff3acac59f");
-    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
+    addGoogleAnalytics("G-KYN6T440WN");function OptanonWrapper() { }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -2074,21 +2074,21 @@
   </div>
 </div>
 
-      <div class="ie-nmt-disclaimer">
-  <span>
-    <div class="ie-nmt-disclaimer-container">
-      <div class="ie-nmt-disclaimer-icon">
-        <svg class="luci-icon" aria-hidden="true">
-          <use xlink:href="/it-it/ontap-tools-vmware-vsphere/images/sprite.svg#circle-info">
-        </svg>
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <svg class="luci-icon" aria-hidden="true">
+            <use xlink:href="/it-it/ontap-tools-vmware-vsphere/images/sprite.svg#circle-info">
+          </svg>
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
+        </div>
+        <div style="clear:both;"></div>
       </div>
-      <div class="ie-nmt-disclaimer-content">
-        <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
-      </div>
-      <div style="clear:both;"></div>
-    </div>
-  </span>
-</div><div class="n-doc__component-detail-heading-wrap">
+    </span>
+  </div><div class="n-doc__component-detail-heading-wrap">
   <h1 class="n-doc__component-detail-heading">Ruoli standard forniti con gli strumenti ONTAP</h1>
 </div>
 
@@ -2096,7 +2096,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 16:56:10 +0000">05/23/2023</time>
+    <time datetime="2023-07-04 12:20:02 +0000">07/04/2023</time>
     
   
 
@@ -2109,10 +2109,10 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Per semplificare l&#8217;utilizzo dei privilegi di vCenter Server e del RBAC (Role-Based Access Control), Virtual Storage Console (VSC) fornisce ruoli VSC standard che consentono di eseguire attività VSC principali. Esiste anche un ruolo di sola lettura che consente di visualizzare le informazioni VSC, ma non di eseguire alcuna attività.</p>
+<p>Per semplificare l&#8217;utilizzo dei privilegi di vCenter Server e del RBAC (role-based access control), gli strumenti ONTAP forniscono ruoli standard di ONTAP Tools che consentono di eseguire le attività chiave degli strumenti ONTAP. Esiste anche un ruolo di sola lettura che consente di visualizzare le informazioni, ma non di eseguire attività.</p>
 </div>
 <div class="paragraph">
-<p>I ruoli VSC standard dispongono sia dei privilegi specifici di VSC che dei privilegi nativi di vCenter Server necessari per eseguire le attività VSC. Inoltre, i ruoli sono configurati in modo da disporre dei privilegi richiesti per tutte le versioni supportate di vCenter Server.</p>
+<p>I ruoli standard dei tool ONTAP dispongono sia dei privilegi specifici dei tool ONTAP che dei privilegi nativi del server vCenter necessari agli utenti per eseguire le attività dei tool ONTAP. Inoltre, i ruoli sono configurati in modo da disporre dei privilegi richiesti per tutte le versioni supportate di vCenter Server.</p>
 </div>
 <div class="paragraph">
 <p>In qualità di amministratore, è possibile assegnare questi ruoli agli utenti in base alle esigenze.</p>
@@ -2124,16 +2124,16 @@
 <img src="/us-en/ontap-tools-vmware-vsphere/images/note.svg" alt="Nota">
 </td>
 <td class="content">
-Quando si aggiorna VSC alla versione più recente, i ruoli standard vengono automaticamente aggiornati per funzionare con la nuova versione di VSC.
+Quando si aggiornano gli strumenti ONTAP alla versione più recente, i ruoli standard vengono automaticamente aggiornati per funzionare con la nuova versione dello strumento.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>È possibile visualizzare i ruoli standard di VSC facendo clic su <strong>Roles</strong> nella home page di vSphere Client.</p>
+<p>È possibile visualizzare i ruoli standard degli strumenti ONTAP facendo clic su <strong>ruoli</strong> nella home page del client vSphere.</p>
 </div>
 <div class="paragraph">
-<p>I ruoli forniti da VSC consentono di eseguire le seguenti attività:</p>
+<p>I ruoli forniti dagli strumenti ONTAP consentono di eseguire le seguenti attività:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2150,7 +2150,7 @@ Quando si aggiorna VSC alla versione più recente, i ruoli standard vengono auto
 <p>Amministratore di VSC</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Fornisce tutti i privilegi nativi di vCenter Server e i privilegi specifici di VSC necessari per eseguire tutte le attività di VSC.</p>
+<p>Fornisce tutti i privilegi nativi di vCenter Server e i privilegi specifici degli strumenti ONTAP necessari per eseguire tutte le attività degli strumenti ONTAP.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2158,7 +2158,7 @@ Quando si aggiorna VSC alla versione più recente, i ruoli standard vengono auto
 <p>VSC di sola lettura</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Fornisce l&#8217;accesso in sola lettura a VSC. Questi utenti non possono eseguire alcuna azione VSC controllata dall&#8217;accesso.</p>
+<p>Fornisce accesso in sola lettura agli strumenti ONTAP. Questi utenti non possono eseguire alcuna azione di ONTAP Tools controllata dall&#8217;accesso.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2166,7 +2166,7 @@ Quando si aggiorna VSC alla versione più recente, i ruoli standard vengono auto
 <p>Provisioning VSC</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Fornisce tutti i privilegi nativi di vCenter Server e i privilegi specifici di VSC necessari per il provisioning dello storage. È possibile eseguire le seguenti operazioni:</p>
+<p>Fornisce tutti i privilegi nativi di vCenter Server e i privilegi specifici dei tool ONTAP necessari per eseguire il provisioning dello storage. È possibile eseguire le seguenti operazioni:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2187,44 +2187,44 @@ Quando si aggiorna VSC alla versione più recente, i ruoli standard vengono auto
 </div>
 </div>
 <div class="sect1">
-<h2 id="linee-guida-per-lutilizzo-dei-ruoli-standard-vsc">Linee guida per l&#8217;utilizzo dei ruoli standard VSC</h2>
+<h2 id="linee-guida-per-lutilizzo-dei-ruoli-standard-degli-strumenti-ontap">Linee guida per l&#8217;utilizzo dei ruoli standard degli strumenti ONTAP</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Quando si lavora con gli strumenti ONTAP standard per i ruoli di VMware vSphere, è necessario seguire alcune linee guida.</p>
 </div>
 <div class="paragraph">
-<p>Non modificare direttamente i ruoli standard. In tal caso, VSC sovrascriverà le modifiche ogni volta che si aggiorna VSC. Il programma di installazione aggiorna le definizioni dei ruoli standard ogni volta che si aggiorna VSC. In questo modo si garantisce che i ruoli siano aggiornati per la versione di VSC e per tutte le versioni supportate di vCenter Server.</p>
+<p>Non modificare direttamente i ruoli standard. In tal caso, gli strumenti ONTAP sovrascriveranno le modifiche ogni volta che si esegue l&#8217;aggiornamento. Il programma di installazione aggiorna le definizioni dei ruoli standard ogni volta che si aggiornano gli strumenti ONTAP. In questo modo si garantisce che i ruoli siano aggiornati per la versione degli strumenti ONTAP e per tutte le versioni supportate di vCenter Server.</p>
 </div>
 <div class="paragraph">
-<p>Tuttavia, è possibile utilizzare i ruoli standard per creare ruoli personalizzati in base all&#8217;ambiente. A tale scopo, è necessario copiare il ruolo standard VSC e quindi modificare il ruolo copiato. Creando un nuovo ruolo, è possibile mantenere questo ruolo anche quando si riavvia o si aggiorna il servizio VSC Windows.</p>
+<p>Tuttavia, è possibile utilizzare i ruoli standard per creare ruoli personalizzati in base all&#8217;ambiente. A tale scopo, è necessario copiare il ruolo standard degli strumenti ONTAP e quindi modificare il ruolo copiato. Creando un nuovo ruolo, è possibile mantenere questo ruolo anche quando si riavvia o si aggiorna il servizio Windows di ONTAP Tools.</p>
 </div>
 <div class="paragraph">
-<p>Di seguito sono riportati alcuni dei modi in cui è possibile utilizzare i ruoli standard di VSC:</p>
+<p>Di seguito sono riportati alcuni dei modi in cui è possibile utilizzare i ruoli standard degli strumenti ONTAP:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Utilizzare i ruoli VSC standard per tutte le attività VSC.</p>
+<p>Utilizzare i ruoli standard degli strumenti ONTAP per tutte le attività degli strumenti ONTAP.</p>
 <div class="paragraph">
-<p>In questo scenario, i ruoli standard forniscono tutti i privilegi di cui un utente ha bisogno per eseguire le attività VSC.</p>
+<p>In questo scenario, i ruoli standard forniscono tutti i privilegi di cui un utente ha bisogno per eseguire le attività degli strumenti ONTAP.</p>
 </div>
 </li>
 <li>
 <p>Combina i ruoli per espandere le attività che un utente può eseguire.</p>
 <div class="paragraph">
-<p>Se i ruoli VSC standard forniscono una granularità eccessiva per l&#8217;ambiente, è possibile espandere i ruoli creando gruppi di livello superiore che contengono più ruoli.</p>
+<p>Se i ruoli standard degli strumenti ONTAP forniscono una granularità eccessiva per l&#8217;ambiente, è possibile espandere i ruoli creando gruppi di livello superiore che contengono più ruoli.</p>
 </div>
 <div class="paragraph">
-<p>Se un utente deve eseguire altre attività non VSC che richiedono ulteriori privilegi nativi di vCenter Server, è possibile creare un ruolo che fornisca tali privilegi e aggiungerlo anche al gruppo.</p>
+<p>Se un utente deve eseguire altre attività di strumenti non ONTAP che richiedono ulteriori privilegi nativi di vCenter Server, è possibile creare un ruolo che fornisca tali privilegi e aggiungerlo anche al gruppo.</p>
 </div>
 </li>
 <li>
 <p>Crea ruoli più specifici.</p>
 <div class="paragraph">
-<p>Se l&#8217;azienda richiede l&#8217;implementazione di ruoli più restrittivi rispetto ai ruoli VSC standard, è possibile utilizzare i ruoli VSC per creare nuovi ruoli.</p>
+<p>Se l&#8217;azienda richiede l&#8217;implementazione di ruoli più restrittivi rispetto ai ruoli standard degli strumenti ONTAP, è possibile utilizzare i ruoli degli strumenti ONTAP per creare nuovi ruoli.</p>
 </div>
 <div class="paragraph">
-<p>In questo caso, clonare i ruoli VSC necessari e modificare il ruolo clonato in modo che disponga solo dei privilegi richiesti dall&#8217;utente.</p>
+<p>In questo caso, clonare i ruoli degli strumenti ONTAP necessari e modificare il ruolo clonato in modo che disponga solo dei privilegi richiesti dall&#8217;utente.</p>
 </div>
 </li>
 </ul>

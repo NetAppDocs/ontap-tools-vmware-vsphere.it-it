@@ -83,7 +83,7 @@
       head.appendChild(onetrustScript);
     }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
     addAdobeLaunch("launch-e9ff3acac59f");
-    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
+    addGoogleAnalytics("G-KYN6T440WN");function OptanonWrapper() { }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -2074,21 +2074,21 @@
   </div>
 </div>
 
-      <div class="ie-nmt-disclaimer">
-  <span>
-    <div class="ie-nmt-disclaimer-container">
-      <div class="ie-nmt-disclaimer-icon">
-        <svg class="luci-icon" aria-hidden="true">
-          <use xlink:href="/it-it/ontap-tools-vmware-vsphere/images/sprite.svg#circle-info">
-        </svg>
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <svg class="luci-icon" aria-hidden="true">
+            <use xlink:href="/it-it/ontap-tools-vmware-vsphere/images/sprite.svg#circle-info">
+          </svg>
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
+        </div>
+        <div style="clear:both;"></div>
       </div>
-      <div class="ie-nmt-disclaimer-content">
-        <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
-      </div>
-      <div style="clear:both;"></div>
-    </div>
-  </span>
-</div><div class="n-doc__component-detail-heading-wrap">
+    </span>
+  </div><div class="n-doc__component-detail-heading-wrap">
   <h1 class="n-doc__component-detail-heading">Punti chiave relativi all&#8217;assegnazione e alla modifica delle autorizzazioni per vCenter Server</h1>
 </div>
 
@@ -2096,7 +2096,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 16:56:10 +0000">05/23/2023</time>
+    <time datetime="2023-07-04 12:20:02 +0000">07/04/2023</time>
     
   
 
@@ -2120,7 +2120,7 @@
 <p>È necessario impostare le autorizzazioni di vCenter Server solo se si desidera limitare l&#8217;accesso agli oggetti e alle attività di vSphere. In caso contrario, è possibile accedere come amministratore. Questo login consente di accedere automaticamente a tutti gli oggetti vSphere.</p>
 </div>
 <div class="paragraph">
-<p>La posizione in cui si assegna un&#8217;autorizzazione determina le attività VSC che un utente può eseguire.</p>
+<p>La posizione in cui si assegna un&#8217;autorizzazione determina le attività degli strumenti ONTAP che un utente può eseguire.</p>
 </div>
 <div class="paragraph">
 <p>A volte, per garantire il completamento di un&#8217;attività, è necessario assegnare l&#8217;autorizzazione a un livello superiore, ad esempio l&#8217;oggetto root. Questo accade quando un&#8217;attività richiede un privilegio che non si applica a un oggetto vSphere specifico (ad esempio, il monitoraggio dell&#8217;attività) o quando un privilegio richiesto si applica a un oggetto non vSphere (ad esempio, un sistema storage).</p>
@@ -2146,10 +2146,10 @@ A meno che le policy di sicurezza aziendali non richiedano autorizzazioni più r
 <h2 id="permessi-e-oggetti-non-vsphere">Permessi e oggetti non vSphere</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>L&#8217;autorizzazione creata viene applicata a un oggetto non vSphere. Ad esempio, un sistema storage non è un oggetto vSphere. Se un privilegio viene applicato a un sistema di storage, è necessario assegnare l&#8217;autorizzazione contenente tale privilegio all&#8217;oggetto root VSC perché non esiste alcun oggetto vSphere a cui è possibile assegnarlo.</p>
+<p>L&#8217;autorizzazione creata viene applicata a un oggetto non vSphere. Ad esempio, un sistema storage non è un oggetto vSphere. Se un privilegio viene applicato a un sistema di storage, è necessario assegnare l&#8217;autorizzazione contenente tale privilegio all&#8217;oggetto root di ONTAP Tools perché non esiste alcun oggetto vSphere a cui è possibile assegnarlo.</p>
 </div>
 <div class="paragraph">
-<p>Ad esempio, qualsiasi autorizzazione che includa un privilegio come il privilegio VSC "Add/Modify/Skip storage Systems" deve essere assegnata a livello di oggetto root.</p>
+<p>Ad esempio, tutte le autorizzazioni che includono un privilegio come il privilegio "Aggiungi/Modifica/Ignora sistemi storage" degli strumenti ONTAP devono essere assegnate a livello di oggetto root.</p>
 </div>
 </div>
 </div>

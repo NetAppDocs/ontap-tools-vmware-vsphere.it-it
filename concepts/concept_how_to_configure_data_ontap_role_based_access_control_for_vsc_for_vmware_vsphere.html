@@ -9,14 +9,14 @@
   <meta property="og:title" content="Come configurare il controllo degli accessi basato sui ruoli di ONTAP per i tool ONTAP per VMware vSphere" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/it-it/ontap-tools-vmware-vsphere/concepts/concept_how_to_configure_data_ontap_role_based_access_control_for_vsc_for_vmware_vsphere.html" />
-	<meta property="og:description" content="Se si desidera utilizzare il controllo degli accessi basato sui ruoli con i tool ONTAP® per ONTAP vSphere, è necessario configurare il controllo degli access..." />
+	<meta property="og:description" content="Se si desidera utilizzare il controllo degli accessi basato sui ruoli con i tool ONTAP per ONTAP vSphere, è necessario configurare il controllo degli accessi..." />
   <meta property="og:image" content="https://docs.netapp.com/it-it/ontap-tools-vmware-vsphere/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Se si desidera utilizzare il controllo degli accessi basato sui ruoli con i tool ONTAP® per ONTAP vSphere, è necessario configurare il controllo degli access...">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Se si desidera utilizzare il controllo degli accessi basato sui ruoli con i tool ONTAP per ONTAP vSphere, è necessario configurare il controllo degli accessi...">
   <meta name="keywords" content=" "><!-- Icons -->
   <link rel="icon" href="/it-it/ontap-tools-vmware-vsphere/images/favicon.ico" type="image/x-icon">
 
@@ -83,7 +83,7 @@
       head.appendChild(onetrustScript);
     }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
     addAdobeLaunch("launch-e9ff3acac59f");
-    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
+    addGoogleAnalytics("G-KYN6T440WN");function OptanonWrapper() { }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -2074,21 +2074,21 @@
   </div>
 </div>
 
-      <div class="ie-nmt-disclaimer">
-  <span>
-    <div class="ie-nmt-disclaimer-container">
-      <div class="ie-nmt-disclaimer-icon">
-        <svg class="luci-icon" aria-hidden="true">
-          <use xlink:href="/it-it/ontap-tools-vmware-vsphere/images/sprite.svg#circle-info">
-        </svg>
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <svg class="luci-icon" aria-hidden="true">
+            <use xlink:href="/it-it/ontap-tools-vmware-vsphere/images/sprite.svg#circle-info">
+          </svg>
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
+        </div>
+        <div style="clear:both;"></div>
       </div>
-      <div class="ie-nmt-disclaimer-content">
-        <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
-      </div>
-      <div style="clear:both;"></div>
-    </div>
-  </span>
-</div><div class="n-doc__component-detail-heading-wrap">
+    </span>
+  </div><div class="n-doc__component-detail-heading-wrap">
   <h1 class="n-doc__component-detail-heading">Come configurare il controllo degli accessi basato sui ruoli di ONTAP per i tool ONTAP per VMware vSphere</h1>
 </div>
 
@@ -2096,7 +2096,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 16:56:10 +0000">05/23/2023</time>
+    <time datetime="2023-07-04 12:20:02 +0000">07/04/2023</time>
     
   
 
@@ -2112,10 +2112,10 @@
 <p>Se si desidera utilizzare il controllo degli accessi basato sui ruoli con gli strumenti ONTAP per VMware vSphere, è necessario configurare il controllo degli accessi basato sui ruoli (RBAC) di ONTAP sul sistema storage. È possibile creare uno o più account utente personalizzati con privilegi di accesso limitati con la funzione RBAC di ONTAP.</p>
 </div>
 <div class="paragraph">
-<p>VSC e SRA possono accedere ai sistemi storage a livello di cluster o di SVM (Storage Virtual Machine). Se si aggiungono sistemi storage a livello di cluster, è necessario fornire le credenziali dell&#8217;utente amministratore per fornire tutte le funzionalità richieste. Se si aggiungono i sistemi storage aggiungendo direttamente i dettagli SVM, è necessario tenere presente che l&#8217;utente &#8220;vsadmin&#8221; non dispone di tutti i ruoli e le funzionalità necessari per eseguire determinate attività.</p>
+<p>Gli strumenti e gli SRA di ONTAP possono accedere ai sistemi storage a livello di cluster o di SVM (Storage Virtual Machine). Se si aggiungono sistemi storage a livello di cluster, è necessario fornire le credenziali dell&#8217;utente amministratore per fornire tutte le funzionalità richieste. Se si aggiungono i sistemi storage aggiungendo direttamente i dettagli SVM, è necessario tenere presente che l&#8217;utente &#8220;vsadmin&#8221; non dispone di tutti i ruoli e le funzionalità necessari per eseguire determinate attività.</p>
 </div>
 <div class="paragraph">
-<p>IL provider VASA può accedere ai sistemi storage solo a livello di cluster. Se il provider VASA è richiesto per un controller storage specifico, il sistema storage deve essere aggiunto a VSC a livello di cluster anche se si utilizza VSC o SRA.</p>
+<p>IL provider VASA può accedere ai sistemi storage solo a livello di cluster. Se per un particolare controller di storage è richiesto un provider VASA, il sistema di storage deve essere aggiunto agli strumenti ONTAP a livello di cluster anche se si utilizzano strumenti ONTAP o SRA.</p>
 </div>
 <div class="paragraph">
 <p>Per creare un nuovo utente e connettere un cluster o una SVM agli strumenti ONTAP, eseguire le seguenti operazioni:</p>
@@ -2128,21 +2128,21 @@
 <li>
 <p>Creare utenti con il ruolo assegnato e il set di applicazioni appropriato utilizzando ONTAP</p>
 <div class="paragraph">
-<p>Queste credenziali del sistema storage sono necessarie per configurare i sistemi storage per VSC. È possibile configurare i sistemi storage per VSC immettendo le credenziali in VSC. Ogni volta che si accede a un sistema storage con queste credenziali, si disporranno delle autorizzazioni per le funzioni VSC configurate in ONTAP durante la creazione delle credenziali.</p>
+<p>Queste credenziali del sistema storage sono necessarie per configurare i sistemi storage per gli strumenti ONTAP. È possibile configurare i sistemi storage per gli strumenti ONTAP immettendo le credenziali negli strumenti ONTAP. Ogni volta che si accede a un sistema di storage con queste credenziali, si disporranno delle autorizzazioni per le funzioni degli strumenti ONTAP configurate in ONTAP durante la creazione delle credenziali.</p>
 </div>
 </li>
 <li>
-<p>Aggiungere il sistema storage a VSC e fornire le credenziali dell&#8217;utente appena creato</p>
+<p>Aggiungere il sistema storage agli strumenti ONTAP e fornire le credenziali dell&#8217;utente appena creato</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="ruoli-vsc">Ruoli VSC</h2>
+<h2 id="ruoli-degli-strumenti-ontap">Ruoli degli strumenti ONTAP</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>VSC classifica i privilegi ONTAP nel seguente set di ruoli VSC:</p>
+<p>Gli strumenti ONTAP classificano i privilegi ONTAP nel seguente set di ruoli degli strumenti ONTAP:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2189,7 +2189,7 @@
 <p>SRA classifica i privilegi ONTAP in un ruolo SAN o NAS a livello di cluster o SVM. Ciò consente agli utenti di eseguire operazioni SRM.</p>
 </div>
 <div class="paragraph">
-<p>Quando si aggiunge il cluster a VSC, VSC esegue una convalida iniziale dei privilegi dei ruoli RBAC di ONTAP. Se è stato aggiunto un IP di storage SVM diretto, VSC non esegue la convalida iniziale. VSC controlla e applica i privilegi in un secondo momento nel flusso di lavoro delle attività.</p>
+<p>Gli strumenti ONTAP eseguono una convalida iniziale dei privilegi dei ruoli RBAC di ONTAP quando si aggiunge il cluster agli strumenti ONTAP. Se è stato aggiunto un IP di storage SVM diretto, gli strumenti ONTAP non eseguono la convalida iniziale. Gli strumenti ONTAP controllano e assicurano i privilegi in un secondo momento nel flusso di lavoro delle attività.</p>
 </div>
 </div>
 </div>
