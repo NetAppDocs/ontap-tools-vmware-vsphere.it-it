@@ -19,11 +19,11 @@ Se sono necessari i file di log del provider VASA, è possibile generare un pacc
 
 `\https://vm_ip:9083`
 
-È possibile raccogliere i file di registro VSC utilizzando la funzione "`Export VSC Logs`" (Esporta registri VSC) nella GUI VSC. Quando si raccoglie un bundle di log VSC con il provider VASA abilitato, il bundle di log VSC avrà anche i log VP. I seguenti passaggi spiegano come raccogliere i file di log di VSC:
+È possibile raccogliere i tool ONTAP per i file di log di VMware vSphere utilizzando la funzione "`Export ONTAP Tools for VMware vSphere Logs`" (Strumenti di esportazione per i log di VMware vSphere) nell'interfaccia grafica di VSC. Quando si raccoglie un pacchetto di tool ONTAP per VMware vSphere Log con il provider VASA abilitato, il bundle di tool ONTAP per VMware vSphere Log avrà anche i log VP. I seguenti passaggi spiegano come raccogliere i tool ONTAP per i file di log di VMware vSphere:
 
 *Fasi*
 
-. Dalla home page degli strumenti ONTAP, fare clic su *Configurazione* > *Esporta log VSC*.
+. Dalla home page dei tool ONTAP, fare clic su *Configurazione* > *Esporta tool ONTAP per i log VMware vSphere*.
 +
 Questa operazione può richiedere alcuni minuti.
 

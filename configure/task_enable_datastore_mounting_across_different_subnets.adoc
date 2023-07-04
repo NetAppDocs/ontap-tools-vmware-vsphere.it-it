@@ -15,7 +15,7 @@ Se si utilizza iSCSI o NFS e la subnet è diversa tra gli host ESXi e il sistema
 
 *A proposito di questa attività*
 
-Quando il provisioning del datastore non riesce, VSC registra i seguenti messaggi di errore:
+Quando il provisioning del datastore non riesce, ONTAP Tools per VMware vSphere registra i seguenti messaggi di errore:
 
 'Impossibile continuare. Nessun indirizzo ip trovato quando si fanno riferimenti incrociati agli indirizzi ip del kernel sul controller. Impossibile trovare una rete corrispondente al volume di montaggio NFS su questi host".
 

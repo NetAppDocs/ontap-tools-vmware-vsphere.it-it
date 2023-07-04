@@ -26,7 +26,7 @@ Questo processo potrebbe richiedere molto tempo, a seconda della configurazione 
 I valori standard e consigliati sono impostati per impostazione predefinita.
 
 +
-image::../media/vsc_recommended_hosts_settings.gif[impostazioni host consigliate per vsc]
+image::../media/vsc_recommended_hosts_settings.gif[Schermata di impostazione dei valori consigliati]
 
 . Fare clic su *OK*.
 

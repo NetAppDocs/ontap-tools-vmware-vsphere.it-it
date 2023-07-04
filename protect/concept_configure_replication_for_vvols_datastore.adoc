@@ -23,6 +23,6 @@ I gruppi di replica vengono creati durante il flusso di lavoro di creazione del 
 
 NOTE: Se si utilizza il disaster recovery per il datastore vVols, non è necessario configurare separatamente Storage Replication Adapter (SRA), in quanto la funzionalità del provider VASA è stata migliorata per la replica di vVols.
 
-image::../media/vvols_replication.png[replica di vvols]
+image::../media/vvols_replication.png[Configurare il flusso di lavoro dei sistemi ONTAP]
 
 link:../protect/configure_vvols_replication_existing_datastore.html["Configurare la replica di vVol per gli archivi dati esistenti"]

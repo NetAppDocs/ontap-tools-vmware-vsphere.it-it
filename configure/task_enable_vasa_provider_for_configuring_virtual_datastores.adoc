@@ -26,7 +26,7 @@ Se la funzionalità del provider VASA viene disattivata prima dell'aggiornamento
 *Fasi*
 
 . Accedere all'interfaccia utente Web di VMware vSphere.
-. Dal client vSphere, fare clic su *Menu* > *NetApp ONTAP Tools* Console.
+. Dal client vSphere, selezionare *Menu* > *NetApp ONTAP Tools*.
 . Fare clic su *Impostazioni*.
 . Fare clic su *Gestisci funzionalità* nella scheda Impostazioni amministrative.
 . Nella finestra di dialogo Manage Capabilities (Gestisci funzionalità), selezionare l'interno del provider VASA da attivare.

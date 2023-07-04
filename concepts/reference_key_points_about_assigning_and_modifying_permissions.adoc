@@ -19,7 +19,7 @@ Esistono diversi punti chiave da tenere a mente quando si utilizzano le autorizz
 
 È necessario impostare le autorizzazioni di vCenter Server solo se si desidera limitare l'accesso agli oggetti e alle attività di vSphere. In caso contrario, è possibile accedere come amministratore. Questo login consente di accedere automaticamente a tutti gli oggetti vSphere.
 
-La posizione in cui si assegna un'autorizzazione determina le attività VSC che un utente può eseguire.
+La posizione in cui si assegna un'autorizzazione determina le attività degli strumenti ONTAP che un utente può eseguire.
 
 A volte, per garantire il completamento di un'attività, è necessario assegnare l'autorizzazione a un livello superiore, ad esempio l'oggetto root. Questo accade quando un'attività richiede un privilegio che non si applica a un oggetto vSphere specifico (ad esempio, il monitoraggio dell'attività) o quando un privilegio richiesto si applica a un oggetto non vSphere (ad esempio, un sistema storage).
 
@@ -32,9 +32,9 @@ TIP: A meno che le policy di sicurezza aziendali non richiedano autorizzazioni p
 
 == Permessi e oggetti non vSphere
 
-L'autorizzazione creata viene applicata a un oggetto non vSphere. Ad esempio, un sistema storage non è un oggetto vSphere. Se un privilegio viene applicato a un sistema di storage, è necessario assegnare l'autorizzazione contenente tale privilegio all'oggetto root VSC perché non esiste alcun oggetto vSphere a cui è possibile assegnarlo.
+L'autorizzazione creata viene applicata a un oggetto non vSphere. Ad esempio, un sistema storage non è un oggetto vSphere. Se un privilegio viene applicato a un sistema di storage, è necessario assegnare l'autorizzazione contenente tale privilegio all'oggetto root di ONTAP Tools perché non esiste alcun oggetto vSphere a cui è possibile assegnarlo.
 
-Ad esempio, qualsiasi autorizzazione che includa un privilegio come il privilegio VSC "Add/Modify/Skip storage Systems" deve essere assegnata a livello di oggetto root.
+Ad esempio, tutte le autorizzazioni che includono un privilegio come il privilegio "Aggiungi/Modifica/Ignora sistemi storage" degli strumenti ONTAP devono essere assegnate a livello di oggetto root.
 
 
 

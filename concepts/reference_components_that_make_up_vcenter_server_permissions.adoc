@@ -34,7 +34,7 @@ Come illustrato nel diagramma seguente, per poter disporre di un'autorizzazione 
 
 NOTE: In questo diagramma, le caselle grigie indicano i componenti presenti in vCenter Server e le caselle bianche indicano i componenti presenti nel sistema operativo in cui è in esecuzione vCenter Server.
 
-image::../media/permission_updated_graphic.gif[grafico aggiornato con permesso]
+image::../media/permission_updated_graphic.gif[illustrazione dei componenti dei permessi]
 
 
 
@@ -46,16 +46,16 @@ Due tipi di privilegi sono associati ai tool ONTAP per VMware vSphere:
 +
 Questi privilegi vengono forniti con vCenter Server.
 
-* Privilegi specifici di VSC
+* Privilegi specifici per i tool ONTAP
 +
-Questi privilegi sono definiti per attività VSC specifiche. Sono esclusivi di VSC.
+Questi privilegi sono definiti per attività specifiche degli strumenti ONTAP. Sono esclusivi degli strumenti ONTAP.
 
 
 
-Le attività VSC richiedono privilegi specifici di VSC e privilegi nativi di vCenter Server. Questi privilegi costituiscono "`role`" per l'utente. Un'autorizzazione può avere più privilegi. Questi privilegi sono riservati a un utente che ha effettuato l'accesso a vCenter Server.
+Le attività degli strumenti ONTAP richiedono privilegi specifici per gli strumenti ONTAP e privilegi nativi per vCenter Server. Questi privilegi costituiscono "`role`" per l'utente. Un'autorizzazione può avere più privilegi. Questi privilegi sono riservati a un utente che ha effettuato l'accesso a vCenter Server.
 
 
-NOTE: Per semplificare l'utilizzo di vCenter Server RBAC, VSC offre diversi ruoli standard che contengono tutti i privilegi nativi e specifici di VSC necessari per eseguire le attività VSC.
+NOTE: Per semplificare l'utilizzo di vCenter Server RBAC, gli strumenti ONTAP offrono diversi ruoli standard che contengono tutti i privilegi nativi e specifici degli strumenti ONTAP necessari per eseguire le attività degli strumenti ONTAP.
 
 Se si modificano i privilegi all'interno di un'autorizzazione, l'utente associato a tale autorizzazione deve disconnettersi e quindi accedere per attivare l'autorizzazione aggiornata.
 
@@ -73,7 +73,7 @@ Console di NetApp ONTAP Tools > Visualizza
 * VSC di sola lettura
 
  a| 
-Tutte le attività specifiche del provider VSC e VASA richiedono il privilegio di visualizzazione.
+Tutti gli strumenti ONTAP e le attività specifiche del provider VASA richiedono il privilegio di visualizzazione.
 
 
 
@@ -89,15 +89,15 @@ Attività del provider VSC e VASA correlate ai profili di capacità dello storag
 
 == Oggetti vSphere
 
-Le autorizzazioni sono associate agli oggetti vSphere, come vCenter Server, host ESXi, macchine virtuali, datastore, data center, e cartelle. È possibile assegnare autorizzazioni a qualsiasi oggetto vSphere. In base all'autorizzazione assegnata a un oggetto vSphere, vCenter Server determina chi può eseguire le attività su tale oggetto. Per attività specifiche di VSC, le autorizzazioni vengono assegnate e validate solo a livello di cartella principale (vCenter Server) e non su altre entità. Ad eccezione del funzionamento del plugin VAAI, in cui i permessi sono validati rispetto all'ESXi interessato.
+Le autorizzazioni sono associate agli oggetti vSphere, come vCenter Server, host ESXi, macchine virtuali, datastore, data center, e cartelle. È possibile assegnare autorizzazioni a qualsiasi oggetto vSphere. In base all'autorizzazione assegnata a un oggetto vSphere, vCenter Server determina chi può eseguire le attività su tale oggetto. Per le attività specifiche degli strumenti ONTAP, le autorizzazioni vengono assegnate e validate solo a livello di cartella principale (server vCenter) e non su altre entità. Ad eccezione del funzionamento del plugin VAAI, in cui i permessi sono validati rispetto all'ESXi interessato.
 
 
 
 == Utenti e gruppi
 
-È possibile utilizzare Active Directory (o la macchina vCenter Server locale) per configurare utenti e gruppi di utenti. È quindi possibile utilizzare le autorizzazioni vCenter Server per concedere l'accesso a questi utenti o gruppi per consentire loro di eseguire attività VSC specifiche.
+È possibile utilizzare Active Directory (o la macchina vCenter Server locale) per configurare utenti e gruppi di utenti. È quindi possibile utilizzare le autorizzazioni vCenter Server per concedere l'accesso a questi utenti o gruppi per consentire loro di eseguire attività specifiche degli strumenti ONTAP.
 
 
-NOTE: Queste autorizzazioni vCenter Server si applicano agli utenti VSC vCenter e non agli amministratori VSC. Per impostazione predefinita, gli amministratori VSC hanno accesso completo al prodotto e non richiedono autorizzazioni assegnate.
+NOTE: Queste autorizzazioni vCenter Server si applicano agli utenti di vCenter di ONTAP Tools, non agli amministratori VSC. Per impostazione predefinita, gli amministratori VSC hanno accesso completo al prodotto e non richiedono autorizzazioni assegnate.
 
 Gli utenti e i gruppi non hanno ruoli assegnati. Ottengono l'accesso a un ruolo facendo parte di un'autorizzazione vCenter Server.

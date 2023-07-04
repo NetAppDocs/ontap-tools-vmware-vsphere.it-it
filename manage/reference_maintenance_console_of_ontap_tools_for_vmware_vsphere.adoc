@@ -18,7 +18,7 @@ Per accedere alla console di manutenzione, è necessario aver installato gli str
 
 NOTE: È necessario impostare una password per `diag` utente durante l'attivazione della diagnostica remota.
 
-Per accedere alla console di manutenzione, utilizzare la scheda *Riepilogo* degli strumenti ONTAP implementati. Quando si fa clic su image:../media/launch_maintenance_console.gif[""], viene avviata la console di manutenzione.
+Per accedere alla console di manutenzione, utilizzare la scheda *Riepilogo* degli strumenti ONTAP implementati. Quando si fa clic su  image:../media/launch_maintenance_console.gif["Pulsante Play (Riproduci)"], viene avviata la console di manutenzione.
 
 |===
 

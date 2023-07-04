@@ -24,7 +24,7 @@ summary: 'È necessario configurare un datastore segnaposto in modo da conservar
 . Accedere a vCenter Server e fare clic su *Site Recovery* > *Sites*.
 . Selezionare il sito protetto, quindi fare clic su *Gestisci*.
 . Nella scheda Manage (Gestisci), selezionare *Placeholder Datastore*.
-. Fare clic su image:../media/new_placeholder_datastore.gif[""] per creare un nuovo datastore segnaposto.
+. Fare clic su image:../media/new_placeholder_datastore.gif["icona cerca e aggiungi"] per creare un nuovo datastore segnaposto.
 . Selezionare l'archivio dati appropriato, quindi fare clic su *OK*.
 +
 

@@ -45,7 +45,7 @@ NOTE: Se si utilizza Gestione di sistema per proteggere i volumi FlexVol e il pr
 . Aggiungere il gruppo di replica alla macchina virtuale non protetta.
 
 
-image::../media/vvols_replication_existing_datastore.png[vvols replica datastore esistente]
+image::../media/vvols_replication_existing_datastore.png[Nuovo utente e workflow utente esistente]
 
 *NOTA:*
 

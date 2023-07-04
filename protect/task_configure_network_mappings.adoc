@@ -30,7 +30,7 @@ summary: È necessario mappare le reti sul sito protetto e sul sito di ripristin
 . Accedere al server vCenter e fare clic su *Site Recovery* > *Sites*.
 . Selezionare il sito protetto, quindi fare clic su *Gestisci*.
 . Nella scheda Manage (Gestisci), selezionare *Network Mappings* (Mapping di rete).
-. Fare clic su image:../media/new_network_mappings.gif[""] per creare una nuova mappatura di rete.
+. Fare clic su image:../media/new_network_mappings.gif["icona del globo"] per creare una nuova mappatura di rete.
 +
 Viene visualizzata la procedura guidata Create Network Mapping.
 
