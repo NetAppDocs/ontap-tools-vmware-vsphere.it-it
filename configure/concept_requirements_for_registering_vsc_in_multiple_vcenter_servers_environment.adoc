@@ -2,35 +2,35 @@
 permalink: configure/concept_requirements_for_registering_vsc_in_multiple_vcenter_servers_environment.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Se si utilizzano gli strumenti ONTAP® per VMware vSphere in un ambiente in cui un singolo client VMware vSphere HTML5 gestisce più istanze di vCenter Server, è necessario registrare un"istanza di VSC con ciascun vCenter Server in modo che vi sia un"associazione 1:1 tra VSC e vCenter Server. Questa operazione consente di gestire tutti i server che eseguono vCenter 6.0 o versioni successive in modalità Linked e non Linked da un singolo client vSphere HTML5.' 
+summary: 'Se si utilizzano strumenti ONTAP® per VMware vSphere in un ambiente in cui un singolo client VMware vSphere HTML5 gestisce più istanze di vCenter Server, è necessario registrare un"istanza degli strumenti ONTAP con ciascun vCenter Server in modo che sia disponibile un"associazione 1:1 tra gli strumenti ONTAP e vCenter Server. Questa operazione consente di gestire tutti i server che eseguono vCenter 6.0 o versioni successive in modalità Linked e non Linked da un singolo client vSphere HTML5.' 
 ---
-= Requisiti per la registrazione di VSC in un ambiente con più vCenter Server
+= Requisiti per la registrazione degli strumenti ONTAP in più ambienti vCenter Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Se si utilizzano gli strumenti ONTAP per VMware vSphere in un ambiente in cui un singolo client VMware vSphere HTML5 gestisce più istanze di vCenter Server, è necessario registrare un'istanza di VSC con ciascun vCenter Server in modo che vi sia un'associazione 1:1 tra VSC e vCenter Server. Questa operazione consente di gestire tutti i server che eseguono vCenter 7.0 o versioni successive in modalità Linked e non Linked da un singolo client vSphere HTML5.
+Se utilizzi strumenti ONTAP per VMware vSphere in un ambiente in cui un singolo client VMware vSphere HTML5 gestisce più istanze di vCenter Server, è necessario registrare un'istanza degli strumenti ONTAP con ciascun vCenter Server in modo che sia disponibile un'associazione 1:1 tra gli strumenti ONTAP e vCenter Server. Questa operazione consente di gestire tutti i server che eseguono vCenter 7,0 o versioni successive in modalità collegata e non collegata da un singolo client vSphere HTML5.
 
 
-NOTE: Se si desidera utilizzare VSC con un vCenter Server, è necessario aver impostato o registrato un'istanza VSC per ogni istanza di vCenter Server che si desidera gestire. Ogni istanza VSC registrata deve essere della stessa versione.
+NOTE: Se si desidera utilizzare gli strumenti ONTAP con vCenter Server, è necessario configurare o registrare un'istanza di ONTAP Tools per ogni istanza di vCenter Server che si desidera gestire. Ogni istanza di ONTAP Tools registrata deve essere della stessa versione.
 
 Linked mode viene installato automaticamente durante l'implementazione di vCenter Server. Linked mode utilizza Microsoft Active Directory Application Mode (ADAM) per memorizzare e sincronizzare i dati su più sistemi vCenter Server.
 
-L'utilizzo del client vSphere HTML5 per eseguire attività VSC su più vCenter Server richiede quanto segue:
+L'utilizzo del client vSphere HTML5 per eseguire le attività degli strumenti ONTAP su più server vCenter richiede quanto segue:
 
-* Ogni vCenter Server nell'inventario VMware che si desidera gestire deve disporre di un singolo server VSC registrato con esso in un'unica associazione 1:1.
+* Ogni vCenter Server nell'inventario VMware che si desidera gestire deve disporre di un singolo server ONTAP Tools registrato con esso in un'associazione 1:1 univoca.
 +
-Ad esempio, è possibile avere il server VSC A registrato su vCenter Server A, il server VSC B registrato su vCenter Server B, il server VSC C registrato su vCenter Server C e così via.
-
-+
-Non è possibile* avere il server VSC A registrato su vCenter Server A e vCenter Server B.
+Ad esempio, è possibile avere il server degli strumenti ONTAP A registrato in vCenter Server A, il server degli strumenti ONTAP B registrato in vCenter Server B, il server degli strumenti ONTAP C registrato in vCenter Server C e così via.
 
 +
-Se un inventario VMware include un vCenter Server che non dispone di un server VSC registrato, ma sono presenti uno o più vCenter Server registrati con VSC, Quindi, è possibile visualizzare le istanze di VSC ed eseguire operazioni VSC per i server vCenter che hanno registrato VSC.
+Non è possibile* avere ONTAP tools server A registrato sia in vCenter Server A che in vCenter Server B.
 
-* È necessario disporre del privilegio View specifico di VSC per ogni vCenter Server registrato nel Single Sign-on (SSO).
++
+Se un inventario VMware include un vCenter Server che non dispone di un server di strumenti ONTAP registrato, ma sono presenti uno o più vCenter Server registrati con gli strumenti ONTAP, quindi, puoi visualizzare le istanze degli strumenti ONTAP ed eseguire le operazioni degli strumenti ONTAP per i server vCenter sui quali sono registrati gli strumenti ONTAP.
+
+* È necessario disporre del privilegio Vista specifico degli strumenti di ONTAP per ogni vCenter Server registrato al single sign-on (SSO).
 +
 È inoltre necessario disporre delle autorizzazioni RBAC corrette.
 
@@ -40,6 +40,6 @@ Quando si esegue un'attività che richiede di specificare un vCenter Server, il 
 
 Se la posizione dello storage è nota (ad esempio, quando si utilizza la procedura guidata di provisioning e il datastore si trova su un host gestito da uno specifico vCenter Server), l'elenco vCenter Server viene visualizzato come opzione di sola lettura. Ciò si verifica solo se si utilizza l'opzione del pulsante destro del mouse per selezionare un elemento nel client Web vSphere.
 
-VSC avvisa l'utente quando tenta di selezionare un oggetto non gestito.
+Gli strumenti ONTAP avvisano l'utente quando tenta di selezionare un oggetto che non gestisce.
 
-È possibile filtrare i sistemi storage in base a uno specifico vCenter Server dalla pagina di riepilogo di VSC. Viene visualizzata una pagina di riepilogo per ogni istanza di VSC registrata con un vCenter Server. È possibile gestire i sistemi di storage associati a un'istanza VSC specifica e a vCenter Server, ma è necessario mantenere separate le informazioni di registrazione per ciascun sistema di storage se si eseguono più istanze di VSC.
+Puoi filtrare i sistemi storage in base a un vCenter Server specifico dalla pagina di riepilogo dei tool ONTAP. Viene visualizzata una pagina di riepilogo per ogni istanza degli strumenti ONTAP registrata in vCenter Server. Puoi gestire i sistemi storage associati a una specifica istanza degli strumenti di ONTAP e vCenter Server, ma devi mantenere separate le informazioni di registrazione per ogni sistema storage se stai eseguendo più istanze di tool di ONTAP.

@@ -2,7 +2,7 @@
 permalink: manage/task_collect_the_log_files.html 
 sidebar: sidebar 
 keywords:  
-summary: 'È possibile raccogliere i file di log per i tool ONTAP® per VMware vSphere dall"opzione disponibile nell"interfaccia grafica utente di VSC. Il supporto tecnico potrebbe richiedere di raccogliere i file di registro per risolvere un problema.' 
+summary: 'È possibile raccogliere i file di registro per gli strumenti ONTAP® per VMware vSphere dall"opzione disponibile nell"interfaccia utente grafica \(GUI\) degli strumenti ONTAP. Il supporto tecnico potrebbe richiedere di raccogliere i file di registro per risolvere un problema.' 
 ---
 = Raccogliere i file di log
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'È possibile raccogliere i file di log per i tool ONTAP® per VMware v
 
 
 [role="lead"]
-È possibile raccogliere i file di log per gli strumenti ONTAP per VMware vSphere dall'opzione disponibile nell'interfaccia grafica utente (GUI) di VSC. Il supporto tecnico potrebbe richiedere di raccogliere i file di registro per risolvere un problema.
+Puoi raccogliere i file di log per i tool ONTAP per VMware vSphere dall'opzione disponibile nell'interfaccia grafica (GUI) dei tool ONTAP. Il supporto tecnico potrebbe richiedere di raccogliere i file di registro per risolvere un problema.
 
 *A proposito di questa attività*
 
@@ -19,7 +19,7 @@ Se sono necessari i file di log del provider VASA, è possibile generare un pacc
 
 `\https://vm_ip:9083`
 
-È possibile raccogliere i tool ONTAP per i file di log di VMware vSphere utilizzando la funzione "`Export ONTAP Tools for VMware vSphere Logs`" (Strumenti di esportazione per i log di VMware vSphere) nell'interfaccia grafica di VSC. Quando si raccoglie un pacchetto di tool ONTAP per VMware vSphere Log con il provider VASA abilitato, il bundle di tool ONTAP per VMware vSphere Log avrà anche i log VP. I seguenti passaggi spiegano come raccogliere i tool ONTAP per i file di log di VMware vSphere:
+È possibile raccogliere gli strumenti ONTAP per i file di log di VMware vSphere utilizzando la funzione "`Esporta strumenti ONTAP per i log di VMware vSphere'" nella GUI degli strumenti di ONTAP. Quando si raccoglie un pacchetto di tool ONTAP per VMware vSphere Log con il provider VASA abilitato, il bundle di tool ONTAP per VMware vSphere Log avrà anche i log VP. I seguenti passaggi spiegano come raccogliere i tool ONTAP per i file di log di VMware vSphere:
 
 *Fasi*
 

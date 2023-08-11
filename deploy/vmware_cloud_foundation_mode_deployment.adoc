@@ -13,7 +13,9 @@ summary: I tool ONTAP per VMware vSphere possono essere implementati in un ambie
 [role="lead"]
 I tool ONTAP per VMware vSphere possono essere implementati in un ambiente VMware Cloud Foundation (VCF). L'obiettivo principale dell'implementazione di VCF è utilizzare gli strumenti ONTAP in una configurazione cloud e creare container senza vCenter Server.
 
-La modalità VCF consente di creare container per lo storage senza la necessità di un vCenter Server. Il provider VASA viene attivato per impostazione predefinita dopo l'implementazione degli strumenti ONTAP in modalità VCF. Una volta completata l'implementazione, è possibile aggiungere sistemi storage e creare container utilizzando le API REST. Viene introdotta una nuova API per generare il _appliance-api-token_ che autentica le chiamate API. Alcune delle API esistenti vengono modificate per includere l'intestazione _appliance-api-token_. Con la release 9.12 di ONTAP Tools, swagger non supporta le API 1.0. I puntatori che in precedenza erano su 1.0 sono stati spostati in 2.0 o 3.0 API.
+La modalità VCF consente di creare container per lo storage senza la necessità di un vCenter Server. Il provider VASA viene attivato per impostazione predefinita dopo l'implementazione degli strumenti ONTAP in modalità VCF. Una volta completata l'implementazione, è possibile aggiungere sistemi storage e creare container utilizzando le API REST. Nel seguente articolo viene descritta la procedura per aggiungere storage agli strumenti ONTAP quando VCF è attivato. https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["Aggiungere memoria agli strumenti ONTAP da Swagger-UI"].
+
+Viene introdotta una nuova API per generare il _appliance-api-token_ che autentica le chiamate API. Alcune delle API esistenti vengono modificate per includere l'intestazione _appliance-api-token_. Con la release 9.12 di ONTAP Tools, swagger non supporta le API 1.0. I puntatori che in precedenza erano su 1.0 sono stati spostati in 2.0 o 3.0 API.
 
 Le API disponibili per la modalità di implementazione VCF sono:
 

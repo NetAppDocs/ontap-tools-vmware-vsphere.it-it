@@ -53,3 +53,5 @@ entries:
     url: "/manage/task_monitor_datastores_using_the_traditional_dashboard.html"
   - title: Analizza i dati delle performance utilizzando la dashboard di vVols
     url: "/manage/task_monitor_vvols_datastores_and_virtual_machines_using_vvols_dashboard.html"
+- title: Disaster Recovery del provider VASA
+  url: "/manage/vasa_provider_disaster_recovery.html"

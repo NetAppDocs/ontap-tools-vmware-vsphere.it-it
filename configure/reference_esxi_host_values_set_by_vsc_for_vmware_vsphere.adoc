@@ -2,7 +2,7 @@
 permalink: configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: È possibile impostare timeout e altri valori sugli host ESXi utilizzando gli strumenti ONTAP per VMware vSphere per garantire le migliori performance e il failover corretto. I valori impostati da Virtual Storage Console sono basati su test interni NetApp. 
+summary: È possibile impostare timeout e altri valori sugli host ESXi utilizzando gli strumenti ONTAP per VMware vSphere per garantire le migliori performance e il failover corretto. I valori impostati dagli strumenti ONTAP si basano su test interni NetApp. 
 ---
 = I valori degli host ESXi vengono impostati utilizzando gli strumenti ONTAP
 :allow-uri-read: 

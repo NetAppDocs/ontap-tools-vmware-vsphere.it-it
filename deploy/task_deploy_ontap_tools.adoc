@@ -82,6 +82,14 @@ Mentre si attende il completamento della distribuzione, è possibile visualizzar
 . Accendere la macchina virtuale ONTAP Tools, quindi aprire una console della macchina virtuale che esegue gli strumenti ONTAP.
 . Verificare che gli strumenti ONTAP siano in esecuzione al termine dell'implementazione.
 . Se gli strumenti ONTAP non sono registrati con alcun server vCenter, utilizzare `\https://appliance_ip:8143/Register.html` Per registrare l'istanza di VSC. Register.html reindirizza l'utente alla pagina swagger. A partire dalla versione 9.12 degli strumenti ONTAP, la registrazione degli strumenti ONTAP con vCenter avviene dalla pagina swagger.
++
+USA l'API POST per registrare gli strumenti ONTAP con vCenter a partire dalla versione 9,12.
+
++
+[listing]
+----
+/2.0/plugin/vcenter
+----
 . Disconnettersi e accedere nuovamente al client vSphere per visualizzare i tool ONTAP implementati.
 +
 L'aggiornamento del plug-in nel client vSphere potrebbe richiedere alcuni minuti.

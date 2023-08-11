@@ -1,5 +1,5 @@
 ---
-permalink: concepts/concept_ontap_role_bastoolsed_access_control_feature_for_ontap_tools.html 
+permalink: concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html 
 sidebar: sidebar 
 keywords:  
 summary: 'Il controllo degli accessi basato sui ruoli di ONTAP consente di controllare l"accesso a sistemi storage specifici e le azioni che un utente può eseguire su tali sistemi storage. Nei tool ONTAP® per VMware vSphere, ONTAP RBAC lavora con vCenter Server RBAC per determinare quali attività dei tool ONTAP possono essere eseguite da un utente specifico sugli oggetti di un sistema storage specifico.' 

@@ -15,8 +15,8 @@ summary: È possibile verificare rapidamente se i datastore sono conformi ai pro
 
 *Cosa ti serve*
 
-* È necessario aver registrato l'istanza del provider VASA con i tool ONTAP® per VMware vSphere (VSC).
-* VSC deve aver rilevato lo storage.
+* È necessario aver registrato l'istanza del provider VASA con i tool ONTAP per VMware vSphere.
+* Devi aver rilevato lo storage con i tool ONTAP.
 
 
 *Fasi*
@@ -25,7 +25,7 @@ summary: È possibile verificare rapidamente se i datastore sono conformi ai pro
 . Esaminare le informazioni nella colonna Compliance Status (Stato di conformità) per identificare i datastore non conformi ed esaminare gli avvisi per motivi di non conformità.
 +
 
-NOTE: Quando si fa clic sul pulsante *COMPLIANCE CHECK*, VSC esegue un'operazione di risDiscovery per tutto lo storage, che potrebbe richiedere alcuni minuti.
+NOTE: Quando si fa clic sul pulsante *VERIFICA CONFORMITÀ*, gli strumenti di ONTAP eseguono un'operazione di nuovo rilevamento per tutto lo spazio di archiviazione, che potrebbe richiedere alcuni minuti.
 
 +
 Se un datastore non è più conforme al proprio profilo, la colonna Compliance Status (Stato di conformità) visualizza un avviso che indica il motivo della non conformità. Ad esempio, un profilo potrebbe richiedere la compressione. Se tale impostazione è stata modificata nello storage, la compressione non viene più utilizzata e l'archivio dati non è conforme.

@@ -24,16 +24,16 @@ La seguente tabella presenta una panoramica di ciò che occorre prendere in cons
  a| 
 Prima implementazione degli strumenti ONTAP
  a| 
-L'implementazione degli strumenti ONTAP installa automaticamente le funzionalità VSC.
+La distribuzione degli strumenti ONTAP installa automaticamente le funzioni degli strumenti ONTAP.
 
 link:../deploy/concept_installation_workflow_for_new_users.html["Workflow di implementazione per i nuovi utenti dei tool ONTAP per VMware vSphere"]
 
 
 
  a| 
-Aggiornamento da un'implementazione esistente di VSC
+Aggiornamento da un'implementazione esistente di strumenti ONTAP
  a| 
-La procedura di aggiornamento da un'implementazione esistente di VSC a strumenti ONTAP dipende dalla versione di VSC e dalla distribuzione degli strumenti ONTAP. La sezione relativa ai flussi di lavoro di implementazione e all'aggiornamento contiene ulteriori informazioni.
+La procedura di aggiornamento da una distribuzione esistente di strumenti ONTAP a strumenti ONTAP dipende dalla versione di strumenti ONTAP e dalla distribuzione di strumenti ONTAP. La sezione relativa ai flussi di lavoro di implementazione e all'aggiornamento contiene ulteriori informazioni.
 
 link:../deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html["Workflow di implementazione per gli utenti esistenti degli strumenti ONTAP"]
 
@@ -43,16 +43,16 @@ Best practice prima di un aggiornamento:
 +
 Dopo l'aggiornamento, verificare che tutti i sistemi storage siano stati rilevati automaticamente e che dispongano delle credenziali corrette.
 
-* Se sono stati modificati i ruoli VSC standard, è necessario copiarli per salvare le modifiche.
+* Se sono stati modificati i ruoli standard degli strumenti ONTAP, è necessario copiarli per salvare le modifiche.
 +
-VSC sovrascrive i ruoli standard con le impostazioni predefinite correnti ogni volta che si riavvia il servizio VSC.
+Gli strumenti ONTAP sovrascrivono i ruoli standard con le impostazioni predefinite correnti ogni volta che si riavvia il servizio ONTAP Tools.
 
 
 
 
 
  a| 
-Rigenerazione di un certificato SSL per VSC
+Rigenerazione di un certificato SSL per gli strumenti ONTAP
  a| 
 Il certificato SSL viene generato automaticamente quando si distribuiscono gli strumenti ONTAP. Potrebbe essere necessario rigenerare il certificato SSL per creare un certificato specifico del sito.
 
@@ -88,9 +88,9 @@ La seguente tabella presenta una panoramica delle operazioni necessarie per conf
  a| 
 Requisiti di RBAC (role-based access control)
  a| 
-VSC supporta sia vCenter Server RBAC che ONTAP RBAC. L'account utilizzato per registrare VSC su vCenter Server (`https://<appliance_ip>:8143/Register.html`) Deve essere un amministratore di vCenter Server (assegnato al ruolo di amministratore o amministratore di vCenter Server). Se si intende eseguire VSC come amministratore, è necessario disporre di tutte le autorizzazioni e i privilegi necessari per tutte le attività.
+I tool ONTAP supportano sia vCenter Server RBAC che ONTAP RBAC. L'account utilizzato per registrare gli strumenti ONTAP in vCenter Server (`https://<appliance_ip>:8143/Register.html`) Deve essere un amministratore di vCenter Server (assegnato al ruolo di amministratore o amministratore di vCenter Server). Se si prevede di eseguire gli strumenti ONTAP come amministratore, è necessario disporre di tutte le autorizzazioni e dei privilegi necessari per tutte le attività.
 
-Se l'azienda richiede di limitare l'accesso agli oggetti vSphere, è possibile creare e assegnare ruoli VSC standard agli utenti per soddisfare i requisiti di vCenter Server.
+Se la tua azienda richiede di limitare l'accesso agli oggetti vSphere, puoi creare e assegnare ruoli standard agli strumenti ONTAP per soddisfare i requisiti di vCenter Server.
 
 È possibile creare i ruoli ONTAP consigliati utilizzando Gestione di sistema di ONTAP utilizzando il file JSON fornito con gli strumenti di ONTAP.
 
@@ -153,11 +153,11 @@ Per motivi di sicurezza, si consiglia di utilizzare una lunghezza della password
 
 * Specificare l'indirizzo IP (IPv4 o IPv6) dell'istanza del server vCenter a cui si desidera registrare gli strumenti ONTAP.
 +
-Il tipo di certificati VSC e VASA generati dipende dall'indirizzo IP (IPv4 o IPv6) fornito durante l'implementazione. Durante l'implementazione degli strumenti ONTAP, se non sono stati immessi dettagli IP statici e DHCP, la rete fornisce indirizzi IPv4 e IPv6.
+Il tipo di strumenti ONTAP e di certificati VASA generati dipende dall'indirizzo IP (IPv4 o IPv6) fornito durante la distribuzione. Durante l'implementazione degli strumenti ONTAP, se non sono stati immessi dettagli IP statici e DHCP, la rete fornisce indirizzi IPv4 e IPv6.
 
 * L'indirizzo IP degli strumenti ONTAP utilizzato per la registrazione con vCenter Server dipende dal tipo di indirizzo IP del server vCenter (IPv4 o IPv6) inserito nella procedura guidata di implementazione.
 +
-I certificati VSC e VASA verranno generati utilizzando lo stesso tipo di indirizzo IP utilizzato durante la registrazione di vCenter Server.
+Sia gli strumenti ONTAP che i certificati VASA verranno generati utilizzando lo stesso tipo di indirizzo IP utilizzato durante la registrazione di vCenter Server.
 
 +
 

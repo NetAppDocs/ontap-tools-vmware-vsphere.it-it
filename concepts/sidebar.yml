@@ -20,7 +20,7 @@ entries:
     url: "/concepts/reference_key_points_about_assigning_and_modifying_permissions.html"
   - title: Ruoli standard forniti con gli strumenti ONTAP
     url: "/concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html"
-  - title: Privilegi richiesti per le attività VSC
+  - title: Privilegi richiesti per le attività degli strumenti ONTAP
     url: "/concepts/concept_privileges_required_for_vsc_tasks.html"
   - title: Autorizzazioni per i sistemi storage ONTAP e gli oggetti vSphere
     url: "/concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html"

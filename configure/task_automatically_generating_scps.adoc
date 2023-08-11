@@ -15,8 +15,8 @@ IL provider VASA per ONTAP consente di generare automaticamente profili di funzi
 
 *Cosa ti serve*
 
-* È necessario aver registrato l'istanza del provider VASA con Virtual Storage Console (VSC).
-* VSC deve aver rilevato lo storage.
+* È necessario aver registrato l'istanza del provider VASA con gli strumenti ONTAP.
+* Devi aver rilevato lo storage con i tool ONTAP.
 
 
 *A proposito di questa attività*

@@ -98,6 +98,6 @@ Le autorizzazioni sono associate agli oggetti vSphere, come vCenter Server, host
 È possibile utilizzare Active Directory (o la macchina vCenter Server locale) per configurare utenti e gruppi di utenti. È quindi possibile utilizzare le autorizzazioni vCenter Server per concedere l'accesso a questi utenti o gruppi per consentire loro di eseguire attività specifiche degli strumenti ONTAP.
 
 
-NOTE: Queste autorizzazioni vCenter Server si applicano agli utenti di vCenter di ONTAP Tools, non agli amministratori VSC. Per impostazione predefinita, gli amministratori VSC hanno accesso completo al prodotto e non richiedono autorizzazioni assegnate.
+NOTE: Queste autorizzazioni vCenter Server si applicano agli utenti vCenter degli strumenti ONTAP, non agli amministratori degli strumenti ONTAP. Per impostazione predefinita, gli amministratori degli strumenti ONTAP hanno accesso completo al prodotto e non richiedono autorizzazioni assegnate.
 
 Gli utenti e i gruppi non hanno ruoli assegnati. Ottengono l'accesso a un ruolo facendo parte di un'autorizzazione vCenter Server.

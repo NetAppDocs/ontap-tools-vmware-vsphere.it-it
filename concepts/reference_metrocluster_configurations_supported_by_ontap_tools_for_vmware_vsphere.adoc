@@ -2,7 +2,7 @@
 permalink: concepts/reference_metrocluster_configurations_supported_by_ontap_tools_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: I tool ONTAP per VMware vSphere supportano ambienti che utilizzano configurazioni MetroCluster IP e FC per ONTAP. La maggior parte di questo supporto è automatica. Tuttavia, potrebbero verificarsi alcune differenze quando si utilizza un ambiente MetroCluster con VSC e provider VASA. 
+summary: I tool ONTAP per VMware vSphere supportano ambienti che utilizzano configurazioni MetroCluster IP e FC per ONTAP. La maggior parte di questo supporto è automatica. Tuttavia, potresti notare alcune differenze quando utilizzi un ambiente MetroCluster con gli strumenti ONTAP e il provider VASA. 
 ---
 = Configurazioni MetroCluster supportate dai tool ONTAP
 :allow-uri-read: 
@@ -11,23 +11,23 @@ summary: I tool ONTAP per VMware vSphere supportano ambienti che utilizzano conf
 
 
 [role="lead"]
-I tool ONTAP per VMware vSphere supportano ambienti che utilizzano configurazioni MetroCluster IP e FC per ONTAP. La maggior parte di questo supporto è automatica. Tuttavia, potrebbero verificarsi alcune differenze quando si utilizza un ambiente MetroCluster con VSC e provider VASA.
+I tool ONTAP per VMware vSphere supportano ambienti che utilizzano configurazioni MetroCluster IP e FC per ONTAP. La maggior parte di questo supporto è automatica. Tuttavia, potresti notare alcune differenze quando utilizzi un ambiente MetroCluster con gli strumenti ONTAP e il provider VASA.
 
 
 NOTE: SRA non supporta le configurazioni MetroCluster.
 
 
 
-== Configurazioni MetroCluster e VSC
+== Configurazioni MetroCluster e tool ONTAP
 
-È necessario assicurarsi che VSC rilevi i controller del sistema di storage nel sito primario e nel sito secondario. In genere, VSC rileva automaticamente i controller dello storage. Se si utilizza una LIF di gestione del cluster, è consigliabile verificare che VSC abbia rilevato i cluster in entrambi i siti. In caso contrario, è possibile aggiungere manualmente i controller di storage a VSC. È inoltre possibile modificare le coppie di nome utente e password utilizzate da VSC per connettersi ai controller di storage.
+Devi garantire che i tool ONTAP rilevino i controller del sistema storage nel sito primario e nel sito secondario. Di solito, i tool ONTAP rilevano automaticamente gli storage controller. Se stai utilizzando una LIF di gestione cluster, è buona norma verificare che i tool ONTAP abbiano rilevato i cluster in entrambi i siti. In caso contrario, puoi aggiungere manualmente i controller di storage ai tool ONTAP. È inoltre possibile modificare le coppie di nomi utente e password utilizzate dagli strumenti ONTAP per la connessione agli storage controller.
 
 Quando si verifica uno switchover, le SVM sul sito secondario prendono il controllo. Questi SVM hanno il suffisso "`-mc`" aggiunto ai loro nomi. Se si verifica un'operazione di switchover mentre si eseguono operazioni come il provisioning di un datastore, il nome della SVM in cui risiede il datastore viene modificato in modo da includere il suffisso "`-mc`". Questo suffisso viene eliminato quando si verifica lo switchback e le SVM sul sito primario riprendono il controllo.
 
 
-NOTE: Se sono state aggiunte delle SVM dirette con configurazione MetroCluster a VSC, dopo lo switchover, la modifica nel nome della SVM (l'aggiunta del suffisso "`-mc`") non viene riflessa. Tutte le altre operazioni di switchover continuano a essere eseguite normalmente.
+NOTE: Se sono state aggiunte SVM dirette con configurazione MetroCluster agli strumenti ONTAP, dopo lo switchover, la modifica del nome della SVM (l'aggiunta del suffisso "`-mc'") non viene riflessa. Tutte le altre operazioni di switchover continuano a essere eseguite normalmente.
 
-Quando si verifica uno switchover o uno switchback, VSC potrebbe impiegare alcuni minuti per rilevare e rilevare automaticamente i cluster. Se ciò accade durante un'operazione VSC, ad esempio il provisioning di un datastore, potrebbe verificarsi un ritardo.
+In caso di switchover o switchback, i tool ONTAP potrebbero richiedere alcuni minuti per rilevare automaticamente i cluster. Se ciò si verifica durante l'esecuzione di un'operazione con strumenti ONTAP, come il provisioning di un datastore, potresti riscontrare un ritardo.
 
 
 

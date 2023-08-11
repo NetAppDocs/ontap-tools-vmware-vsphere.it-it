@@ -2,7 +2,7 @@
 permalink: configure/task_refresh_the_storage_system_display.html 
 sidebar: sidebar 
 keywords:  
-summary: È possibile utilizzare la funzionalità di aggiornamento fornita dai tool ONTAP® per VMware vSphere per aggiornare le informazioni sui sistemi di storage e forzare la rilevazione dei sistemi di storage da parte della console di storage virtuale. 
+summary: È possibile utilizzare la funzionalità di aggiornamento fornita dagli strumenti ONTAP® per VMware vSphere per aggiornare le informazioni sui sistemi di storage e forzare gli strumenti ONTAP a rilevare i sistemi di storage. 
 ---
 = Aggiornare il display del sistema di storage
 :allow-uri-read: 
@@ -11,11 +11,11 @@ summary: È possibile utilizzare la funzionalità di aggiornamento fornita dai t
 
 
 [role="lead"]
-È possibile utilizzare la funzionalità di aggiornamento fornita dai tool ONTAP® per VMware vSphere per aggiornare le informazioni sui sistemi storage e forzare la VSC (Virtual Storage Console) a rilevare i sistemi storage.
+È possibile utilizzare la funzionalità di aggiornamento fornita dagli strumenti ONTAP® per VMware vSphere per aggiornare le informazioni sui sistemi di storage e forzare gli strumenti ONTAP a rilevare i sistemi di storage.
 
 *A proposito di questa attività*
 
-Il `refresh` questa opzione è utile se si modificano le credenziali predefinite per i sistemi di storage dopo la ricezione di un errore di autenticazione. È sempre necessario eseguire un'operazione di aggiornamento se le credenziali del sistema di storage sono state modificate dopo che il sistema di storage ha segnalato un `Authentication Failure Status`. Durante l'operazione di aggiornamento, VSC tenta di connettersi al sistema di storage utilizzando le nuove credenziali.
+Il `refresh` questa opzione è utile se si modificano le credenziali predefinite per i sistemi di storage dopo la ricezione di un errore di autenticazione. È sempre necessario eseguire un'operazione di aggiornamento se le credenziali del sistema di storage sono state modificate dopo che il sistema di storage ha segnalato un `Authentication Failure Status`. Durante l'operazione di aggiornamento, gli strumenti ONTAP tentano di connettersi al sistema di storage utilizzando le nuove credenziali.
 
 A seconda della configurazione del sistema, il completamento di questa attività può richiedere molto tempo.
 

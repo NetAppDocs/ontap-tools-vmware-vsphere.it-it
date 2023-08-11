@@ -2,7 +2,7 @@
 permalink: concepts/concept_recommended_ontap_roles_when_using_vsc_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: È possibile impostare diversi ruoli ONTAP consigliati per lavorare con i tool ONTAP® per VMware vSphere e il controllo degli accessi basato sui ruoli. Questi ruoli contengono i privilegi di ONTAP necessari per eseguire le operazioni di storage necessarie eseguite dalle attività della console di storage virtuale. 
+summary: È possibile impostare diversi ruoli ONTAP consigliati per lavorare con i tool ONTAP® per VMware vSphere e il controllo degli accessi basato sui ruoli. Questi ruoli contengono i privilegi di ONTAP necessari per eseguire le operazioni di storage necessarie eseguite dalle attività degli strumenti ONTAP. 
 ---
 = Ruoli ONTAP consigliati quando si utilizzano gli strumenti ONTAP per VMware vSphere
 :allow-uri-read: 
@@ -11,15 +11,15 @@ summary: È possibile impostare diversi ruoli ONTAP consigliati per lavorare con
 
 
 [role="lead"]
-È possibile impostare diversi ruoli ONTAP consigliati per lavorare con gli strumenti ONTAP per VMware vSphere e RBAC (role-based access control). Questi ruoli contengono i privilegi di ONTAP necessari per eseguire le operazioni di storage necessarie eseguite dalle attività della console di storage virtuale (VSC).
+È possibile impostare diversi ruoli ONTAP consigliati per lavorare con gli strumenti ONTAP per VMware vSphere e RBAC (role-based access control). Questi ruoli contengono i privilegi di ONTAP necessari per eseguire le operazioni di storage necessarie eseguite dalle attività degli strumenti ONTAP.
 
 Per creare nuovi ruoli utente, è necessario accedere come amministratore nei sistemi storage che eseguono ONTAP. È possibile creare ruoli ONTAP utilizzando Gestione di sistema di ONTAP 9.8P1 o versioni successive. Vederelink:../configure/task_configure_user_role_and_privileges.html["Configurare i ruoli e i privilegi degli utenti"] per ulteriori informazioni.
 
 A ciascun ruolo di ONTAP è associata una coppia di nome utente e password, che costituiscono le credenziali del ruolo. Se non si effettua l'accesso utilizzando queste credenziali, non è possibile accedere alle operazioni di storage associate al ruolo.
 
-Come misura di sicurezza, i ruoli ONTAP specifici del VSC sono ordinati gerarchicamente. Ciò significa che il primo ruolo è il ruolo più restrittivo e dispone solo dei privilegi associati al set più semplice di operazioni di storage VSC. Il ruolo successivo include sia i propri privilegi che tutti i privilegi associati al ruolo precedente. Ogni ruolo aggiuntivo è meno restrittivo per quanto riguarda le operazioni di storage supportate.
+Come misura di sicurezza, i ruoli ONTAP specifici degli strumenti ONTAP vengono ordinati gerarchicamente. Ciò significa che il primo ruolo è il ruolo più restrittivo e dispone solo dei privilegi associati al set più semplice di operazioni di storage degli strumenti ONTAP. Il ruolo successivo include sia i propri privilegi che tutti i privilegi associati al ruolo precedente. Ogni ruolo aggiuntivo è meno restrittivo per quanto riguarda le operazioni di storage supportate.
 
-Di seguito sono riportati alcuni dei ruoli RBAC ONTAP consigliati quando si utilizza VSC. Dopo aver creato questi ruoli, è possibile assegnare i ruoli agli utenti che devono eseguire attività correlate allo storage, ad esempio il provisioning delle macchine virtuali.
+Di seguito sono riportati alcuni dei ruoli RBAC ONTAP consigliati quando si utilizzano gli strumenti ONTAP. Dopo aver creato questi ruoli, è possibile assegnare i ruoli agli utenti che devono eseguire attività correlate allo storage, ad esempio il provisioning delle macchine virtuali.
 
 . Discovery (rilevamento)
 +

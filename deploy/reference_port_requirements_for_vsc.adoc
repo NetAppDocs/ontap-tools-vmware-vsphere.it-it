@@ -2,22 +2,22 @@
 permalink: deploy/reference_port_requirements_for_vsc.html 
 sidebar: sidebar 
 keywords: port requirements 
-summary: Per impostazione predefinita, Virtual Storage Console utilizza porte designate per abilitare la comunicazione tra i suoi componenti, che includono sistemi storage e VMware vCenter Server. Se si dispone di firewall abilitati, assicurarsi che i firewall siano impostati in modo da consentire eccezioni. 
+summary: Per impostazione predefinita, i tool di ONTAP utilizzano porte designate per consentire la comunicazione tra i suoi componenti, che comprendono i sistemi storage e VMware vCenter Server. Se si dispone di firewall abilitati, assicurarsi che i firewall siano impostati in modo da consentire eccezioni. 
 ---
-= Requisiti delle porte per VSC
+= Requisiti delle porte per gli strumenti ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per impostazione predefinita, Virtual Storage Console (VSC) utilizza porte designate per consentire la comunicazione tra i suoi componenti, tra cui i sistemi storage e VMware vCenter Server. Se si dispone di firewall abilitati, assicurarsi che i firewall siano impostati in modo da consentire eccezioni.
+Per impostazione predefinita, i tool di ONTAP utilizzano porte designate per consentire la comunicazione tra i suoi componenti, che comprendono i sistemi storage e VMware vCenter Server. Se si dispone di firewall abilitati, assicurarsi che i firewall siano impostati in modo da consentire eccezioni.
 
-Per firewall diversi da Windows, è necessario concedere manualmente l'accesso a porte specifiche utilizzate da VSC. Se non si concede l'accesso a queste porte, viene visualizzato un messaggio di errore simile al seguente.
+Per i firewall diversi da Windows, è necessario concedere manualmente l'accesso a porte specifiche utilizzate dagli strumenti ONTAP. Se non si concede l'accesso a queste porte, viene visualizzato un messaggio di errore simile al seguente.
 
 `Unable to communicate with the server.`
 
-VSC utilizza le seguenti porte TCP bidirezionali predefinite:
+Gli strumenti ONTAP utilizzano le seguenti porte TCP bidirezionali predefinite:
 
 |===
 
@@ -42,10 +42,10 @@ A seconda di come sono state configurate le credenziali, VMware vCenter Server e
  a| 
 8143
  a| 
-VSC è in attesa di comunicazioni sicure su questa porta. La porta viene utilizzata nell'architettura di comunicazione client-server. Il client, che può essere qualsiasi client di automazione che utilizza l'API REST, avvia la connessione al server e gli endpoint si scambiano i dati. Questa porta è abilitata per i servizi VSC e per l'esportazione dei log del server VSC. La pagina register.html è ospitata su questa porta. Il RESTO della swap è esposto su questa porta.
+Gli strumenti ONTAP sono in ascolto per comunicazioni sicure su questa porta. La porta viene utilizzata nell'architettura di comunicazione client-server. Il client, che può essere qualsiasi client di automazione che utilizza l'API REST, avvia la connessione al server e gli endpoint si scambiano i dati. Questa porta è abilitata per i servizi di ONTAP Tools e per l'esportazione dei registri del server di ONTAP Tools. La pagina register.html è ospitata su questa porta. Il RESTO della swap è esposto su questa porta.
 
 |===
 
 NOTE: Prima di implementare gli strumenti ONTAP, è necessario aver attivato il protocollo ICMP (Internet Control message Protocol).
 
-Se ICMP è disattivato, la configurazione iniziale degli strumenti ONTAP non riesce e VSC non può avviare i servizi VSC e VASA dopo l'implementazione. Dopo l'implementazione, è necessario attivare manualmente i servizi VSC e VASA Provider.
+Se ICMP è disattivato, la configurazione iniziale degli strumenti ONTAP non riesce e gli strumenti ONTAP non possono avviare gli strumenti ONTAP e i servizi del provider VASA dopo la distribuzione. Devi abilitare manualmente i tool ONTAP e i servizi del provider VASA dopo l'implementazione.

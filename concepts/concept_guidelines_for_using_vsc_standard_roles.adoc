@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Quando si lavora con i tool ONTAP® standard per i ruoli di VMware vSphere, è necessario seguire alcune linee guida. 
 ---
-= Linee guida per l'utilizzo dei ruoli standard VSC
+= Linee guida per l'utilizzo dei ruoli standard degli strumenti ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,28 +13,28 @@ summary: Quando si lavora con i tool ONTAP® standard per i ruoli di VMware vSph
 [role="lead"]
 Quando si lavora con i tool ONTAP® standard per i ruoli di VMware vSphere, è necessario seguire alcune linee guida.
 
-Non modificare direttamente i ruoli standard. In tal caso, VSC sovrascriverà le modifiche ogni volta che si aggiorna VSC. Il programma di installazione aggiorna le definizioni dei ruoli standard ogni volta che si aggiorna VSC. In questo modo si garantisce che i ruoli siano aggiornati per la versione di VSC e per tutte le versioni supportate di vCenter Server.
+Non modificare direttamente i ruoli standard. In tal caso, gli strumenti di ONTAP sovrascriveranno le modifiche ogni volta che si esegue l'aggiornamento degli strumenti di ONTAP. Il programma di installazione aggiorna le definizioni dei ruoli standard ogni volta che si aggiornano gli strumenti ONTAP. In questo modo si garantisce che i ruoli siano aggiornati per la versione degli strumenti ONTAP e per tutte le versioni supportate di vCenter Server.
 
-Tuttavia, è possibile utilizzare i ruoli standard per creare ruoli personalizzati in base all'ambiente. A tale scopo, è necessario copiare il ruolo standard VSC e quindi modificare il ruolo copiato. Creando un nuovo ruolo, è possibile mantenere questo ruolo anche quando si riavvia o si aggiorna il servizio VSC Windows.
+Tuttavia, è possibile utilizzare i ruoli standard per creare ruoli personalizzati in base all'ambiente. A tale scopo, è necessario copiare il ruolo standard degli strumenti ONTAP e quindi modificare il ruolo copiato. Creando un nuovo ruolo, è possibile mantenere questo ruolo anche quando si riavvia o si aggiorna il servizio Windows di ONTAP Tools.
 
-Di seguito sono riportati alcuni dei modi in cui è possibile utilizzare i ruoli standard di VSC:
+Di seguito sono riportati alcuni dei modi in cui è possibile utilizzare i ruoli standard degli strumenti ONTAP:
 
-* Utilizzare i ruoli VSC standard per tutte le attività VSC.
+* Utilizzare i ruoli standard degli strumenti ONTAP per tutte le attività degli strumenti ONTAP.
 +
-In questo scenario, i ruoli standard forniscono tutti i privilegi di cui un utente ha bisogno per eseguire le attività VSC.
+In questo scenario, i ruoli standard forniscono tutti i privilegi di cui un utente ha bisogno per eseguire le attività degli strumenti ONTAP.
 
 * Combina i ruoli per espandere le attività che un utente può eseguire.
 +
-Se i ruoli VSC standard forniscono una granularità eccessiva per l'ambiente, è possibile espandere i ruoli creando gruppi di livello superiore che contengono più ruoli.
+Se i ruoli standard degli strumenti ONTAP forniscono una granularità eccessiva per l'ambiente, è possibile espandere i ruoli creando gruppi di livello superiore che contengono più ruoli.
 
 +
-Se un utente deve eseguire altre attività non VSC che richiedono ulteriori privilegi nativi di vCenter Server, è possibile creare un ruolo che fornisca tali privilegi e aggiungerlo anche al gruppo.
+Se un utente deve eseguire altre attività di strumenti non ONTAP che richiedono ulteriori privilegi nativi di vCenter Server, è possibile creare un ruolo che fornisca tali privilegi e aggiungerlo anche al gruppo.
 
 * Crea ruoli più specifici.
 +
-Se l'azienda richiede l'implementazione di ruoli più restrittivi rispetto ai ruoli VSC standard, è possibile utilizzare i ruoli VSC per creare nuovi ruoli.
+Se l'azienda richiede l'implementazione di ruoli più restrittivi rispetto ai ruoli standard degli strumenti ONTAP, è possibile utilizzare i ruoli degli strumenti ONTAP per creare nuovi ruoli.
 
 +
-In questo caso, clonare i ruoli VSC necessari e modificare il ruolo clonato in modo che disponga solo dei privilegi richiesti dall'utente.
+In questo caso, clonare i ruoli degli strumenti ONTAP necessari e modificare il ruolo clonato in modo che disponga solo dei privilegi richiesti dall'utente.
 
 
