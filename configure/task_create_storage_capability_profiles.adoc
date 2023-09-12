@@ -2,7 +2,7 @@
 permalink: configure/task_create_storage_capability_profiles.html 
 sidebar: sidebar 
 keywords:  
-summary: È possibile utilizzare VSC per creare manualmente profili di capacità storage, generare automaticamente un profilo in base alle funzionalità di un datastore o modificare un profilo in base alle proprie esigenze. 
+summary: Puoi utilizzare i tool di ONTAP per creare manualmente profili di funzionalità dello storage, generare automaticamente un profilo in base alle funzionalità di un datastore o modificare un profilo per soddisfare i tuoi requisiti. 
 ---
 = Creazione di profili di funzionalità storage
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: È possibile utilizzare VSC per creare manualmente profili di capacità
 
 
 [role="lead"]
-È possibile utilizzare VSC per creare manualmente profili di capacità storage, generare automaticamente un profilo in base alle funzionalità di un datastore o modificare un profilo in base alle proprie esigenze.
+Puoi utilizzare i tool di ONTAP per creare manualmente profili di funzionalità dello storage, generare automaticamente un profilo in base alle funzionalità di un datastore o modificare un profilo per soddisfare i tuoi requisiti.
 
 *Cosa ti serve*
 
@@ -69,9 +69,10 @@ La maggior parte dei campi di questa procedura guidata sono esplicativi. La segu
  a| 
 Identificazione di più profili
  a| 
-È possibile utilizzare il campo *Descrizione* della scheda Nome e Descrizione per descrivere lo scopo del profilo di capacità dello storage. Fornire una buona descrizione è utile perché è consigliabile impostare profili diversi in base alle applicazioni in uso.
+È possibile utilizzare il campo *Descrizione* nella scheda Nome e Descrizione per descrivere lo scopo del profilo SCP (Storage Capability Profile). Fornire una buona descrizione è utile perché è consigliabile impostare profili diversi in base alle applicazioni in uso.
 
-Ad esempio, un'applicazione business-critical richiede un profilo con funzionalità che supportino performance più elevate, come ad esempio una piattaforma AFF. Un datastore utilizzato per il test o la formazione potrebbe utilizzare un profilo con una piattaforma FAS dalle performance inferiori e consentire tutte le funzionalità di efficienza dello storage e il tiering per controllare i costi.
+Ad esempio, un'applicazione business-critical richiede un profilo con funzionalità che supportano performance più elevate, come le piattaforme AFF e ASA. Un datastore utilizzato per il test o il training potrebbe utilizzare un profilo con una piattaforma ibrida Flash Array a performance inferiori e consentire a tutte le funzionalità di efficienza dello storage e il tiering di controllare i costi.
+La combinazione di tipo di piattaforma e flag asimmetrico determina il tipo di SCP. Ad esempio: Platinum_ASA_A, Platinum_AFF_A, Platinum_AFF_C.
 
 Se è stata attivata la modalità "`Linked`" per i server vCenter, è necessario selezionare il server vCenter per cui si sta creando il profilo di capacità storage.
 
@@ -80,7 +81,7 @@ Se è stata attivata la modalità "`Linked`" per i server vCenter, è necessario
  a| 
 Piattaforma
  a| 
-È possibile selezionare il sistema di storage per il tipo di piattaforma AFF o FAS. Le opzioni nelle schermate successive vengono aggiornate in base alla selezione del tipo di sistema di storage.
+Puoi creare un profilo di funzionalità dello storage con tipi di piattaforma: Performance, capacità, Flash Array ibrido e una nuova funzionalità dello storage asimmetrica. Le opzioni nelle schermate successive vengono aggiornate in base alla selezione del tipo di sistema di storage.
 
 
 
@@ -118,13 +119,17 @@ Attributi dello storage
  a| 
 Gli attributi di storage che è possibile attivare in questa scheda dipendono dal tipo di storage selezionato nella scheda Personality.
 
-** Se si seleziona lo storage FAS, è possibile configurare la riserva di spazio (spessa o sottile), abilitare la deduplica, la compressione e la crittografia.
+** Se selezioni lo storage ibrido Flash Array, puoi configurare la riserva di spazio (thick o thin) e abilitare la deduplica, la compressione e la crittografia.
 +
-L'attributo tiering è disattivato perché questo attributo non è applicabile allo storage FAS.
+L'attributo di tiering è disattivato perché questo attributo non è applicabile allo storage ibrido Flash Array.
 
 ** Se si seleziona lo storage AFF, è possibile attivare la crittografia e il tiering.
 +
 Deduplica e compressione sono attivate per impostazione predefinita per lo storage AFF e non possono essere disattivate.
+
+** Se scegli lo storage ASA, puoi abilitare crittografia e tiering.
++
+La deduplica e la compressione sono abilitate per impostazione predefinita per lo storage ASA e non possono essere disabilitate.
 
 +
 L'attributo tiering consente l'utilizzo di volumi che fanno parte di un aggregato abilitato a FabricPool (supportato dal provider VASA per sistemi AFF con ONTAP 9.4 e versioni successive). È possibile configurare uno dei seguenti criteri per l'attributo tiering:

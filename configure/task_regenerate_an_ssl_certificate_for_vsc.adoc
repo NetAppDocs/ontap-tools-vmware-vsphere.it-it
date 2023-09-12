@@ -23,6 +23,6 @@ https://kb.netapp.com/advice_and_troubleshooting/data_storage_software/vsc_and_v
 
 . Accedere alla console di manutenzione.
 . Invio `1` Per accedere al menu Configurazione applicazione.
-. Nel menu Application Configuration (Configurazione applicazione), immettere `3` Per arrestare il servizio VSC.
+. Nel menu Application Configuration (Configurazione applicazione), immettere `3` Per arrestare il servizio ONTAP Tools.
 . Invio `7` Per rigenerare il certificato SSL.
 

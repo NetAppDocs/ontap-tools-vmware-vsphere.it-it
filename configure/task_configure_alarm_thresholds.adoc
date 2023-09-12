@@ -2,7 +2,7 @@
 permalink: configure/task_configure_alarm_thresholds.html 
 sidebar: sidebar 
 keywords:  
-summary: È possibile utilizzare VSC per impostare gli allarmi per notificare quando le soglie di volume e le soglie aggregate raggiungono i limiti impostati. 
+summary: 'È possibile utilizzare gli strumenti di ONTAP per impostare gli allarmi per avvisare l"utente quando le soglie di volume e le soglie di aggregazione raggiungono i limiti impostati.' 
 ---
 = Configurare le soglie di allarme
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: È possibile utilizzare VSC per impostare gli allarmi per notificare qu
 
 
 [role="lead"]
-È possibile utilizzare VSC per impostare gli allarmi per notificare quando le soglie di volume e le soglie aggregate raggiungono i limiti impostati.
+È possibile utilizzare gli strumenti di ONTAP per impostare gli allarmi per avvisare l'utente quando le soglie di volume e le soglie di aggregazione raggiungono i limiti impostati.
 
 *Fasi*
 

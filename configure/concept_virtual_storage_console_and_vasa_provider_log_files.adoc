@@ -15,7 +15,8 @@ summary: È possibile controllare i file di log nella directory /opt/netapp/vscs
 
 I seguenti tre file di log possono essere utili per identificare i problemi:
 
-* 'cxf.log', contenente informazioni sul traffico API in entrata e in uscita dal provider VASA *'kaminoPrefs.xml', contenente informazioni sulle impostazioni VSC
+* "cxf.log", contenente informazioni sul traffico API in entrata e in uscita dal provider VASA
+*'kaminoPrefs.xml', contenente informazioni sulle impostazioni degli strumenti ONTAP
 * 'Vvolvp.log', contenente tutte le informazioni di log relative al provider VASA
 
 
@@ -29,7 +30,7 @@ Il menu di manutenzione degli strumenti ONTAP per VMware vSphere consente di imp
 
 Quando si impostano i livelli di log, vengono aggiornati i seguenti file:
 
-* Server VSC: 'kamino.log' e 'vvolvp.log'
+* ONTAP tools server: 'kamino.log' e 'vvolvp.log'
 * Server VASA Provider: 'Vvolvp.log', 'error.log' e 'netapp.log'
 
 

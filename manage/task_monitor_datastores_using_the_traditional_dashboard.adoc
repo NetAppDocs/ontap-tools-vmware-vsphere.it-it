@@ -35,7 +35,7 @@ La dashboard tradizionale degli strumenti ONTAP consente di visualizzare gli arc
 Il portlet Datastores fornisce i seguenti dettagli:
 
 +
-** Il numero di datastore tradizionali e le relative metriche di performance gestite da VSC nell'istanza di vCenter Server
+** Il numero di datastore tradizionali e le relative metriche di performance gestiti dagli strumenti ONTAP nella tua istanza di vCenter Server
 ** I primi cinque datastore in base all'utilizzo delle risorse e ai parametri delle performance che è possibile modificare, se necessario, è possibile modificare l'elenco dei datastore in base allo spazio utilizzato, agli IOPS o alla latenza e nell'ordine richiesto.
 
 

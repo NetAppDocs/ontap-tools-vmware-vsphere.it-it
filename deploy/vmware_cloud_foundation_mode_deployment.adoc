@@ -15,7 +15,10 @@ I tool ONTAP per VMware vSphere possono essere implementati in un ambiente VMwar
 
 La modalità VCF consente di creare container per lo storage senza la necessità di un vCenter Server. Il provider VASA viene attivato per impostazione predefinita dopo l'implementazione degli strumenti ONTAP in modalità VCF. Una volta completata l'implementazione, è possibile aggiungere sistemi storage e creare container utilizzando le API REST. Nel seguente articolo viene descritta la procedura per aggiungere storage agli strumenti ONTAP quando VCF è attivato. https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["Aggiungere memoria agli strumenti ONTAP da Swagger-UI"].
 
-Viene introdotta una nuova API per generare il _appliance-api-token_ che autentica le chiamate API. Alcune delle API esistenti vengono modificate per includere l'intestazione _appliance-api-token_. Con la release 9.12 di ONTAP Tools, swagger non supporta le API 1.0. I puntatori che in precedenza erano su 1.0 sono stati spostati in 2.0 o 3.0 API.
+Viene introdotta una nuova API per generare il _appliance-api-token_ che autentica le chiamate API. Alcune delle API esistenti vengono modificate per includere l'intestazione _appliance-api-token_. A partire dalla versione 9,12 degli strumenti ONTAP, swagger non supporta le API 1,0. I puntatori che in precedenza erano su 1.0 sono stati spostati in 2.0 o 3.0 API.
+
+
+NOTE: Dai tool ONTAP per VMware vSphere 9,13-02, le API del profilo di funzionalità dello storage 2,0 non sono più disponibili.
 
 Le API disponibili per la modalità di implementazione VCF sono:
 
@@ -143,13 +146,11 @@ storage/volumi
 Durante l'esecuzione dell'API di creazione dei container, è possibile aggiungere volumi esistenti al container. Tuttavia, è necessario assicurarsi che i valori di compressione e deduplica dei volumi esistenti corrispondano alle funzionalità di storage del container. La creazione della macchina virtuale non riesce quando i valori non corrispondono. La seguente tabella fornisce dettagli sui valori che i volumi esistenti devono avere per i profili di funzionalità dello storage corrispondenti.
 
 |===
-
-
 | *Profilo capacità storage container* | *Deduplica* | *Compressione* 
 
 
  a| 
-Platinum
+Platinum_AFF_A
  a| 
 Entrambi
  a| 
@@ -158,7 +159,7 @@ Entrambi
 
 
  a| 
-AFF_thick
+Platinum_AFF_C
  a| 
 Entrambi
  a| 
@@ -167,7 +168,7 @@ Entrambi
 
 
  a| 
-AFF_Default (AFF_Default)
+Platinum_ASA_A.
  a| 
 Entrambi
  a| 
@@ -176,7 +177,7 @@ Entrambi
 
 
  a| 
-AFF_Tiering
+AFF_NVME_AFF_A
  a| 
 Entrambi
  a| 
@@ -185,7 +186,7 @@ Entrambi
 
 
  a| 
-AFF_Encrypted
+AFF_NVME_AFF_C
  a| 
 Entrambi
  a| 
@@ -194,7 +195,7 @@ Entrambi
 
 
  a| 
-AFF_Encrypted_Tiering
+AFF_NVME_ASA_A.
  a| 
 Entrambi
  a| 
@@ -203,7 +204,7 @@ Entrambi
 
 
  a| 
-AFF_Encrypted_Min50
+AFF_THICK_AFF_A
  a| 
 Entrambi
  a| 
@@ -212,7 +213,25 @@ Entrambi
 
 
  a| 
-FAS_Default
+AFF_THICK_AFF_C
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_THICK_ASA_A
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_DEFAULT_AFF_A
  a| 
 Sfondo
  a| 
@@ -221,11 +240,128 @@ Nessuno
 
 
  a| 
-FAS_Max20
+AFF_DEFAULT_AFF_C
  a| 
 Sfondo
  a| 
 Nessuno
+
+
+
+ a| 
+AFF_DEFAULT_ASA_A
+ a| 
+Sfondo
+ a| 
+Nessuno
+
+
+
+ a| 
+AFF_TIERING_AFF_A
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_TIERING_AFF_C
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_TIERING_ASA_A
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_CRITTOGRAFATO_AFF_A
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_CRITTOGRAFATO_AFF_C
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_CRITTOGRAFATO_ASA_A.
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_Encrypted_Tiering_AFF_A
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_Encrypted_Tiering_AFF_C
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_Encrypted_Tiering_ASA_A.
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_crittografato_Min50_AFF_A
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_crittografato_Min50_AFF_C
+ a| 
+Entrambi
+ a| 
+Entrambi
+
+
+
+ a| 
+AFF_crittografato_Min50_ASA_A.
+ a| 
+Entrambi
+ a| 
+Entrambi
 
 
 

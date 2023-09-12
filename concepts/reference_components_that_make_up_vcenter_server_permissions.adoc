@@ -82,7 +82,7 @@ NetApp Virtual Storage Console > Gestione basata su policy > Gestione o privileg
  a| 
 Amministratore di VSC
  a| 
-Attività del provider VSC e VASA correlate ai profili di capacità dello storage e alle impostazioni delle soglie.
+Tool ONTAP e task di provider VASA correlati ai profili di funzionalità dello storage e alle impostazioni delle soglie.
 
 |===
 

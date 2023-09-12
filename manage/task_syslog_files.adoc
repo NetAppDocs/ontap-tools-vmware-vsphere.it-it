@@ -15,14 +15,15 @@ Utilizzare syslog per inviare i log di sistema al server di logging centralizzat
 
 *A proposito di questa attività*
 
-I tool ONTAP per VMware vSphere 9.12 rimuovono le precedenti API syslog 2.0 e contengono nuove API relative a syslog 3.0 che supportano l'autenticazione reciproca. Per configurare syslog, attenersi alla procedura riportata di seguito.
+Dagli strumenti ONTAP per VMware vSphere 9,12 in poi, gli strumenti ONTAP rimuovono le API syslog 2,0 precedenti. Contengono nuove API correlate al syslog 3,0 che supportano l'autenticazione reciproca.
+Per configurare syslog, attenersi alla procedura riportata di seguito.
 
 *Fasi*
 
 . Eseguire _POST /2.0/Security/user/login per ottenere_ un ID di sessione.
 . Eseguire _POST /3.0/appliance-management/logging-client-certificate_ superando il sessionid ricevuto nella risposta precedente.
 +
-In questo modo vengono generati i certificati per il server VP e per il server VSC.
+In questo modo vengono generati certificati per il server VP e per il server degli strumenti ONTAP.
 
 . Copiare entrambi i certificati sul server syslog e renderli attendibili sul server syslog.
 +

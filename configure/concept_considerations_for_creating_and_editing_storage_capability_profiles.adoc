@@ -18,9 +18,9 @@ Di seguito sono riportate le considerazioni per la creazione e la modifica dei p
 +
 Questa funzionalità offre una maggiore flessibilità nell'assegnazione di diverse metriche QoS per diversi VMDK della stessa macchina virtuale che viene fornita su un datastore virtuale.
 
-* È possibile configurare i profili delle funzionalità di storage per gli archivi dati FAS e AFF.
+* È possibile configurare profili di funzionalità dello storage per i datastore flash array ibridi, ASA e AFF.
 +
-Per i sistemi FAS AFF, è possibile configurare la riserva di spazio in modo che sia spessa o sottile.
+Per i sistemi ibridi Flash Array, ASA e AFF, puoi configurare la riserva di spazio come thick o thin.
 
 * È possibile utilizzare i profili di capacità dello storage per fornire la crittografia per i datastore.
 * Non è possibile modificare i profili di capacità dello storage esistenti (creati prima della versione 7.2) dopo l'aggiornamento da una versione precedente dei tool ONTAP per VMware vSphere all'ultima versione dei tool ONTAP.

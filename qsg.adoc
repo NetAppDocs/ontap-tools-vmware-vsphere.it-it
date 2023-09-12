@@ -19,7 +19,7 @@ summary: 'Fornisce istruzioni per l"implementazione e l"inizializzazione dei too
 
 
 [role="lead"]
-ONTAP Tools per VMware vSphere è un plug-in vCenter Server singolo che include VSC, provider VASA e estensioni SRA (Storage Replication Adapter). VSC è consigliato per tutti gli ambienti ONTAP vSphere in quanto configura le impostazioni degli host ESXi e fornisce lo storage ONTAP utilizzando le Best practice. Il provider VASA è necessario per il supporto dei volumi virtuali (vVol) e SRA funziona insieme a VMware Site Recovery Manager.
+I tool ONTAP per VMware vSphere sono un singolo plug-in vCenter Server che include i tool ONTAP, il provider VASA e le estensioni SRA (Storage Replication Adapter). I tool ONTAP sono consigliati per tutti gli ambienti ONTAP vSphere quando configura le impostazioni dell'host ESXi ed esegue il provisioning dello storage ONTAP utilizzando Best practice. Il provider VASA è necessario per il supporto dei volumi virtuali (vVol) e SRA funziona insieme a VMware Site Recovery Manager.
 
 
 

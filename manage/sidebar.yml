@@ -32,7 +32,7 @@ entries:
   entries:
   - title: Panoramica della console di manutenzione degli strumenti ONTAP
     url: "/manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html"
-  - title: File di log del provider VSC e VASA
+  - title: Strumenti ONTAP e file di log del provider VASA
     url: "/manage/concept_virtual_storage_console_and_vasa_provider_log_files.html"
   - title: Modificare la password dell'amministratore
     url: "/manage/task_change_the_administrative_password.html"

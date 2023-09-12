@@ -104,7 +104,7 @@ Questa sezione consente di selezionare se si desidera attivare o disattivare la 
 
 *Nota:* durante la creazione di volumi FlexVol in ONTAP, è necessario assicurarsi di crearli con gli attributi che si desidera selezionare nel profilo delle funzionalità di storage. Sia i volumi FlexVol di protezione dei dati che di lettura/scrittura devono avere attributi simili.
 
-Una volta creati i volumi FlexVol e inizializzato SnapMirror in ONTAP, è necessario eseguire una riscoperta dello storage in VSC per visualizzare i nuovi volumi.
+Una volta creati i volumi di FlexVol e inizializzati SnapMirror in ONTAP, è necessario eseguire un nuovo rilevamento dello storage negli strumenti di ONTAP per vedere i nuovi volumi.
 
 
 

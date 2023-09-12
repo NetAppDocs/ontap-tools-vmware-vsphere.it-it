@@ -2,7 +2,7 @@
 permalink: configure/task_enable_datastore_mounting_across_different_subnets.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Se si utilizza iSCSI o NFS e la subnet è diversa tra gli host ESXi e il sistema di storage, è necessario modificare i tool ONTAP per i file delle preferenze di VMware vSphere. Se non si modifica il file delle preferenze, il provisioning del datastore non viene eseguito perché la Virtual Storage Console (VSC) non è in grado di montare il datastore.' 
+summary: Se si utilizza iSCSI o NFS e la subnet è diversa tra gli host ESXi e il sistema di storage, è necessario modificare i tool ONTAP per i file delle preferenze di VMware vSphere. Se non si modifica il file delle preferenze, il provisioning del datastore non riesce perché gli strumenti ONTAP non possono montare il datastore. 
 ---
 = Attiva il montaggio del datastore su diverse subnet
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Se si utilizza iSCSI o NFS e la subnet è diversa tra gli host ESXi e 
 
 
 [role="lead"]
-Se si utilizza iSCSI o NFS e la subnet è diversa tra gli host ESXi e il sistema di storage, è necessario modificare i tool ONTAP per i file delle preferenze di VMware vSphere. Se non si modifica il file delle preferenze, il provisioning del datastore non viene eseguito perché la Virtual Storage Console (VSC) non può montare il datastore.
+Se si utilizza iSCSI o NFS e la subnet è diversa tra gli host ESXi e il sistema di storage, è necessario modificare i tool ONTAP per i file delle preferenze di VMware vSphere. Se non si modifica il file delle preferenze, il provisioning del datastore non riesce perché gli strumenti ONTAP non possono montare il datastore.
 
 *A proposito di questa attività*
 

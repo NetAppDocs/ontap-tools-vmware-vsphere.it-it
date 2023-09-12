@@ -2,7 +2,7 @@
 permalink: manage/concept_virtual_storage_console_reports.html 
 sidebar: sidebar 
 keywords:  
-summary: 'È possibile utilizzare il menu Report della console degli strumenti ONTAP per visualizzare i report predefiniti per tutti gli archivi dati gestiti da un"istanza VSC selezionata in un determinato server vCenter. È possibile eseguire operazioni come l"ordinamento e l"esportazione dei report.' 
+summary: 'È possibile utilizzare il menu Report della console degli strumenti di ONTAP per visualizzare i report predefiniti per tutti gli archivi dati gestiti da un"istanza selezionata di strumenti ONTAP in un determinato vCenter Server. È possibile eseguire operazioni come l"ordinamento e l"esportazione dei report.' 
 ---
 = Panoramica dei report datastore e vVol di ONTAP Tools
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: 'È possibile utilizzare il menu Report della console degli strumenti O
 
 
 [role="lead"]
-È possibile utilizzare il menu *Report* della console degli strumenti di ONTAP per visualizzare i report predefiniti per tutti gli archivi dati gestiti da un'istanza VSC selezionata in un determinato server vCenter. È possibile eseguire operazioni come l'ordinamento e l'esportazione dei report.
+È possibile utilizzare il menu *rapporti* della console degli strumenti di ONTAP per visualizzare i report predefiniti per tutti gli archivi dati gestiti da un'istanza di strumenti ONTAP selezionata in un determinato vCenter Server. È possibile eseguire operazioni come l'ordinamento e l'esportazione dei report.
 
 I report visualizzano informazioni dettagliate su datastore e macchine virtuali, che consentono di esaminare e identificare potenziali problemi con datastore e macchine virtuali in vCenter Server
 
 È possibile visualizzare, ordinare ed esportare i report.
 
-Virtual Storage Console (VSC) fornisce i seguenti report predefiniti:
+I tool ONTAP offrono i seguenti report predefiniti:
 
 * Report datastore
 * Report macchine virtuali
@@ -73,7 +73,7 @@ Il report visualizza le informazioni di latenza per l'archivio dati.
 
 *Report macchina virtuale*
 
-Il menu Virtual Machine Report (Report macchina virtuale) fornisce le metriche delle performance per tutte le macchine virtuali che utilizzano datastore forniti da VSC per un vCenter Server selezionato. Le metriche delle macchine virtuali visualizzate nei report delle macchine virtuali sono dati storici che vengono raccolti ogni 30 minuti per le macchine virtuali su datastore tradizionali. I termini "ultimo aggiornamento" e "successivo aggiornamento" vengono aggiunti alla tabella per fornire dettagli su quando i dati sono stati raccolti e quando sarà la successiva raccolta di dati.
+Il menu Report macchine virtuali fornisce le metriche di performance per tutte le macchine virtuali che utilizzano datastore forniti dagli strumenti ONTAP per un vCenter Server selezionato. Le metriche delle macchine virtuali visualizzate nei report delle macchine virtuali sono dati storici che vengono raccolti ogni 30 minuti per le macchine virtuali su datastore tradizionali. I termini "ultimo aggiornamento" e "successivo aggiornamento" vengono aggiunti alla tabella per fornire dettagli su quando i dati sono stati raccolti e quando sarà la successiva raccolta di dati.
 
 * Nome della macchina virtuale
 * Nome del datastore
@@ -179,7 +179,7 @@ Lo stato del file di registro disponibile è:
 
 I tool ONTAP per VMware vSphere generano la registrazione dell'audit per:
 
-* Servizio VSC
+* Servizio ONTAP Tools
 +
 Posizione del log di audit per vscservice: _/opt/netapp/vscservice/vsc-audit.log_. È possibile modificare i seguenti parametri del report sull'integrità del log nel file _/opt/netapp/vscserver/etc/log4j2.properties_:
 

@@ -21,7 +21,7 @@ Quando si aggiunge un volume FlexVol, è anche possibile modificare il profilo d
 ====
 * Durante l'espansione di un datastore vVols con funzionalità di replica, non è possibile creare nuovi volumi FlexVol, ma è possibile selezionare solo volumi FlexVol preconfigurati dall'elenco esistente.
 * Quando si esegue la clonazione di una macchina virtuale protetta implementata nel datastore con la replica di vVol a causa di uno spazio insufficiente, è necessario aumentare le dimensioni del volume FlexVol.
-* Quando un datastore vVol viene creato su un cluster AFF, non è possibile espandere il datastore con un altro volume FlexVol che dispone di un profilo di funzionalità storage di generazione automatica.
+* Quando si crea un datastore vVol in un cluster AFF o ASA, non è possibile espandere il datastore con un altro volume FlexVol che ha un profilo di funzionalità storage generato automaticamente.
 +
 ** È possibile espandere il datastore vVols con volumi FlexVol che dispongono di profili di funzionalità storage pre-creati.
 

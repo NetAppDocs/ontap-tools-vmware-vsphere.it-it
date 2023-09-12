@@ -30,7 +30,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 * È necessario disconnettersi e chiudere tutte le sessioni del browser del client vSphere ed eliminare la cache del browser per evitare problemi di cache del browser durante l'implementazione degli strumenti ONTAP.
 * È necessario aver attivato il protocollo ICMP (Internet Control message Protocol).
 +
-Se ICMP è disattivato, la configurazione iniziale degli strumenti ONTAP non riesce e VSC non può avviare i servizi VSC e VASA dopo l'implementazione. Dopo l'implementazione, è necessario attivare manualmente i servizi VSC e VASA Provider.
+Se ICMP è disattivato, la configurazione iniziale degli strumenti ONTAP non riesce e gli strumenti ONTAP non possono avviare gli strumenti ONTAP e i servizi del provider VASA dopo la distribuzione. Devi abilitare manualmente i tool ONTAP e i servizi del provider VASA dopo l'implementazione.
 
 
 
@@ -81,7 +81,7 @@ Mentre si attende il completamento della distribuzione, è possibile visualizzar
 
 . Accendere la macchina virtuale ONTAP Tools, quindi aprire una console della macchina virtuale che esegue gli strumenti ONTAP.
 . Verificare che gli strumenti ONTAP siano in esecuzione al termine dell'implementazione.
-. Se gli strumenti ONTAP non sono registrati con alcun server vCenter, utilizzare `\https://appliance_ip:8143/Register.html` Per registrare l'istanza di VSC. Register.html reindirizza l'utente alla pagina swagger. A partire dalla versione 9.12 degli strumenti ONTAP, la registrazione degli strumenti ONTAP con vCenter avviene dalla pagina swagger.
+. Se gli strumenti ONTAP non sono registrati con alcun server vCenter, utilizzare `\https://appliance_ip:8143/Register.html` Per registrare l'istanza di ONTAP Tools. Register.html reindirizza l'utente alla pagina swagger. A partire dalla versione 9.12 degli strumenti ONTAP, la registrazione degli strumenti ONTAP con vCenter avviene dalla pagina swagger.
 +
 USA l'API POST per registrare gli strumenti ONTAP con vCenter a partire dalla versione 9,12.
 

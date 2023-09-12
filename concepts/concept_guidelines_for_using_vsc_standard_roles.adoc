@@ -11,7 +11,7 @@ summary: Quando si lavora con i tool ONTAP® standard per i ruoli di VMware vSph
 
 
 [role="lead"]
-Quando si lavora con i tool ONTAP® standard per i ruoli di VMware vSphere, è necessario seguire alcune linee guida.
+Quando si lavora con gli strumenti ONTAP standard per i ruoli di VMware vSphere, è necessario seguire alcune linee guida.
 
 Non modificare direttamente i ruoli standard. In tal caso, gli strumenti di ONTAP sovrascriveranno le modifiche ogni volta che si esegue l'aggiornamento degli strumenti di ONTAP. Il programma di installazione aggiorna le definizioni dei ruoli standard ogni volta che si aggiornano gli strumenti ONTAP. In questo modo si garantisce che i ruoli siano aggiornati per la versione degli strumenti ONTAP e per tutte le versioni supportate di vCenter Server.
 

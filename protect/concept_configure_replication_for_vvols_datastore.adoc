@@ -13,6 +13,9 @@ summary: 'È possibile configurare la replica per il datastore vVol utilizzando 
 [role="lead"]
 È possibile configurare la replica per il datastore vVol utilizzando gli strumenti di ONTAP. Lo scopo principale della replica di vVol è proteggere le macchine virtuali critiche durante il disaster recovery utilizzando VMware Site Recovery Manager (SRM).
 
+
+NOTE: I flussi di lavoro di Site Recovery Manager (SRM) non riescono in vCenter 8,0 con un messaggio di errore. La replica Vvol funziona come previsto nella release di vCenter 7.0u3.
+
 Tuttavia, per configurare la replica di vVol per gli strumenti ONTAP, è necessario attivare la funzionalità del provider VASA e la replica di vVol. Il provider VASA è attivato per impostazione predefinita negli strumenti ONTAP. La replica basata su array viene eseguita a livello di FlexVol. Ogni datastore vVol viene mappato a un container di storage costituito da uno o più volumi FlexVol. I volumi FlexVol devono essere preconfigurati con SnapMirror di ONTAP.
 
 
