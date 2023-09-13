@@ -2107,7 +2107,6 @@ La combinazione di tipo di piattaforma e flag asimmetrico determina il tipo di S
   <block id="e35bb7c62e5e99a4dd4c45dc7401d654" category="paragraph">Le immagini ISO degli script del sistema operativo guest sono montate su strumenti per il server VMware vSphere. Per utilizzare gli script del sistema operativo guest per impostare i timeout dello storage per le macchine virtuali, è necessario montare gli script dal client vSphere.</block>
   <block id="7a7c304e2893cb9575f4c95e13bd9557" category="paragraph">È necessario installare lo script dalla copia dell'istanza degli strumenti ONTAP registrata in vCenter Server (ELM) che gestisce la macchina virtuale. Se l'ambiente include più vCenter Server, selezionare l'istanza che contiene la macchina virtuale per cui si desidera impostare i valori di timeout dello storage.</block>
   <block id="955b51e13e470f907369543549a3a405" category="inline-link">Note sulla versione dei tool ONTAP per VMware vSphere 9,13</block>
-  <block id="5e6870560e6c8c9613501cc132ae6c39" category="paragraph">Per ulteriori informazioni, consultare<block ref="a04b4fbd78e27d3612eea8f3ed389176" category="inline-link-rx"></block>.</block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open source</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">I file di avviso forniscono informazioni sul copyright e sulle licenze di terze parti utilizzate nel software NetApp.</block>
   <block id="b1659ef2c01d8401d9bc67bd39f2ad1d" category="inline-link">Avviso relativo ai tool ONTAP per VMware vSphere 9,13</block>
@@ -2131,4 +2130,5 @@ Esegui i seguenti comandi sull'interfaccia a riga di comando di ONTAP con access
   <block id="5693a336860dc6b738a1f289ec743b63" category="sidebar">Tool ONTAP per documenti VMware vSphere 9,13</block>
   <block id="48c1a759d48445c3852e48203f0d0aae" category="sidebar">Strumenti ONTAP e file di log del provider VASA</block>
   <block id="b1ea6eb22e631a7bdaef7c4f2b598432" category="sidebar">Rigenerare un certificato SSL per gli strumenti ONTAP</block>
+  <block id="ccfe3ded2b336756061426e3beb4ea84" category="paragraph">Per ulteriori informazioni, consultare<block ref="217abffc61852464bf1ed6a3818c434b" category="inline-link-rx"></block>.</block>
 </blocks>
