@@ -81,7 +81,20 @@ Se è stata attivata la modalità "`Linked`" per i server vCenter, è necessario
  a| 
 Piattaforma
  a| 
-Puoi creare un profilo di funzionalità dello storage con tipi di piattaforma: Performance, capacità, Flash Array ibrido e una nuova funzionalità dello storage asimmetrica. Le opzioni nelle schermate successive vengono aggiornate in base alla selezione del tipo di sistema di storage.
+A partire dai tool ONTAP per VMware vSphere 9,13, puoi creare profili di funzionalità dello storage utilizzando una combinazione dei seguenti elementi:
+
+.. Tipo di piattaforma: Performance, capacità e Flash Array ibridi
+.. Indicatore asimmetrico - indica lo stato ottimizzato per SAN (All SAN Array) del sistema storage.
++
+*** Quando il tipo di piattaforma è *Performance* e il flag asimmetrico è *TRUE*, prende in considerazione il sistema di storage di tipo AFF-A.
+*** Quando il tipo di piattaforma è *Performance* e l'indicatore asimmetrico è *False*, considera il sistema di archiviazione di tipo ASA-A.
+*** Quando il tipo di piattaforma è *Capacity* e il flag asimmetrico è *True*, prende in considerazione il sistema di storage di tipo AFF-C.
+*** Quando il tipo di piattaforma è *Flash Hybrid array* e il flag asimmetrico è NA, prende in considerazione il sistema storage di tipo FAS
+
+
+
+
+Le opzioni nelle schermate successive vengono aggiornate in base alla selezione del tipo di sistema di storage.
 
 
 

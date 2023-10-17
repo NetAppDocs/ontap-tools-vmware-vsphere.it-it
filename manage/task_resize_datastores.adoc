@@ -26,7 +26,7 @@ NOTE: Se si utilizzano piattaforme di storage di tipo All SAN Array (ASA) con ON
 
 . Dalla home page del client vSphere, fare clic su *host e cluster*.
 . Nel riquadro di navigazione, selezionare il data center che contiene il datastore.
-. Fare clic con il pulsante destro del mouse sull'archivio dati e selezionare *NetApp ONTAP Tools* > *Assegna QoS*.
+. Fare clic con il pulsante destro del mouse sull'archivio dati e selezionare *NetApp ONTAP tools* > *Ridimensiona archivio dati non vVol*.
 . Nella finestra di dialogo Ridimensiona, specificare una nuova dimensione per l'archivio dati, quindi fare clic su *OK*.
 +
 È possibile eseguire l'opzione *RISCOPRI TUTTO* nel menu Storage Systems (sistemi storage) per aggiornare manualmente l'elenco di storage in Storage Systems and Dashboard (sistemi storage e dashboard) o attendere il successivo aggiornamento pianificato.

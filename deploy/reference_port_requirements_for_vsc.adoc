@@ -44,6 +44,21 @@ A seconda di come sono state configurate le credenziali, VMware vCenter Server e
  a| 
 Gli strumenti ONTAP sono in ascolto per comunicazioni sicure su questa porta. La porta viene utilizzata nell'architettura di comunicazione client-server. Il client, che può essere qualsiasi client di automazione che utilizza l'API REST, avvia la connessione al server e gli endpoint si scambiano i dati. Questa porta è abilitata per i servizi di ONTAP Tools e per l'esportazione dei registri del server di ONTAP Tools. La pagina register.html è ospitata su questa porta. Il RESTO della swap è esposto su questa porta.
 
+
+
+ a| 
+8443
+ a| 
+Questa porta viene utilizzata per il servizio di plugin remoto.
+
+
+
+ a| 
+7
+ a| 
+Gli strumenti ONTAP inviano una richiesta di eco a ONTAP per verificare la raggiungibilità ed è necessaria solo quando si aggiunge storage
+il sistema e può essere disattivato in seguito.
+
 |===
 
 NOTE: Prima di implementare gli strumenti ONTAP, è necessario aver attivato il protocollo ICMP (Internet Control message Protocol).

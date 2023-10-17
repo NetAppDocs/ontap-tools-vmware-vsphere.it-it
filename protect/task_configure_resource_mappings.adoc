@@ -25,7 +25,7 @@ NOTE: In Site Recovery Manager (SRM), le risorse possono essere pool di risorse,
 . Accedere a vCenter Server e fare clic su *Site Recovery* > *Sites*.
 . Selezionare il sito protetto, quindi fare clic su *Gestisci*.
 . Nella scheda Manage (Gestisci), selezionare *Resource Mapping*.
-. Fare clic su image:../media/new_resource_mappings.gif[""] per creare una nuova mappatura delle risorse.
+. Fare clic su image:../media/new_resource_mappings.gif["icona del globo"] per creare una nuova mappatura delle risorse.
 +
 Viene visualizzata la procedura guidata Create Resource Mapping.
 
