@@ -39,9 +39,9 @@ NOTE: IL provider VASA non aggiunge il suffisso "`-mc`" ai nomi delle SVM sul si
 
 == Configurazioni MetroCluster e SRA
 
-Lo Storage Replication Adapter (SRA) supporta ambienti che utilizzano configurazioni MetroCluster (MCC) con protocollo FC.
+L'adattatore per la replica dello storage (SRA) supporta ambienti che utilizzano configurazioni MetroCluster (MCC) con protocollo NFS, iSCSI e FCP.
 
-Come prerequisito per la configurazione MCC e SRA, tutti i nomi delle Storage Virtual Machine (SVM) devono essere univoci sui cluster MCC. Se i nomi non sono univoci, causano conflitti e i flussi di lavoro SRA non riescono.
+Come prerequisito per la configurazione SRA MCC, tutti i nomi delle Storage Virtual Machine (SVM) devono essere univoci sui cluster MCC. Se i nomi non sono univoci, causano conflitti e i flussi di lavoro SRA non riescono.
 
 Azioni necessarie:
 
