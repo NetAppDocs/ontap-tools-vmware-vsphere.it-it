@@ -15,7 +15,7 @@ Se si utilizza Site Recovery Manager (SRM) basato su Windows per il disaster rec
 
 Le fasi della migrazione del disaster recovery sono:
 
-. Aggiorna l'appliance ONTAP alla versione più recente.
+. Aggiornare l'appliance ONTAP Tools esistente alla versione più recente.
 +
 link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["Effettua l'aggiornamento alla versione più recente dei tool ONTAP"]
 

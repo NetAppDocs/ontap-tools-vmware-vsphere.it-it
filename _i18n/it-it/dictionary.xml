@@ -65,7 +65,6 @@
   <block id="3d7fb394c85bb4d38079573b5a7dd241" category="paragraph">La sessione di accesso rimane valida solo fino alla mezzanotte del giorno successivo.</block>
   <block id="89d6409d2df201f4f1ab3e5173030ee0" category="list-text">Si accede nuovamente come utente di DIAG utilizzando SSH.</block>
   <block id="4839d2f25cc35b249d5db15efa1afd75" category="paragraph">*Fasi*</block>
-  <block id="ae8542fbf5a656049ee2f2fc888a8431" category="list-text">Dal server vCenter, aprire una console per il provider VASA.</block>
   <block id="8ad5a937567108f86af9e88f7518216d" category="list-text">Accedere come utente di manutenzione.</block>
   <block id="87c93b9816d806cccc58f0b610872eda" category="list-text">Invio<block ref="a87ff679a2f3e71d9181a67b7542122c" prefix=" " category="inline-code"></block> Per selezionare Support and Diagnostics (supporto e diagnostica).</block>
   <block id="4a046628c353b3aadc7da0fe8feb02e5" category="list-text">Invio<block ref="eccbc87e4b5ce2fe28308fd9f2a7baf3" prefix=" " category="inline-code"></block> Per selezionare Enable remote Diagnostics access (attiva accesso di diagnostica remota).</block>
@@ -243,16 +242,7 @@
   <block id="74aa15274c9a75ae1e9b01b9a4867fea" category="section-title">Snapshot delle macchine virtuali</block>
   <block id="49e93fd9a17de8559bffcb0218844f3a" category="paragraph">Attualmente sono supportate solo le istantanee delle macchine virtuali senza memoria. Se la macchina virtuale dispone di Snapshot con memoria, la macchina virtuale non viene presa in considerazione per la protezione.</block>
   <block id="dacf6492baba7d65ff424a82e4118683" category="paragraph">Inoltre, non è possibile proteggere macchine virtuali non protette che dispongono di memoria Snapshot. Per questa release, si prevede di eliminare lo snapshot di memoria prima di attivare la protezione per la macchina virtuale.</block>
-  <block id="5385433ee01cd2037e0f3275521224ae" category="summary">È possibile utilizzare i tool ONTAP® per VMware vSphere per impostare le credenziali predefinite per un sistema storage nel server vCenter.</block>
-  <block id="3cabeb9f2dfaeed94f3553f24bb6697f" category="doc">Impostare le credenziali predefinite per i sistemi storage</block>
-  <block id="c741ed49a5385413c6168a727f99799f" category="paragraph">È possibile utilizzare gli strumenti ONTAP per VMware vSphere per impostare le credenziali predefinite per un sistema storage nel server vCenter.</block>
-  <block id="79709e46ab199855d00cbacbb6cc6473" category="paragraph">È necessario selezionare il vCenter Server che si desidera utilizzare per creare le credenziali predefinite.</block>
-  <block id="975c4484ae2524f3de4c1fe48b561c9e" category="list-text">Nella pagina iniziale degli strumenti ONTAP, fare clic su *Impostazioni* &gt; *Impostazioni amministrative* &gt; *Configura credenziali predefinite per il sistema di storage*.</block>
-  <block id="4753a60fdd29d20db04cca9e9d56fba7" category="list-text">Nella finestra di dialogo Storage System Default Credentials (credenziali predefinite del sistema di storage), immettere il nome utente e la password per il sistema di storage.</block>
-  <block id="b241564d6daa7ecf800e2fce4f75c26d" category="paragraph">Le credenziali dello storage controller vengono assegnate in ONTAP in base alla coppia di nome utente e password. Le credenziali dello storage controller possono essere l'account amministratore o un account personalizzato che utilizza RBAC (role-based access control).</block>
   <block id="637136b177eed37009281c2b49416083" category="inline-link-macro">Configurare i ruoli e i privilegi degli utenti</block>
-  <block id="c38b8f955a1f067bf2f51d940354b04d" category="paragraph">Vedere <block ref="e3114922664a9d29184df9e8de358b9e" category="inline-link-macro-rx"></block>Nella sezione _Strumenti ONTAP per la documentazione di VMware vSphere_.</block>
-  <block id="5d647a0e64f2ce6656770c3697c2e747" category="list-text">Fare clic su *OK* per salvare le credenziali predefinite.</block>
   <block id="663286485b5e919a0aa500a3b041d3e1" category="summary">È possibile monitorare le performance e visualizzare i cinque principali datastore DI volumi virtuali VMware SAN e NAS nel server vCenter in base ai parametri selezionati utilizzando la dashboard vVol dei tool ONTAP.</block>
   <block id="1301eee3894cdde4884748d9472841bb" category="doc">Analizza i dati delle performance utilizzando la dashboard di vVols</block>
   <block id="84b47b7556a7d98b8ac00a64aec4edcc" category="paragraph">È possibile monitorare le performance e visualizzare i cinque principali datastore vVol (VMware Virtual Volumes) SAN e NAS nel server vCenter in base ai parametri selezionati utilizzando la dashboard vVol dei tool ONTAP.</block>
@@ -1059,7 +1049,6 @@
   <block id="6643b98ed9ea45720db80a09d25444cd" category="list-text">Eseguire<block ref="75c71bee480a21dd01b8096c75e044b3" prefix=" " category="inline-code"></block> script.</block>
   <block id="49d72ec77a1c9ef34ba00af4bc7e47a9" category="paragraph">Per Solaris 10, viene visualizzato un messaggio simile al seguente:</block>
   <block id="10b4996a7204aa24b697bff8cd333f39" category="list-text">Smontare l'immagine ISO.</block>
-  <block id="2384e9746fd49297b20eb475ef6c5bce" category="paragraph">Vedere <block ref="e3114922664a9d29184df9e8de358b9e" category="inline-link-macro-rx"></block>sezione.</block>
   <block id="cee064a38177c0438cb03601edf062b9" category="summary">È possibile configurare nuovi ruoli utente per la gestione dei sistemi storage utilizzando il file JSON fornito con gli strumenti ONTAP e Gestione di sistema di ONTAP.</block>
   <block id="6e511cfe87a95df884e3eeb9f86e7f6c" category="paragraph">*Cosa ti serve*</block>
   <block id="1242e163636ceb52703fad8214a2bedc" category="list-text">È necessario aver configurato lo storage ONTAP 9.8P1 o successivo.</block>
@@ -1808,7 +1797,6 @@
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">Concetti</block>
   <block id="bba5d660126dffb643c6c3cc6300704d" category="sidebar">Storage Replication Adapter per il disaster recovery</block>
   <block id="99da96b7c57595264a2d5f3ba294a0af" category="sidebar">Controllo degli accessi in base al ruolo</block>
-  <block id="96ab5f4eecc9217c7e8b30303647f507" category="sidebar">Panoramica del controllo degli accessi basato sui ruoli per gli strumenti ONTAP</block>
   <block id="f15e14b44728511393b49d485af9e88b" category="sidebar">Come configurare il controllo degli accessi basato sui ruoli per gli strumenti ONTAP</block>
   <block id="a7c1f19a0afcdde0b988ba73af98d366" category="sidebar">Configurare gli strumenti ONTAP</block>
   <block id="d323122d1d04a198d3dd6ef4bae01b87" category="sidebar">Configurare le impostazioni ESXi</block>
@@ -1901,7 +1889,6 @@
   <block id="f09ce17953135a26f2f12c89bb1b9a79" category="paragraph">Per accedere alla console di manutenzione, utilizzare la scheda *Riepilogo* degli strumenti ONTAP implementati. Quando si fa clic su  <block ref="80abd5c70dec820fc31b07b6e3d6acac" category="inline-image-macro-rx" type="image"></block>, viene avviata la console di manutenzione.</block>
   <block id="ad6409a6647b6007d0c59236c9a9526d" category="inline-image-macro">icona del globo</block>
   <block id="de0b37295bc569e05978d71253c5fc03" category="list-text">Fare clic su <block ref="10af7a3d6b71a29635365f6da600da8a" category="inline-image-macro-rx" type="image"></block> per creare una nuova mappatura di rete.</block>
-  <block id="a86a5be1650520ca8fdf9ff8bc76967f" category="list-text">Aggiorna l'appliance ONTAP alla versione più recente.</block>
   <block id="ceafa9243433e49b5a0576a4ed1cd4b5" category="list-text">Migrazione di Storage Replication Adapter basato su Windows a un SRA basato su appliance.</block>
   <block id="81f65208775e1359f20f81e36c085f41" category="list-text">Migrare i dati di Windows SRM all'appliance SRM.</block>
   <block id="008e64a5de1742c87435cc61c7288a46" category="image-alt">Nuovo utente e workflow utente esistente</block>
@@ -1927,9 +1914,6 @@ Con il privilegio *Visualizza*, è possibile accedere alla GUI degli strumenti d
   <block id="cd407a7dc68ec4931863b0a4b9511c12" category="summary">I tool ONTAP per VMware vSphere offrono la possibilità di utilizzare la funzionalità SRA insieme agli strumenti ONTAP per configurare il disaster recovery.</block>
   <block id="75d26898739bfbd118ceb40ee609588b" category="list-text">Accedere all'interfaccia di gestione dell'appliance SRM di VMware utilizzando l'URL:<block ref="65934cfc97d2d08e8dbabc6019658190" category="inline-link-rx"></block>E quindi passare a Storage Replication Adapter in VMware SRM Appliance Management Interface.</block>
   <block id="fcfc4d0541fcfaef918a6982404c79f6" category="paragraph">Se si desidera che gli strumenti ONTAP ridimensionino il volume contenente quando ridimensiona il datastore VMFS, non utilizzare l'opzione *Usa volume esistente* nella sezione attributi storage quando si esegue inizialmente il provisioning del datastore VMFS, ma lasciare che crei automaticamente un nuovo volume per ogni datastore.</block>
-  <block id="0660b9689bf2b0fa8177b2047a37e93b" category="paragraph">Se si configurano credenziali predefinite per i sistemi storage, i tool ONTAP utilizzano queste credenziali per accedere a un sistema storage appena rilevato dai tool ONTAP. Se le credenziali predefinite non funzionano, è necessario accedere manualmente al sistema di storage. I tool ONTAP e SRA supportano l'aggiunta di credenziali del sistema storage a livello di cluster o di SVM. Tuttavia, il provider VASA funziona solo con le credenziali a livello di cluster.</block>
-  <block id="4dc8b39d7d7b6d7c31dfedf281c6ce67" category="paragraph">Non è possibile utilizzare gli strumenti di ONTAP per modificare i ruoli associati alla coppia di nome utente e password dello storage controller. Per modificare o creare un nuovo ruolo utente ONTAP da utilizzare con gli strumenti ONTAP, è possibile utilizzare Gestione sistema.</block>
-  <block id="abfa917bee29e9d6901145eb371db3c3" category="paragraph">Se le credenziali del sistema di storage sono state aggiornate perché è stato segnalato un sistema di storage<block ref="b7aa7656b58c3a7862a86f5f8cd10336" prefix=" " category="inline-code"></block> Fare clic sull'opzione *RISCOPRI TUTTO* disponibile nella pagina dei sistemi storage. Durante questa operazione, gli strumenti di ONTAP tentano di connettersi al sistema di storage utilizzando le nuove credenziali.</block>
   <block id="51f5ef577515311d873f15616c367953" category="summary">Se l'appliance virtuale VASA Provider (VP) viene persa, resa inaccessibile o non funzionante, potrebbe essere necessario eseguire un VP Disaster Recovery. </block>
   <block id="b8d4b381d817836a8a1f3e5c51418019" category="doc">Disaster Recovery del provider VASA</block>
   <block id="6799b6ec743f9159edf3b43790210a11" category="inline-link">Come eseguire un Disaster Recovery provider VASA - Guida alla risoluzione</block>
@@ -2154,4 +2138,8 @@ il sistema e può essere disattivato in seguito.</block>
 Tuttavia, se si aggiorna vCenter alla versione più recente supportata da FIPS e si dispone di una versione precedente dei tool ONTAP, l'implementazione funzionerà solo se FIPS è disattivato su vCenter.</block>
   <block id="700f785cc3b0c94782ea099d30974628" category="paragraph">L'adattatore per la replica dello storage (SRA) supporta ambienti che utilizzano configurazioni MetroCluster (MCC) con protocollo NFS, iSCSI e FCP.</block>
   <block id="b0cf503432f798961e23d246f3541857" category="paragraph">Come prerequisito per la configurazione SRA MCC, tutti i nomi delle Storage Virtual Machine (SVM) devono essere univoci sui cluster MCC. Se i nomi non sono univoci, causano conflitti e i flussi di lavoro SRA non riescono.</block>
+  <block id="ebfe914a124eb1ec0cc1d8f6d6c420cb" category="list-text">VSphere 8.x è supportato con il plug-in NetApp NFS VAAI 2,0.1 (build 16).</block>
+  <block id="142666c1fbe08e639361aca9fb6d3d5a" category="list-text">Aggiornare l'appliance ONTAP Tools esistente alla versione più recente.</block>
+  <block id="7ffdc51b9c93dfaa755052457f971d9e" category="list-text">Da vCenter Server, aprire una console per la macchina virtuale dell'appliance ONTAP Tools.</block>
+  <block id="d0119a1425315c47822975d16de6de70" category="sidebar">Panoramica sul role-based access control per i tool ONTAP</block>
 </blocks>

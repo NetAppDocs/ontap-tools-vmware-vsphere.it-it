@@ -35,7 +35,7 @@ La sessione di accesso rimane valida solo fino alla mezzanotte del giorno succes
 
 *Fasi*
 
-. Dal server vCenter, aprire una console per il provider VASA.
+. Da vCenter Server, aprire una console per la macchina virtuale dell'appliance ONTAP Tools.
 . Accedere come utente di manutenzione.
 . Invio `4` Per selezionare Support and Diagnostics (supporto e diagnostica).
 . Invio `3` Per selezionare Enable remote Diagnostics access (attiva accesso di diagnostica remota).
