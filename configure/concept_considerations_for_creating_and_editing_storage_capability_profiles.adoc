@@ -28,5 +28,4 @@ Per i sistemi ibridi Flash Array, ASA e AFF, puoi configurare la riserva di spaz
 I profili delle funzionalità di storage legacy vengono conservati per garantire la compatibilità con le versioni precedenti. Se i modelli predefiniti non sono in uso, durante l'aggiornamento alla versione più recente dei tool ONTAP, i modelli esistenti vengono sovrascritti per riflettere le nuove metriche di QoS correlate alle performance dei profili di capacità dello storage.
 
 * Non è possibile modificare o utilizzare i profili delle funzionalità di storage legacy per eseguire il provisioning di nuovi datastore virtuali o policy di storage delle macchine virtuali.
-* Per tutti i nuovi datastore, è necessario utilizzare nuovi profili di funzionalità storage.
 

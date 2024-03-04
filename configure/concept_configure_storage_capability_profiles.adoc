@@ -27,27 +27,35 @@ Se utilizzato con vVol, il profilo di capacità dello storage viene utilizzato a
 * Platinum_AFF_A
 * Platinum_AFF_C
 * Platinum_ASA_A.
+* Platinum_ASA_C
 * AFF_NVME_AFF_A
 * AFF_NVME_AFF_C
 * AFF_NVME_ASA_A.
+* AFF_NVME_ASA_C
 * AFF_THICK_AFF_A
 * AFF_THICK_AFF_C
 * AFF_THICK_ASA_A
+* AFF_THICK_ASA_C
 * AFF_DEFAULT_AFF_A
 * AFF_DEFAULT_AFF_C
 * AFF_DEFAULT_ASA_A
+* AFF_DEFAULT_ASA_C
 * AFF_TIERING_AFF_A
 * AFF_TIERING_AFF_C
 * AFF_TIERING_ASA_A
+* AFF_TIERING_ASA_C
 * AFF_CRITTOGRAFATO_AFF_A
 * AFF_CRITTOGRAFATO_AFF_C
 * AFF_CRITTOGRAFATO_ASA_A.
+* AFF_CRITTOGRAFATO_ASA_C
 * AFF_Encrypted_Tiering_AFF_A
 * AFF_Encrypted_Tiering_AFF_C
 * AFF_Encrypted_Tiering_ASA_A.
+* AFF_Encrypted_Tiering_ASA_C
 * AFF_crittografato_Min50_AFF_A
 * AFF_crittografato_Min50_AFF_C
 * AFF_crittografato_Min50_ASA_A.
+* AFF_crittografato_Min50_ASA_C
 * Bronzo
 
 
@@ -76,5 +84,4 @@ Per i sistemi AFF, ASA e ibridi array flash, puoi configurare la riserva di spaz
 I profili delle funzionalità di storage legacy vengono conservati per garantire la compatibilità con le versioni precedenti. Se i modelli predefiniti non sono in uso, durante l'aggiornamento alla versione più recente dei tool ONTAP, i modelli esistenti vengono sovrascritti per riflettere le nuove metriche QoS e le policy di tiering correlate alle performance dei profili di capacità dello storage.
 
 * Non è possibile modificare o utilizzare i profili delle funzionalità di storage legacy per eseguire il provisioning di nuovi datastore virtuali o policy di storage delle macchine virtuali.
-* Per tutti i nuovi datastore, è necessario utilizzare nuovi profili di funzionalità storage.
 

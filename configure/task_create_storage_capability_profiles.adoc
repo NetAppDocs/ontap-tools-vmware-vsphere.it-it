@@ -72,7 +72,7 @@ Identificazione di più profili
 È possibile utilizzare il campo *Descrizione* nella scheda Nome e Descrizione per descrivere lo scopo del profilo SCP (Storage Capability Profile). Fornire una buona descrizione è utile perché è consigliabile impostare profili diversi in base alle applicazioni in uso.
 
 Ad esempio, un'applicazione business-critical richiede un profilo con funzionalità che supportano performance più elevate, come le piattaforme AFF e ASA. Un datastore utilizzato per il test o il training potrebbe utilizzare un profilo con una piattaforma ibrida Flash Array a performance inferiori e consentire a tutte le funzionalità di efficienza dello storage e il tiering di controllare i costi.
-La combinazione di tipo di piattaforma e flag asimmetrico determina il tipo di SCP. Ad esempio: Platinum_ASA_A, Platinum_AFF_A, Platinum_AFF_C.
+La combinazione di tipo di piattaforma e flag asimmetrico determina il tipo di SCP. Ad esempio: Platinum_ASA_A, Platinum_ASA_C, Platinum_AFF_A, Platinum_AFF_C.
 
 Se è stata attivata la modalità "`Linked`" per i server vCenter, è necessario selezionare il server vCenter per cui si sta creando il profilo di capacità storage.
 
