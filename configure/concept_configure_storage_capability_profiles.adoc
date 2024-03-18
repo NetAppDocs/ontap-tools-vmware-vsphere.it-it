@@ -22,7 +22,12 @@ NOTE: Gli archivi dati vVol non sono supportati su SVM diretta.
 
 Se utilizzata con datastore vVols, la procedura guidata di provisioning può utilizzare più profili di funzionalità storage per creare diversi volumi FlexVol nell'archivio dati. È possibile utilizzare il criterio di storage delle macchine virtuali per creare automaticamente i vVol per una macchina virtuale nei volumi FlexVol appropriati, come definito. Ad esempio, è possibile creare profili per classi di storage comuni (ad esempio per limiti di performance e altre funzionalità come crittografia o FabricPool). In seguito, è possibile creare policy di storage delle macchine virtuali in vCenter Server che rappresentino le classi di business delle macchine virtuali e collegarle al profilo di capacità dello storage appropriato per nome (ad esempio produzione, test, risorse umane).
 
-Se utilizzato con vVol, il profilo di capacità dello storage viene utilizzato anche per impostare le prestazioni dello storage per la singola macchina virtuale e posizionarlo sul volume FlexVol nel datastore vVol che soddisfa al meglio i requisiti di performance. È possibile specificare una policy QoS con IOPS minimi e/o massimi per le performance. È possibile utilizzare le policy predefinite quando si esegue il provisioning iniziale di una macchina virtuale o modificare la policy di storage della macchina virtuale in un secondo momento, se i requisiti di business cambiano. I profili di funzionalità storage predefiniti per questa release di strumenti ONTAP:
+Se utilizzato con vVol, il profilo di capacità dello storage viene utilizzato anche per impostare le prestazioni dello storage per la singola macchina virtuale e posizionarlo sul volume FlexVol nel datastore vVol che soddisfa al meglio i requisiti di performance. È possibile specificare una policy QoS con IOPS minimi e/o massimi per le performance. È possibile utilizzare le policy predefinite quando si esegue il provisioning iniziale di una macchina virtuale o modificare la policy di storage della macchina virtuale in un secondo momento, se i requisiti di business cambiano.
+
+
+NOTE: Il profilo della capacità di storage ASA-C è supportato dai tool ONTAP per VMware vSphere 9.13P1 in poi.
+
+I profili di funzionalità storage predefiniti per questa release di strumenti ONTAP:
 
 * Platinum_AFF_A
 * Platinum_AFF_C

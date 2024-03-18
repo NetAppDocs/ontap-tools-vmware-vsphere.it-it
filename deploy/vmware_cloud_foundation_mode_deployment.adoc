@@ -13,7 +13,12 @@ summary: I tool ONTAP per VMware vSphere possono essere implementati in un ambie
 [role="lead"]
 I tool ONTAP per VMware vSphere possono essere implementati in un ambiente VMware Cloud Foundation (VCF). L'obiettivo principale dell'implementazione di VCF è utilizzare gli strumenti ONTAP in una configurazione cloud e creare container senza vCenter Server.
 
-La modalità VCF consente di creare container per lo storage senza la necessità di un vCenter Server. Il provider VASA viene attivato per impostazione predefinita dopo l'implementazione degli strumenti ONTAP in modalità VCF. Una volta completata l'implementazione, potrai aggiungere, eliminare o modificare i sistemi storage e creare container utilizzando le API REST. Nel seguente articolo viene descritta la procedura per aggiungere storage agli strumenti ONTAP quando VCF è attivato. https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["Aggiungere memoria agli strumenti ONTAP da Swagger-UI"].
+La modalità VCF consente di creare container per lo storage senza la necessità di un vCenter Server. Il provider VASA viene attivato per impostazione predefinita dopo l'implementazione degli strumenti ONTAP in modalità VCF. Una volta completata l'implementazione, potrai aggiungere, eliminare o modificare i sistemi storage e creare container utilizzando le API REST.
+
+
+NOTE: La modifica e l'eliminazione del sistema di archiviazione sono supportate dagli strumenti ONTAP per VMware vSphere 9.13P1 in poi.
+
+Nel seguente articolo viene descritta la procedura per aggiungere storage agli strumenti ONTAP quando VCF è attivato. https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["Aggiungere memoria agli strumenti ONTAP da Swagger-UI"].
 
 Viene introdotta una nuova API per generare il _appliance-api-token_ che autentica le chiamate API. Alcune delle API esistenti vengono modificate per includere l'intestazione _appliance-api-token_. A partire dalla versione 9,12 degli strumenti ONTAP, swagger non supporta le API 1,0. I puntatori che in precedenza erano su 1.0 sono stati spostati in 2.0 o 3.0 API.
 
@@ -469,7 +474,7 @@ Nessuno
 |===
 È possibile utilizzare l'API DELLA PATCH ONTAP per impostare i valori appropriati.
 
-`https://<machine_IP>/api/storage/volumes/{uuid}`
+`\https://<machine_IP>/api/storage/volumes/{uuid}`
 
 L'implementazione VCF degli strumenti ONTAP consente solo la creazione di flussi di lavoro di container. Se si desidera utilizzare altri flussi di lavoro, come il provisioning di datastore, la creazione di profili di capacità dello storage o il disaster recovery, è necessario registrare gli strumenti ONTAP con vCenter Server utilizzando la pagina swagger. A partire dalla versione 9.12 degli strumenti ONTAP, la registrazione degli strumenti ONTAP con vCenter avviene dalla pagina swagger. Il limite degli strumenti ONTAP in modalità VCF è che non è possibile configurare SRA per il disaster recovery fino a quando non si registra il plug-in. Quando si implementano gli strumenti ONTAP senza la modalità VCF, la registrazione viene eseguita automaticamente.
 

@@ -32,7 +32,7 @@ Vedere link:../protect/task_enable_storage_replication_adapter.html["Abilitare S
 Per attivare il flag quick_resync, attenersi alla seguente procedura:
 
 .Fasi
-. Accedere al pannello di controllo da _https://<IP address>:9083_ e fare clic su interfaccia CLI basata su web.
+. Accedere al pannello di controllo all'indirizzo `/https://<IP address>:9083` E fare clic su interfaccia CLI basata su Web.
 . Eseguire il comando `vp updateconfig -key=snapmirror.quick.resync.enabled -value=true`.
 . Eseguire il comando `vp reloadconfig`.
 

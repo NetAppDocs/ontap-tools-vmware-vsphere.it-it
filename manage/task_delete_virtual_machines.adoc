@@ -18,7 +18,7 @@ NOTE: Si consiglia di rimuovere eventuali datastore vVol prima di eseguire la pu
 
 *Fasi*
 
-. Annullare la registrazione del plug-in https://OTV_IP:8143/Register.html[]
+. Annullare la registrazione del plug-in `\https://OTV_IP:8143/Register.html`
 . Verificare che il plug-in non sia più disponibile su vCenter.
 . Chiudere gli strumenti ONTAP per VMware vSphere VM
 . Eliminare i tool ONTAP per VMware vSphere VM

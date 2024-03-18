@@ -34,4 +34,4 @@ Quando si impostano i livelli di log, vengono aggiornati i seguenti file:
 * Server VASA Provider: 'Vvolvp.log', 'error.log' e 'netapp.log'
 
 
-Inoltre, la pagina dell'interfaccia della riga di comando web (CLI) del provider VASA contiene le chiamate API effettuate, gli errori restituiti e diversi contatori relativi alle performance. La pagina Web CLI si trova all'indirizzo 'https://<IP_address_or_hostname>:9083/stats'[].
+Inoltre, la pagina dell'interfaccia della riga di comando web (CLI) del provider VASA contiene le chiamate API effettuate, gli errori restituiti e diversi contatori relativi alle performance. La pagina Web CLI si trova all'indirizzo `\https://<IP_address_or_hostname>:9083/stats`.
