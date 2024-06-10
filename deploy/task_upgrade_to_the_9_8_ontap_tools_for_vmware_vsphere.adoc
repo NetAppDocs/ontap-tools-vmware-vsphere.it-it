@@ -50,8 +50,7 @@ Eseguire i comandi riportati di seguito sulla CLI di ONTAP prima di eseguire l'a
 . _security login role create -role <existing-role-name> -cmddirname "security certificate install" -access all_
 
 
-Se il sistema storage viene aggiunto con un utente SVM scoped creato personalizzato utilizzando il file json e vuoi eseguire l'upgrade a 9,12 e versioni successive
-Esegui i seguenti comandi sull'interfaccia a riga di comando di ONTAP con accesso come amministratore del cluster prima dell'aggiornamento per abilitare la comunicazione basata su certificato tra gli strumenti ONTAP per VMware vSphere e ONTAP:
+Se il sistema storage viene aggiunto con un utente SVM scoped creato personalizzato utilizzando il file json e vuoi eseguire l'upgrade a 9,12 e versioni successive, Esegui quindi i seguenti comandi sull'interfaccia a riga di comando di ONTAP con accesso come amministratore del cluster prima dell'aggiornamento per abilitare la comunicazione basata su certificato tra gli strumenti ONTAP per VMware vSphere e ONTAP:
 
 . _security login role create -role <existing-role-name> -cmddirname "security certificate install" -access all -vserver <vserver-name>_
 . _security login role create -role <existing-role-name> -cmddirname "security certificate show" -access all -vserver <vserver-name>_

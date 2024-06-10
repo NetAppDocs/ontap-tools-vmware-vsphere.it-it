@@ -68,7 +68,9 @@ Estrarre il file .zip, che contiene il file .ova nel sistema locale. Nella pagin
 |===
 . Immettere i dettagli per personalizzare la procedura guidata di implementazione.
 +
-(Facoltativo) nella sezione Configura vCenter o attiva VCF, selezionare la casella di controllo *attiva VMware Cloud Foundation (VCF)* e fornire una password per le credenziali dei tool ONTAP. Non è necessario fornire un indirizzo IP, ma è obbligatorio fornire una password. Per informazioni dettagliate, consultare la sezione seguente.
+(Facoltativo) nella sezione Configura vCenter o attiva VCF, selezionare la casella di controllo *attiva VMware Cloud Foundation (VCF)* e fornire una password per le credenziali dei tool ONTAP. Gli strumenti ONTAP memorizzano i dettagli dell'utente in un formato codificato. Per qualsiasi comunicazione dagli strumenti ONTAP a vCenter, vengono utilizzati questi dettagli utente vCenter.
+Non è necessario fornire un indirizzo IP, ma è obbligatorio fornire una password.
+Per informazioni dettagliate, consultare la sezione seguente.
 
 +
 ** link:../deploy/reference_considerations_for_deploying_ontap_tools_for_vmware_vsphere.html["Considerazioni sulla personalizzazione dell'implementazione"]
@@ -80,6 +82,10 @@ Estrarre il file .zip, che contiene il file .ova nel sistema locale. Nella pagin
 Mentre si attende il completamento della distribuzione, è possibile visualizzare l'avanzamento della distribuzione dalla scheda Tasks (attività).
 
 . Accendere la macchina virtuale ONTAP Tools, quindi aprire una console della macchina virtuale che esegue gli strumenti ONTAP.
++
+
+NOTE: Non memorizzare una macchina virtuale con tool ONTAP in un datastore vVol gestito da quest'ultima.
+
 . Verificare che gli strumenti ONTAP siano in esecuzione al termine dell'implementazione.
 . Se gli strumenti ONTAP non sono registrati con alcun server vCenter, utilizzare `\https://appliance_ip:8143/Register.html` Per registrare l'istanza di ONTAP Tools. Register.html reindirizza l'utente alla pagina swagger. A partire dalla versione 9.12 degli strumenti ONTAP, la registrazione degli strumenti ONTAP con vCenter avviene dalla pagina swagger.
 +

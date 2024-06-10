@@ -185,7 +185,8 @@ Il file di log contiene l'esecuzione di _sha256sum -c /opt/netapp/vscerver/etc/c
 . Passare all'utente root: `su root`
 . Nella posizione del log, immettere il comando per ottenere l'ID del docker utilizzato da SRA docker: `docker ps -l`
 . Accedere all'ID container: `docker exec -it -u srm <container id> sh`
-. Configurare SRM con l'indirizzo IP e la password degli strumenti ONTAP: `perl command.pl -I <otv-IP> administrator <otv-password>`Viene visualizzato un messaggio di conferma dell'avvenuta memorizzazione delle credenziali di storage.
+. Configurare SRM con l'indirizzo IP e la password degli strumenti ONTAP: `perl command.pl -I <otv-IP> administrator <otv-password>`. È necessario disporre di un'unica citazione relativa al valore della password.
+Viene visualizzato un messaggio di conferma dell'avvenuta memorizzazione delle credenziali di storage. SRA può comunicare con il server SRA utilizzando l'indirizzo IP, la porta e le credenziali forniti.
 
 
 
@@ -202,7 +203,10 @@ Il file di log contiene l'esecuzione di _sha256sum -c /opt/netapp/vscerver/etc/c
 . Eseguire il comando perl per configurare SRA con le nuove credenziali:
 +
 .. `cd /srm/sra/`
-.. `perl command.pl -I <otv-IP> administrator <otv-password>`
+.. `perl command.pl -I <otv-IP> administrator <otv-password>`. È necessario disporre di un'unica citazione relativa al valore della password.
++
+Viene visualizzato un messaggio di conferma dell'avvenuta memorizzazione delle credenziali di storage. SRA può comunicare con il server SRA utilizzando l'indirizzo IP, la porta e le credenziali forniti.
+
 
 
 
