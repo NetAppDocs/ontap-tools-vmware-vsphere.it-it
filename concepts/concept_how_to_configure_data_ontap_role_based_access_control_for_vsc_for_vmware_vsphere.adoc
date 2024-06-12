@@ -13,9 +13,9 @@ summary: Se si desidera utilizzare il controllo degli accessi basato sui ruoli c
 [role="lead"]
 Se si desidera utilizzare il controllo degli accessi basato sui ruoli con gli strumenti ONTAP per VMware vSphere, è necessario configurare il controllo degli accessi basato sui ruoli (RBAC) di ONTAP sul sistema storage. È possibile creare uno o più account utente personalizzati con privilegi di accesso limitati con la funzione RBAC di ONTAP.
 
-Gli strumenti e gli SRA di ONTAP possono accedere ai sistemi storage a livello di cluster o di SVM (Storage Virtual Machine). Se si aggiungono sistemi storage a livello di cluster, è necessario fornire le credenziali dell'utente amministratore per fornire tutte le funzionalità richieste. Se si aggiungono i sistemi storage aggiungendo direttamente i dettagli SVM, è necessario tenere presente che l'utente "`vsadmin`" non dispone di tutti i ruoli e le funzionalità necessari per eseguire determinate attività.
+I tool ONTAP per VMware vSphere e SRA possono accedere ai sistemi storage a livello di cluster o di Storage Virtual Machine (SVM). Se si aggiungono sistemi storage a livello di cluster, è necessario fornire le credenziali dell'utente amministratore per fornire tutte le funzionalità richieste. Se si aggiungono i sistemi storage aggiungendo direttamente i dettagli SVM, è necessario tenere presente che l'utente "`vsadmin`" non dispone di tutti i ruoli e le funzionalità necessari per eseguire determinate attività.
 
-IL provider VASA può accedere ai sistemi storage solo a livello di cluster. Se per un particolare controller di storage è richiesto un provider VASA, il sistema di storage deve essere aggiunto agli strumenti ONTAP a livello di cluster anche se si utilizzano strumenti ONTAP o SRA.
+IL provider VASA può accedere ai sistemi storage solo a livello di cluster. Se per uno storage controller specifico è richiesto un provider VASA, è necessario aggiungere il sistema storage ai tool ONTAP per VMware vSphere a livello del cluster, anche se si utilizzano tool ONTAP o SRA.
 
 Per creare un nuovo utente e connettere un cluster o una SVM agli strumenti ONTAP, eseguire le seguenti operazioni:
 
@@ -24,7 +24,7 @@ Per creare un nuovo utente e connettere un cluster o una SVM agli strumenti ONTA
 +
 Queste credenziali del sistema storage sono necessarie per configurare i sistemi storage per gli strumenti ONTAP. È possibile configurare i sistemi storage per gli strumenti ONTAP immettendo le credenziali negli strumenti ONTAP. Ogni volta che si accede a un sistema di storage con queste credenziali, si disporranno delle autorizzazioni per le funzioni degli strumenti ONTAP configurate in ONTAP durante la creazione delle credenziali.
 
-* Aggiungere il sistema storage agli strumenti ONTAP e fornire le credenziali dell'utente appena creato
+* Aggiungi il sistema storage ai tool ONTAP per VMware vSphere e fornisci le credenziali dell'utente appena creato
 
 
 
@@ -63,4 +63,4 @@ Consente la distruzione di volumi e LUN
 
 SRA classifica i privilegi ONTAP in un ruolo SAN o NAS a livello di cluster o SVM. Ciò consente agli utenti di eseguire operazioni SRM.
 
-Gli strumenti ONTAP eseguono una convalida iniziale dei privilegi dei ruoli RBAC di ONTAP quando si aggiunge il cluster agli strumenti ONTAP. Se è stato aggiunto un IP di storage SVM diretto, gli strumenti ONTAP non eseguono la convalida iniziale. Gli strumenti ONTAP controllano e assicurano i privilegi in un secondo momento nel flusso di lavoro delle attività.
+Gli strumenti ONTAP eseguono una convalida iniziale dei privilegi dei ruoli RBAC di ONTAP quando si aggiunge il cluster agli strumenti ONTAP. Se è stato aggiunto un IP per lo storage utente SVM, i tool ONTAP non eseguono la convalida iniziale. Gli strumenti ONTAP controllano e assicurano i privilegi in un secondo momento nel flusso di lavoro delle attività.

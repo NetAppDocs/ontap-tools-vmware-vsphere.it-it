@@ -18,10 +18,10 @@ NOTE: Se il cluster ONTAP è abilitato per SAML, la comunicazione con ONTAP vien
 
 *A proposito di questa attività*
 
-Ogni volta che si avviano gli strumenti ONTAP o si seleziona l'opzione *RISCOPRI tutto*, gli strumenti ONTAP rilevano automaticamente i sistemi di archiviazione disponibili.
+Ogni volta che si avviano i tool ONTAP o si seleziona l'opzione *REDISCOVERY all*, i tool ONTAP per VMware vSphere rilevano automaticamente i sistemi storage disponibili.
 
 
-NOTE: Gli archivi dati vVol non sono supportati su SVM diretta.
+NOTE: I datastore vVol non sono supportati sull'utente SVM.
 
 *Fasi*
 

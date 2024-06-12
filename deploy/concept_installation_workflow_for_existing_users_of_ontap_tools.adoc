@@ -24,7 +24,7 @@ I dati di configurazione includono le credenziali del sistema di storage e le pr
 
 link:../configure/reference_set_ipv4_or_ipv6.html["Impostare IPv4 o IPv6 utilizzando il file delle preferenze"]
 
-In molti casi, potrebbe non essere necessario migrare i dati di configurazione. Tuttavia, se i file delle preferenze sono stati personalizzati in precedenza, potrebbe essere necessario esaminarli e apportare modifiche simili ai nuovi strumenti ONTAP implementati. È possibile aggiungere i sistemi storage ai tool ONTAP appena implementati e specificare le credenziali man mano che vengono aggiunti.
+In molti casi, potrebbe non essere necessario migrare i dati di configurazione. Tuttavia, se i file delle preferenze sono stati personalizzati in precedenza, potrebbe essere necessario esaminarli e apportare modifiche simili ai nuovi strumenti ONTAP implementati. Puoi aggiungere i sistemi storage ai tool ONTAP appena implementati per VMware vSphere e specificare le credenziali quando li Aggiungi.
 
 Se si esegue l'aggiornamento dal provider VASA 6.X, è necessario annullare la registrazione del provider VASA prima di eseguire l'aggiornamento. Per ulteriori informazioni, consultare la documentazione relativa alla versione corrente.
 

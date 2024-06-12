@@ -4,9 +4,9 @@ title: Configurare gli strumenti ONTAP
 entries:
 - title: Workflow per la configurazione degli strumenti ONTAP
   url: "/configure/concept_workflow_for_configuring_the_unified_appliance.html"
-- title: Configurare le impostazioni ESXi
+- title: Configurare le impostazioni dell'host ESXi
   entries:
-  - title: Configurare le impostazioni di multipathing e timeout del server ESXi
+  - title: Configurare le impostazioni di multipathing e timeout del server host ESXi
     url: "/configure/task_configure_esx_server_multipathing_and_timeout_settings.html"
   - title: I valori degli host ESXi vengono impostati utilizzando gli strumenti ONTAP
     url: "/configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html"

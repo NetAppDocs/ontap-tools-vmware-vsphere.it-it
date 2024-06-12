@@ -18,7 +18,7 @@ Una funzionalità di storage è un insieme di attributi del sistema di storage c
 Per i datastore tradizionali, è possibile utilizzare un profilo di capacità dello storage per creare datastore in modo coerente con gli attributi comuni e assegnare loro i criteri QoS. Durante il provisioning, i tool di ONTAP visualizzano cluster, SVM e aggregati che corrispondono al profilo di funzionalità dello storage. È possibile generare un profilo di capacità dello storage dagli archivi dati tradizionali esistenti utilizzando l'opzione *GLOBAL AUTO-GENERATE PROFILES* dal menu Storage Mapping (mappatura dello storage). Una volta creato il profilo, potrai utilizzare gli strumenti di ONTAP per monitorare la conformità dei datastore rispetto al profilo.
 
 
-NOTE: Gli archivi dati vVol non sono supportati su SVM diretta.
+NOTE: I datastore vVol non sono supportati sull'utente SVM.
 
 Se utilizzata con datastore vVols, la procedura guidata di provisioning può utilizzare più profili di funzionalità storage per creare diversi volumi FlexVol nell'archivio dati. È possibile utilizzare il criterio di storage delle macchine virtuali per creare automaticamente i vVol per una macchina virtuale nei volumi FlexVol appropriati, come definito. Ad esempio, è possibile creare profili per classi di storage comuni (ad esempio per limiti di performance e altre funzionalità come crittografia o FabricPool). In seguito, è possibile creare policy di storage delle macchine virtuali in vCenter Server che rappresentino le classi di business delle macchine virtuali e collegarle al profilo di capacità dello storage appropriato per nome (ad esempio produzione, test, risorse umane).
 

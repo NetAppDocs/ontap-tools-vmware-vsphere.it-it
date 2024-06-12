@@ -36,7 +36,27 @@ Il comando ribilanciamento rimuove i volumi FlexVol vuoti per fornire spazio ad 
 
 
 * Se un volume FlexVol dispone di snapshot, durante l'operazione di ribilanciamento di vVol, i vVol non vengono ribilanciati correttamente a causa di dettagli insufficienti sull'utilizzo dello spazio.
-* È possibile impostare la proprietà del provider VASA _enable.update.vvol.through.Discovery_ su true per ottenere dati coerenti tra gli strumenti ONTAP e ONTAP, quando si verifica un timeout durante l'operazione di ribilanciamento del container.
+* È possibile impostare la proprietà Provider VASA _enable.update.vvol.through.Discovery_ su true per ottenere dati coerenti tra gli strumenti ONTAP per VMware vSphere e ONTAP, quando si verifica un timeout durante l'operazione di ribilanciamento dei container.
+* Non esistono API REST esposte per riequilibrare il datastore vVol.
 
 
 ====
+.*Prima di iniziare*
+* Generare il token Web-CLI dalla console di manutenzione:
++
+.. Accedere alla console di manutenzione.
+.. Selezionare l'opzione *1* Configurazione dispositivo.
+.. Selezionare l'opzione *12* genera token di autenticazione Web-CLI.
+
+
+* Ottenere il nome del container e il nome dei volumi FlexVol da vCenter o dalla Web-CLI.
+Per ottenere l'elenco dei volumi FlexVol collegati al contenitore, eseguire il comando _container list_ da Web-CLI. È possibile trovare i dettagli del comando Container Ribilanciate nella pagina Web-CLI.
+
+
+
+NOTE: Devi fornire il nome del container per eseguire il ribilanciamento in tutti i volumi FlexVol collegati a quel container. Tuttavia, se viene fornito il parametro FlexVol volume, il ribilanciamento viene eseguito solo nel volume FlexVol fornito.
+
+.*Fasi*
+. Effettuare l'accesso da Web-CLI utilizzando l'URL `\https://<OTV-IP>:9083/`
+. Eseguire il comando: _Container Ribiliance -container_name=<container-name>_
+

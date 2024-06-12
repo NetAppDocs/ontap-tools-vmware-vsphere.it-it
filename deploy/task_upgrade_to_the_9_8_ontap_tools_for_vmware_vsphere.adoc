@@ -77,7 +77,7 @@ Al termine dell'aggiornamento, gli strumenti di ONTAP vengono riavviata. Gli str
 +
 .. Annullare la registrazione degli strumenti ONTAP.
 .. Registrare l'indirizzo IPv6 degli strumenti ONTAP su vCenter Server utilizzando la pagina *Registra*.
-.. Rigenerare gli strumenti ONTAP e i certificati del provider VASA dopo la registrazione.
+.. Rigenera i tool ONTAP per i certificati di VMware vSphere e VASA Provider dopo la registrazione.
 
 
 +

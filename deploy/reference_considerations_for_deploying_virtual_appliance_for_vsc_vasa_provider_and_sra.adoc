@@ -24,7 +24,7 @@ La seguente tabella presenta una panoramica di ciò che occorre prendere in cons
  a| 
 Prima implementazione degli strumenti ONTAP
  a| 
-La distribuzione degli strumenti ONTAP installa automaticamente le funzioni degli strumenti ONTAP.
+La distribuzione degli strumenti ONTAP per VMware vSphere installa automaticamente le funzionalità degli strumenti ONTAP.
 
 link:../deploy/concept_installation_workflow_for_new_users.html["Workflow di implementazione per i nuovi utenti dei tool ONTAP per VMware vSphere"]
 
@@ -88,7 +88,7 @@ La seguente tabella presenta una panoramica delle operazioni necessarie per conf
  a| 
 Requisiti di RBAC (role-based access control)
  a| 
-I tool ONTAP supportano sia vCenter Server RBAC che ONTAP RBAC. L'account utilizzato per registrare gli strumenti ONTAP in vCenter Server (`\https://<appliance_ip>:8143/Register.html`) Deve essere un amministratore di vCenter Server (assegnato al ruolo di amministratore o amministratore di vCenter Server). Se si prevede di eseguire gli strumenti ONTAP come amministratore, è necessario disporre di tutte le autorizzazioni e dei privilegi necessari per tutte le attività.
+I tool ONTAP supportano sia vCenter Server RBAC che ONTAP RBAC. L'account utilizzato per registrare gli strumenti ONTAP in vCenter Server (`\https://<appliance_ip>:8143/Register.html`) Deve essere un amministratore di vCenter Server (assegnato al ruolo di amministratore o amministratore di vCenter Server). Se si prevede di eseguire gli strumenti ONTAP per VMware vSphere come amministratore, è necessario disporre di tutte le autorizzazioni e dei privilegi necessari per tutte le attività.
 
 Se la tua azienda richiede di limitare l'accesso agli oggetti vSphere, puoi creare e assegnare ruoli standard agli strumenti ONTAP per soddisfare i requisiti di vCenter Server.
 

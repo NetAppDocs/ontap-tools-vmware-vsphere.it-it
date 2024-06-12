@@ -86,7 +86,7 @@ Gli strumenti ONTAP sono in ascolto per comunicazioni sicure su questa porta. La
  a| 
 8443
  a| 
-Questa porta viene utilizzata per il servizio di plugin remoto.
+Questa porta viene utilizzata per gli strumenti ONTAP per il servizio plug-in VMware vSphere.
 
 |===
 Requisiti minimi di storage e applicazioni:
@@ -223,5 +223,5 @@ Viene visualizzato un messaggio di conferma dell'avvenuta memorizzazione delle c
 
 NOTE: IL provider VASA è attivato per impostazione predefinita. Se si desidera utilizzare la funzionalità di replica per gli archivi dati vVol, utilizzare il pulsante di attivazione/disattivazione Enable vVols Replication.
 
-. Inserire l'indirizzo IP degli strumenti ONTAP e la password dell'amministratore, quindi fare clic su *Apply* (Applica).
+. Immettere l'indirizzo IP degli strumenti ONTAP per VMware vSphere e la password di amministratore, quindi fare clic su *Applica*.
 

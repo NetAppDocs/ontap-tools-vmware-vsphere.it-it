@@ -23,7 +23,7 @@ I tool ONTAP si affidano alla funzionalità di alta disponibilità (ha) di VMwar
 
 Non è richiesta alcuna configurazione aggiuntiva per gli strumenti ONTAP per garantire l'alta disponibilità. Solo gli host vCenter Server e ESXi devono essere configurati con la funzionalità VMware vSphere ha o vSphere FT in base ai requisiti. Sia ha che FT richiedono host in cluster insieme allo storage condiviso. FT presenta requisiti e limitazioni aggiuntivi.
 
-Oltre alla soluzione VMware vSphere ha e alla soluzione vSphere FT, i tool ONTAP consentono anche di mantenere costantemente in esecuzione i servizi degli strumenti ONTAP. Il processo di controllo degli strumenti ONTAP monitora periodicamente tutti e tre i servizi e li riavvia automaticamente quando viene rilevato un qualsiasi tipo di errore. In questo modo si evitano gli errori delle applicazioni.
+Oltre alla soluzione VMware vSphere ha e alla soluzione vSphere FT, i tool ONTAP per VMware vSphere consentono di garantire l'esecuzione continua dei servizi degli strumenti ONTAP. Il processo di controllo degli strumenti ONTAP monitora periodicamente tutti e tre i servizi e li riavvia automaticamente quando viene rilevato un qualsiasi tipo di errore. In questo modo si evitano gli errori delle applicazioni.
 
 
 NOTE: VCenter ha non è supportato dai tool ONTAP.

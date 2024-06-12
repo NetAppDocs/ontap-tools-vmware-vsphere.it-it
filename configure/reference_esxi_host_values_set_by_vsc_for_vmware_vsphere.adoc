@@ -17,7 +17,7 @@ summary: È possibile impostare timeout e altri valori sugli host ESXi utilizzan
 
 
 
-== Configurazione avanzata di ESXi
+== Configurazione avanzata dell'host ESXi
 
 * *VMFS3.HardwareAcceleratedLocking*
 +

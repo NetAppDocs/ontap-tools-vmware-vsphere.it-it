@@ -2,7 +2,7 @@
 permalink: configure/concept_configure_storage_systems_for_ontap_tools_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: 'È necessario aggiungere sistemi storage ai tool ONTAP e impostare le credenziali predefinite, se necessario, utilizzando l"interfaccia degli strumenti ONTAP.' 
+summary: 'Devi aggiungere sistemi storage ai tool ONTAP per VMware vSphere e impostare le credenziali predefinite, se necessario, utilizzando l"interfaccia dei tool ONTAP.' 
 ---
 = Panoramica dei sistemi storage per gli strumenti ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'È necessario aggiungere sistemi storage ai tool ONTAP e impostare le 
 
 
 [role="lead"]
-È necessario aggiungere sistemi storage ai tool ONTAP e impostare le credenziali predefinite, se necessario, utilizzando l'interfaccia degli strumenti ONTAP.
+Devi aggiungere sistemi storage ai tool ONTAP per VMware vSphere e impostare le credenziali predefinite, se necessario, utilizzando l'interfaccia dei tool ONTAP.
 
 I tool ONTAP per VMware vSphere offrono un unico meccanismo per rilevare i sistemi storage e impostare le credenziali dello storage. Le credenziali forniscono le autorizzazioni ONTAP necessarie per consentire agli utenti dei tool ONTAP di eseguire le attività utilizzando i sistemi storage.
 
@@ -20,7 +20,7 @@ Prima che i tool ONTAP possano visualizzare e gestire le risorse storage, i tool
 
 NOTE: Se si effettua l'accesso come amministratore, si dispone automaticamente di tutti i privilegi per il sistema di storage in questione.
 
-Quando si aggiunge un sistema storage agli strumenti ONTAP, è necessario fornire un indirizzo IP per il sistema di storage e la coppia di nome utente e password associati a tale sistema. È possibile impostare le credenziali predefinite che i tool ONTAP utilizzeranno durante il processo di rilevamento del sistema storage oppure è possibile inserire manualmente le credenziali quando viene rilevato il sistema storage. I dettagli del sistema storage aggiunto agli strumenti ONTAP vengono automaticamente inviati alle estensioni abilitate nell'implementazione. Non è necessario aggiungere manualmente lo storage al provider VASA e a Storage Replication Adapter (SRA). Sia i tool ONTAP che SRA supportano l'aggiunta di credenziali a livello di cluster e a livello di Storage Virtual Machine (SVM). IL provider VASA supporta solo le credenziali a livello di cluster per l'aggiunta di sistemi storage. Quando si aggiunge un sistema storage, qualsiasi comunicazione tra il plug-in degli strumenti ONTAP e il sistema storage deve essere autenticata reciprocamente.
+Quando si aggiunge un sistema storage agli strumenti ONTAP, è necessario fornire un indirizzo IP per il sistema di storage e la coppia di nome utente e password associati a tale sistema. È possibile impostare le credenziali predefinite che i tool ONTAP utilizzeranno durante il processo di rilevamento del sistema storage oppure è possibile inserire manualmente le credenziali quando viene rilevato il sistema storage. I dettagli del sistema storage aggiunto ai tool ONTAP per VMware vSphere vengono automaticamente inviati alle estensioni abilitate nell'implementazione. Non è necessario aggiungere manualmente lo storage al provider VASA e a Storage Replication Adapter (SRA). Entrambi i tool ONTAP per VMware vSphere e SRA supportano l'aggiunta di credenziali a livello di cluster e a livello di Storage Virtual Machine (SVM). IL provider VASA supporta solo le credenziali a livello di cluster per l'aggiunta di sistemi storage. Quando si aggiunge un sistema storage, qualsiasi comunicazione tra il plug-in degli strumenti ONTAP e il sistema storage deve essere autenticata reciprocamente.
 
 Se il tuo ambiente include più istanze di vCenter Server, quando Aggiungi un sistema storage agli strumenti ONTAP dalla pagina sistemi storage, la finestra di dialogo Add Storage System (Aggiungi sistema storage) visualizza una finestra di dialogo vCenter Server in cui è possibile specificare a quale istanza di vCenter Server deve essere aggiunto il sistema storage. Se si aggiunge un sistema storage facendo clic con il pulsante destro del mouse sul nome di un data center, non è possibile specificare un'istanza di vCenter Server perché il server è già associato a tale data center.
 

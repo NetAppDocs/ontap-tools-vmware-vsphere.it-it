@@ -36,7 +36,8 @@ L'adattatore viene installato su SRM.
 . Verificare che i LUN si trovino in igroups che dispongono di `ostype` Opzione impostata su _VMware_ sul sistema di storage primario.
 . Verificare che gli host ESXi del sito di ripristino dispongano della connettività FC o iSCSI appropriata per la macchina virtuale di storage (SVM). Gli host ESXi del sito secondario devono avere accesso allo storage del sito secondario, analogamente gli host ESXi del sito primario devono avere accesso allo storage del sito primario.
 +
-È possibile eseguire questa operazione verificando che gli host ESXi dispongano di LUN locali collegati alla SVM o utilizzando `fcp show initiators` o il `iscsi show initiators` Sulle SVM. Controllare l'accesso LUN per i LUN mappati in ESXi per verificare la connettività FC e iSCSI.
+È possibile eseguire questa operazione verificando che gli host ESXi dispongano di LUN locali collegati alla SVM o utilizzando `fcp show initiators` o il `iscsi show initiators` Sulle SVM.
+Controllare l'accesso LUN per i LUN mappati nell'host ESXi per verificare la connettività FC e iSCSI.
 
 
 

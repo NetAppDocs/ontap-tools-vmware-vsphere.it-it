@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: I tool ONTAP® per VMware vSphere controllano e impostano le impostazioni di multipathing degli host ESXi e le impostazioni di timeout HBA che funzionano meglio con i sistemi storage NetApp. 
 ---
-= Configurare le impostazioni di multipathing e timeout del server ESXi
+= Configurare le impostazioni di multipathing e timeout del server host ESXi
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

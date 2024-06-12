@@ -28,7 +28,7 @@ Gli strumenti ONTAP utilizzano le seguenti porte TCP bidirezionali predefinite:
  a| 
 9083
  a| 
-Quando questa opzione è attivata, il provider VASA e l'adattatore di replica dello storage (SRA) utilizzano questa porta per comunicare con il server vCenter. Questa porta è necessaria anche per ottenere le impostazioni TCP/IP. Questa porta deve essere abilitata sul firewall dagli host ESXi all'appliance ONTAP Tools. Questa porta viene utilizzata per scaricare il pacchetto di supporto VP, accedere all'interfaccia utente Web-CLI e controllare la comunicazione del percorso da VMware a VP.
+Quando questa opzione è attivata, il provider VASA e l'adattatore di replica dello storage (SRA) utilizzano questa porta per comunicare con il server vCenter. Questa porta è necessaria anche per ottenere le impostazioni TCP/IP. Questa porta deve essere abilitata sul firewall dagli host ESXi agli strumenti ONTAP per l'appliance VMware vSphere. Questa porta viene utilizzata per scaricare il pacchetto di supporto VP, accedere all'interfaccia utente Web-CLI e controllare la comunicazione del percorso da VMware a VP.
 
 
 
@@ -49,7 +49,7 @@ Gli strumenti ONTAP sono in ascolto per comunicazioni sicure su questa porta. La
  a| 
 8443
  a| 
-Questa porta viene utilizzata per il servizio di plugin remoto.
+Questa porta viene utilizzata per gli strumenti ONTAP per il servizio plug-in VMware vSphere.
 
 
 
@@ -63,4 +63,4 @@ il sistema e può essere disattivato in seguito.
 
 NOTE: Prima di implementare gli strumenti ONTAP, è necessario aver attivato il protocollo ICMP (Internet Control message Protocol).
 
-Se ICMP è disattivato, la configurazione iniziale degli strumenti ONTAP non riesce e gli strumenti ONTAP non possono avviare gli strumenti ONTAP e i servizi del provider VASA dopo la distribuzione. Devi abilitare manualmente i tool ONTAP e i servizi del provider VASA dopo l'implementazione.
+Se ICMP è disattivato, la configurazione iniziale degli strumenti ONTAP non riesce e gli strumenti ONTAP non possono avviare gli strumenti ONTAP per i servizi VMware vSphere e provider VASA dopo la distribuzione. Devi abilitare manualmente i tool ONTAP per i servizi di VMware vSphere e provider VASA dopo l'implementazione.

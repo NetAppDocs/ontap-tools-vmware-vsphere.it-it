@@ -40,7 +40,7 @@ Fornisce tutti i privilegi nativi di vCenter Server e i privilegi specifici degl
  a| 
 VSC di sola lettura
  a| 
-Fornisce accesso in sola lettura agli strumenti ONTAP. Questi utenti non possono eseguire alcuna azione di ONTAP Tools controllata dall'accesso.
+Fornisce accesso in sola lettura agli strumenti ONTAP. Questi utenti non possono eseguire strumenti ONTAP per le azioni VMware vSphere controllate dall'accesso.
 
 
 
@@ -61,7 +61,7 @@ Fornisce tutti i privilegi nativi di vCenter Server e i privilegi specifici dei 
 
 Quando si lavora con gli strumenti ONTAP standard per i ruoli di VMware vSphere, è necessario seguire alcune linee guida.
 
-Non modificare direttamente i ruoli standard. In tal caso, gli strumenti ONTAP sovrascriveranno le modifiche ogni volta che si esegue l'aggiornamento. Il programma di installazione aggiorna le definizioni dei ruoli standard ogni volta che si aggiornano gli strumenti ONTAP. In questo modo si garantisce che i ruoli siano aggiornati per la versione degli strumenti ONTAP e per tutte le versioni supportate di vCenter Server.
+Non modificare direttamente i ruoli standard. In tal caso, gli strumenti ONTAP sovrascriveranno le modifiche ogni volta che si esegue l'aggiornamento. Il programma di installazione aggiorna le definizioni dei ruoli standard ogni volta che si aggiornano gli strumenti ONTAP. In questo modo si garantisce che i ruoli siano aggiornati per la versione degli strumenti ONTAP per VMware vSphere e per tutte le versioni supportate di vCenter Server.
 
 Tuttavia, è possibile utilizzare i ruoli standard per creare ruoli personalizzati in base all'ambiente. A tale scopo, è necessario copiare il ruolo standard degli strumenti ONTAP e quindi modificare il ruolo copiato. Creando un nuovo ruolo, è possibile mantenere questo ruolo anche quando si riavvia o si aggiorna il servizio Windows di ONTAP Tools.
 

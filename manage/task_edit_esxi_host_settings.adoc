@@ -52,7 +52,7 @@ Pagina iniziale del client vSphere
 
 
  a| 
-Portlet dei sistemi host ESXi
+Portlet sistemi host ESXi
  a| 
 .. Fare clic sulla scheda *Dashboard tradizionale* nella sezione Panoramica degli strumenti di ONTAP.
 .. Fare clic su *Edit ESXi host Settings* (Modifica impostazioni host ESXi).

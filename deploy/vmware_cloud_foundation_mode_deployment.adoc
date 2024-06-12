@@ -476,7 +476,7 @@ Nessuno
 
 `\https://<machine_IP>/api/storage/volumes/{uuid}`
 
-L'implementazione VCF degli strumenti ONTAP consente solo la creazione di flussi di lavoro di container. Se si desidera utilizzare altri flussi di lavoro, come il provisioning di datastore, la creazione di profili di capacità dello storage o il disaster recovery, è necessario registrare gli strumenti ONTAP con vCenter Server utilizzando la pagina swagger. A partire dalla versione 9.12 degli strumenti ONTAP, la registrazione degli strumenti ONTAP con vCenter avviene dalla pagina swagger. Il limite degli strumenti ONTAP in modalità VCF è che non è possibile configurare SRA per il disaster recovery fino a quando non si registra il plug-in. Quando si implementano gli strumenti ONTAP senza la modalità VCF, la registrazione viene eseguita automaticamente.
+L'implementazione VCF degli strumenti ONTAP per VMware vSphere consente solo flussi di lavoro di creazione dei container. Se si desidera utilizzare altri flussi di lavoro, come il provisioning di datastore, la creazione di profili di capacità dello storage o il disaster recovery, è necessario registrare gli strumenti ONTAP con vCenter Server utilizzando la pagina swagger. A partire dalla versione 9.12 degli strumenti ONTAP, la registrazione degli strumenti ONTAP con vCenter avviene dalla pagina swagger. Il limite degli strumenti ONTAP in modalità VCF è che non è possibile configurare SRA per il disaster recovery fino a quando non si registra il plug-in. Quando si implementano gli strumenti ONTAP senza la modalità VCF, la registrazione viene eseguita automaticamente.
 
 
 NOTE: Il file Register.html verrà rimosso nelle prossime versioni dei tool ONTAP.

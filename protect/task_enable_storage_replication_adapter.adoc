@@ -34,7 +34,7 @@ La flessibilità necessaria per abilitare le funzionalità di provider VASA e SR
 . Fare clic su *Impostazioni*.
 . Fare clic su *Manage Capabilities* (Gestisci funzionalità) nella scheda *Administrative Settings* (Impostazioni amministrative).
 . Nella finestra di dialogo *Manage Capabilities* (Gestisci funzionalità), selezionare l'estensione SRA che si desidera attivare.
-. Inserire l'indirizzo IP degli strumenti ONTAP e la password dell'amministratore, quindi fare clic su *Apply* (Applica).
+. Immettere l'indirizzo IP degli strumenti ONTAP per VMware vSphere e la password dell'amministratore, quindi fare clic su *Applica*.
 . Per implementare SRA, è possibile utilizzare uno dei seguenti metodi:
 +
 *Per appliance SRM*

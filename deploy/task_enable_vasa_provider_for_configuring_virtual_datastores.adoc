@@ -31,7 +31,7 @@ Se la funzionalità del provider VASA viene disattivata prima dell'aggiornamento
 . Fare clic su *Gestisci funzionalità* nella scheda Impostazioni amministrative.
 . Nella finestra di dialogo Manage Capabilities (Gestisci funzionalità), selezionare l'interno del provider VASA da attivare.
 . Se si desidera utilizzare la funzionalità di replica per gli archivi dati vVols, utilizzare il pulsante di commutazione *Enable vVols Replication* (attiva replica vVols).
-. Inserire l'indirizzo IP degli strumenti ONTAP e la password dell'amministratore, quindi fare clic su *Apply* (Applica).
+. Immettere l'indirizzo IP degli strumenti ONTAP per VMware vSphere e la password dell'amministratore, quindi fare clic su *Applica*.
 +
 
 NOTE: Se lo stato del provider VASA viene visualizzato come "`Offline`" anche dopo aver attivato l'interno del provider VASA, controllare ``/var/log/vmware/vmware-sps/sps.log` Per eventuali errori di connessione con il provider VASA o riavviare il servizio "`vmware-sps`".

@@ -80,4 +80,4 @@ Dopo aver creato un volume FlexVol, è possibile modificarlo facendo clic sul pu
 La procedura guidata aggiunge lo storage specificato al datastore vVols. Al termine dell'operazione, viene visualizzato un messaggio di conferma.
 
 
-NOTE: La procedura guidata Expand Storage of vVols Datastore gestisce automaticamente qualsiasi nuova scansione dello storage ESXi o qualsiasi altra operazione significativa richiesta. Poiché un datastore vVol è un'entità logica controllata dal provider VASA, l'aggiunta del volume FlexVol è l'unica operazione da eseguire per aumentare la capacità del container di storage.
+NOTE: La procedura guidata Expand Storage of vVols Datastore gestisce automaticamente qualsiasi nuova scansione di storage host ESXi o qualsiasi altra operazione significativa richiesta. Poiché un datastore vVol è un'entità logica controllata dal provider VASA, l'aggiunta del volume FlexVol è l'unica operazione da eseguire per aumentare la capacità del container di storage.
