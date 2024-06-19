@@ -448,7 +448,6 @@
   <block id="77508822eda5d675bed0a20bfe5cf0ff" category="paragraph"><block ref="8aeef6d0d11f6ade54cdcb478a77d30a" prefix="" category="inline-code"></block></block>
   <block id="ac234df83bfcb986ebeb55e2c7819fd9" category="cell">*Numero di porta predefinito*</block>
   <block id="a44ba9086b2b83ccf2baf7c678723449" category="paragraph">9083</block>
-  <block id="36716d5924fd9465137a810fd76c2f48" category="paragraph">Quando questa opzione è attivata, il provider VASA e l'adattatore di replica dello storage (SRA) utilizzano questa porta per comunicare con il server vCenter. Questa porta è necessaria anche per ottenere le impostazioni TCP/IP. Questa porta viene utilizzata per scaricare il pacchetto di supporto VP, accedere all'interfaccia utente Web-CLI e controllare la comunicazione del percorso da VMware a VP.</block>
   <block id="13f3cf8c531952d72e5847c4183e6910" category="paragraph">443</block>
   <block id="71a6973fa992a434c0d25fb07bd6f07d" category="paragraph">A seconda di come sono state configurate le credenziali, VMware vCenter Server e i sistemi storage sono in attesa di comunicazioni sicure su questa porta. La porta viene utilizzata nell'architettura di comunicazione client-server. La porta 443 è attivata per impostazione predefinita per le connessioni sicure. Il client, che può essere qualsiasi client di automazione che utilizza l'API REST, avvia la connessione al server e gli endpoint si scambiano i dati.</block>
   <block id="0c95054981de037de06e544a52eb3613" category="paragraph">8143</block>
@@ -628,29 +627,20 @@
   <block id="fa43d63ba917729629ab7f912cf6f6ca" category="paragraph">È necessario configurare gli intervalli di timeout dello storage in base alle impostazioni consigliate per Storage Replication Adapter (SRA) in modo da ottenere prestazioni ottimali in ambienti altamente scalabili.</block>
   <block id="383c9f9f08441de49a64fa51e25ad9c9" category="section-title">Impostazioni del provider di storage</block>
   <block id="68c185224c05d2129a14987da1b847a6" category="paragraph">Impostare i seguenti valori di timeout su SRM per l'ambiente in scala:</block>
-  <block id="fe4c6a5e7bd6793b37370e4e46daf998" category="cell">Impostazioni avanzate</block>
-  <block id="2d454f7be17f2289142fb73539ba0c06" category="cell">Valori di timeout</block>
-  <block id="cfb1af8547e34b1470b19edbde9418b8" category="paragraph">StorageProvider.roggatureTimeout</block>
   <block id="341bac145cc58ec7a7ab03eba3971c0b" category="paragraph">Aumentare il valore dell'impostazione da 900 secondi a 12000 secondi.</block>
-  <block id="084a7cbae7a12c6ad6f1f66a39e88f9b" category="paragraph">StorageProvider.hostRescanDelaySec</block>
   <block id="072b030ba126b2f4b2374f342be9ed44" category="paragraph">60</block>
-  <block id="aa18dc2961636b24cb5d5f9e925404a9" category="paragraph">StorageProvider.hostRescanRepeatCnt</block>
   <block id="98f13708210194c475687be6106a3b84" category="paragraph">20</block>
-  <block id="c1533677fede32792c4b54cf81865145" category="paragraph">StorageProvider.hostRescanTimeoutSec</block>
   <block id="9df3b59d2f557fab39346b37532a0832" category="paragraph">Impostare un valore alto (ad esempio: 99999)</block>
-  <block id="3868919c1577c6c9fcb90f12ff7241a9" category="paragraph">Attivare anche l'opzione StorageProvider.autoResignatureMode.</block>
   <block id="7ab0999b0811be49a9148b1092cf0095" category="paragraph">Per ulteriori informazioni sulla modifica delle impostazioni dello Storage Provider, consultare la documentazione di VMware.</block>
   <block id="7ceb96cf2f53ab82cf68115087e42798" category="inline-link">Documentazione VMware vSphere: Modifica delle impostazioni dello Storage Provider</block>
   <block id="6b9647887381f9ce12a57a287e1bafbd" category="paragraph"><block ref="6b9647887381f9ce12a57a287e1bafbd" category="inline-link-rx"></block></block>
   <block id="6deaa5e1cafca832bac1b468485b9454" category="section-title">Impostazioni di storage</block>
-  <block id="202667bd06a4b1c9918ebf1e566e60f2" category="paragraph">È necessario impostare il valore dell'intervallo di timeout storage.commandTimeout e storage.maxConcurrentCommandCnt per ambienti altamente scalabili su 99,999 secondi.</block>
   <block id="00a510939945fb6eb144a70baf6f9fd4" category="admonition">L'intervallo di timeout specificato è il valore massimo. Non è necessario attendere il raggiungimento del timeout massimo. La maggior parte dei comandi termina entro l'intervallo di timeout massimo impostato.</block>
   <block id="e8e75924ea6b1743aedaf9cdc60f2811" category="paragraph">È inoltre necessario impostare il tempo massimo per l'esecuzione di una singola operazione nel file vvol.properties: offtap.operation.timeout.period.seconds=86400.</block>
   <block id="0a757269d3671e08f4647a4a3f39c7af" category="inline-link">Risposta della Knowledge base di NetApp 1001111: Guida al dimensionamento di NetApp Storage Replication Adapter 4.0/7.X per ONTAP</block>
   <block id="58ea740e145f2581727a12d0fe5a5b26" category="paragraph"><block ref="58ea740e145f2581727a12d0fe5a5b26" category="inline-link-rx"></block></block>
   <block id="b2dacb077897e6e20eab5019528b0b4d" category="paragraph">La documentazione VMware sulla modifica delle impostazioni DEL provider SAN contiene ulteriori informazioni.</block>
   <block id="c106a2cd545fb9665a990784905584ee" category="inline-link">Documentazione di VMware Site Recovery Manager: Modifica delle impostazioni di storage</block>
-  <block id="5ae0fbc5a94ef2dc0c2a09ad3529481f" category="paragraph"><block ref="5ae0fbc5a94ef2dc0c2a09ad3529481f" category="inline-link-rx"></block></block>
   <block id="f941583eff3ed87da8d807407294540f" category="paragraph"><block ref="f941583eff3ed87da8d807407294540f" category="inline-link-macro-rx"></block></block>
   <block id="b4985c4f7663e3e799236852df85319e" category="inline-link-macro">I valori degli host ESXi vengono impostati utilizzando i tool ONTAP per VMware vSphere</block>
   <block id="fceaf78f3c73355fe250db66743fa112" category="list-text"><block ref="fceaf78f3c73355fe250db66743fa112" category="inline-link-macro-rx"></block></block>
@@ -1234,7 +1224,6 @@
   <block id="64e03b083d70c2d810f723dad414a6b6" category="paragraph">L'opzione *Provision Datastore* consente di specificare un profilo di capacità dello storage per il datastore. I profili di capacità dello storage aiutano a specificare obiettivi di livello di servizio (SLO) coerenti e semplificano il processo di provisioning. È possibile specificare un profilo di capacità di storage solo se è stato attivato il provider VASA. I tool ONTAP per VMware vSphere supportano i seguenti protocolli:</block>
   <block id="d381d999826d4e61587a2570d1e51324" category="list-text">NFSv3 e NFSv4.1</block>
   <block id="c95106f0432e13b79e1223e1c8f1ab3b" category="list-text">VMFS5 e VMFS6</block>
-  <block id="ec2fa05ad1e1cd992e000b32058b54e0" category="list-text">I tool ONTAP supportano il provisioning di datastore VMFS5 e VMFS6 fino al LUN VMFS massimo e alle dimensioni del volume di 64 TB se utilizzati con sistemi ASA e AFF approvati che eseguono ONTAP 9.8 e versioni successive.</block>
   <block id="e5c5d2c6aa619e098374e32171e7bd4a" category="paragraph">Su altre piattaforme, la dimensione massima del LUN supportata è di 16 TB.</block>
   <block id="5164789a1859f790f66a6451331546d0" category="list-text">VMware non supporta NFSv4.1 con cluster di datastore.</block>
   <block id="1415c1c83a97d2309236d6acbf410723" category="list-text">Per l'autenticazione Kerberos, sono necessari i seguenti elementi:</block>
@@ -1644,7 +1633,6 @@
   <block id="abc76e74279f9441a4a6c363c930ab48" category="paragraph"><block ref="aa18dc2961636b24cb5d5f9e925404a9" prefix="" category="inline-code"></block></block>
   <block id="d9ad1cd9ed6154c08811ffdbeec40f42" category="paragraph"><block ref="c1533677fede32792c4b54cf81865145" prefix="" category="inline-code"></block></block>
   <block id="c30b7c029fe2d9044307db1e0f6ea417" category="paragraph">Attivare anche il<block ref="227c938fa0f7b152cce7b139b698bf4c" prefix=" " category="inline-code"></block> opzione.</block>
-  <block id="686f64fc789747485a424cbfcfd51b54" category="paragraph">È necessario impostare il valore di<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> e.<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> intervallo di timeout per ambienti altamente scalati fino a 99,999 secondi.</block>
   <block id="9abf7c4d6f8e5b536137c70ad41a5f3b" category="paragraph"><block ref="9abf7c4d6f8e5b536137c70ad41a5f3b" category="inline-link-rx"></block></block>
   <block id="be3fa7c52a8312e8c8b325925496196d" category="summary">È necessario configurare i sistemi storage prima di eseguire Storage Replication Adapter (SRA) per VMware vCenter Site Recovery Manager (SRM).</block>
   <block id="83e61f6a906aec5062ad2e215e9b780b" category="paragraph">È necessario configurare i sistemi storage prima di eseguire Storage Replication Adapter (SRA) per VMware vCenter Site Recovery Manager (SRM).</block>
@@ -2162,4 +2150,6 @@ Controllare l'accesso LUN per i LUN mappati nell'host ESXi per verificare la con
   <block id="c4d7bfe92b4693a00e8289e45547ab0d" category="paragraph">In una configurazione del sito di ripristino condiviso SRM, ogni server SRM deve disporre di un'istanza SRA dedicata (relazione 1:1 tra SRM e SRA). Configurare OTV in modalità VCF per agire come istanza SRA dedicata per ciascun server SRM. Puoi anche disporre di tool ONTAP non abilitati per SRA per l'appliance VMware vSphere, registrati con vCenter e utilizzati per task non-SRA come il provisioning dei datastore.</block>
   <block id="ffb65cab8d95fee8d80abc7ceaa0a0ec" category="list-text">Se dopo un'operazione di Reprotect non viene visualizzato un datastore nei tool di ONTAP per VMware vSphere, è necessario eseguire un rilevamento del sistema storage o attendere la successiva operazione di rilevamento programmata.</block>
   <block id="1030a4736944c363305ecfdc816d75b0" category="sidebar">Configurare le impostazioni dell'host ESXi</block>
+  <block id="5f479a62f2104046972d10f2cbf88255" category="paragraph">Quando si preme un timeout, aumentare i valori di<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> e.<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> ad un valore più alto.</block>
+  <block id="7e2e86e08ed241dcd1c4a60663089958" category="list-text">Gli strumenti ONTAP supportano il provisioning di datastore VMFS5 e VMFS6 fino a un massimo di LUN VMFS e dimensioni del volume di 64TB GB, se utilizzati con tutti i sistemi ASA che eseguono ONTAP 9,8 o versione successiva e tutti gli altri sistemi che eseguono ONTAP 9.12.1P2 o versione successiva.</block>
 </blocks>

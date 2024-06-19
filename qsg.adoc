@@ -65,7 +65,7 @@ Gli strumenti ONTAP utilizzano le seguenti porte TCP bidirezionali predefinite:
  a| 
 9083
  a| 
-Quando questa opzione è attivata, il provider VASA e l'adattatore di replica dello storage (SRA) utilizzano questa porta per comunicare con il server vCenter. Questa porta è necessaria anche per ottenere le impostazioni TCP/IP. Questa porta viene utilizzata per scaricare il pacchetto di supporto VP, accedere all'interfaccia utente Web-CLI e controllare la comunicazione del percorso da VMware a VP.
+Quando questa opzione è attivata, il provider VASA e l'adattatore di replica dello storage (SRA) utilizzano questa porta per comunicare con il server vCenter. Questa porta è necessaria anche per ottenere le impostazioni TCP/IP. Questa porta deve essere abilitata sul firewall dagli host ESXi agli strumenti ONTAP per l'appliance VMware vSphere. Questa porta viene utilizzata per scaricare il pacchetto di supporto VP, accedere all'interfaccia utente Web-CLI e controllare la comunicazione del percorso da VMware a VP.
 
 
 
