@@ -15,6 +15,8 @@ summary: È possibile eseguire un aggiornamento in-place alla versione più rece
 
 *Cosa ti serve*
 
+Lo strumento matrice di interoperabilità (IMT) contiene le informazioni più recenti sulle versioni supportate di ONTAP, vCenter Server, host ESXi, applicazioni plug-in e Gestione ripristino sito (SRM). Per https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Tool di matrice di interoperabilità"^] informazioni sul percorso di aggiornamento supportato, consultare la sezione.
+
 * È necessario aver scaricato il file _.iso_ per la versione più recente dei tool ONTAP.
 * È necessario aver riservato almeno 12 GB di RAM affinché gli strumenti ONTAP funzionino in modo ottimale dopo l'aggiornamento.
 * È necessario pulire la cache del browser del client vSphere.
