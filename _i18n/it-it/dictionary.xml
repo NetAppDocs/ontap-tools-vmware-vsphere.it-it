@@ -585,7 +585,6 @@
   <block id="8d8b5664d88102f63bdc8eb0650ec133" category="paragraph">Non utilizzare spazi nella password dell'amministratore.</block>
   <block id="9f06240dce78a8c112ac76d8a18ec234" category="paragraph">Se la password per il server vCenter cambia, è possibile aggiornare la password per l'amministratore utilizzando il seguente URL://&lt;IP&gt;:8143/Register.html dove l'indirizzo IP è costituito dagli strumenti ONTAP forniti durante l'implementazione.</block>
   <block id="b43ed576c67b6d850a49fae28d355059" category="admonition">: IPv6 è supportato solo con vCenter Server 6.7 e versioni successive.</block>
-  <block id="a7189062665fe6b8b3263ee857e62834" category="paragraph">Se non hai mai utilizzato un prodotto NetApp ONTAP Tools per la prima volta, devi configurare il server vCenter e configurare un host ESXi prima di implementare e configurare i tool ONTAP.</block>
   <block id="78b9c306d2b9e90dc4612872a3412b17" category="image-alt">Implementazione di nuovi utenti</block>
   <block id="f056e37e2646ccbf027d27be6a8cc71d" category="summary">È possibile eseguire un aggiornamento in-place alla versione più recente dei tool ONTAP dalla configurazione esistente della versione 9.10 o successiva seguendo le istruzioni fornite qui.</block>
   <block id="20f1e803dc0cd0cd8a34402229733015" category="paragraph">È possibile eseguire un aggiornamento in-place alla versione più recente dei tool ONTAP dalla versione 9.10 o successiva, seguendo le istruzioni fornite qui.</block>
@@ -703,7 +702,6 @@
   <block id="b8ace162f3094fd5ac1138ced112d7a7" category="list-text">Avviare il servizio VMware vSphere Client:<block ref="bfbe7f4b006f6fcfc7bb66e075309067" prefix=" " category="inline-code"></block></block>
   <block id="8169f681458fdeab0f3382d2821b913f" category="doc">Privilegio a livello di prodotto richiesto dai tool ONTAP per VMware vSphere</block>
   <block id="74d56f13e9a7c977cac9a88a879fcbfc" category="paragraph">L'oggetto root è la posizione consigliata per assegnare qualsiasi autorizzazione contenente il privilegio View.</block>
-  <block id="ef9991a7cf13c45bcebdc7db419b4a5b" category="summary">I tool ONTAP per VMware vSphere offrono una gestione end-to-end del ciclo di vita delle macchine virtuali in ambienti VMware che utilizzano sistemi storage NetApp. Consente agli amministratori di gestire direttamente lo storage all'interno di vCenter Server, semplificando quindi la gestione dello storage e dei dati per gli ambienti VMware.</block>
   <block id="539018505dde88069c03ead0e16d021b" category="doc">Panoramica sui tool ONTAP</block>
   <block id="35b93a81a0436a7a2cfd708e05194805" category="paragraph">Gli strumenti ONTAP si integrano con il client vSphere e consentono di utilizzare i servizi SSO (Single Sign-on). In un ambiente con più istanze di vCenter Server, ogni istanza di vCenter Server che si desidera gestire deve disporre di una propria istanza registrata di ONTAP Tools.</block>
   <block id="088edf0a41c67ef0d8cab2de751c7631" category="paragraph">Ogni componente degli strumenti ONTAP offre funzionalità che consentono di gestire lo storage in modo più efficiente.</block>
@@ -754,8 +752,6 @@
   <block id="66c5b34575bb610e09f6281aecda93e6" category="paragraph">La procedura per configurare ha dipende dalla versione di vCenter Server. Ad esempio, è possibile utilizzare il seguente collegamento di riferimento e selezionare la versione di vCenter Server richiesta per visualizzare la procedura di configurazione di ha.</block>
   <block id="9c506678975809e892cfdd7c14758cae" category="inline-link">Documentazione di VMware vSphere: Requisiti di tolleranza agli errori, limiti e licenze</block>
   <block id="20422418e9f27ff480459f880734075a" category="paragraph"><block ref="20422418e9f27ff480459f880734075a" category="inline-link-rx"></block></block>
-  <block id="6b894d7e8f2bb219ece874c3c249c3f7" category="inline-link">Come configurare RBAC per Virtual Storage Console</block>
-  <block id="14d107055fdbd0aa4ef3c23300469f88" category="paragraph"><block ref="14d107055fdbd0aa4ef3c23300469f88" category="inline-link-rx"></block></block>
   <block id="431526444f5217c0c4d88bbb5bd31943" category="summary">È possibile configurare l'ambiente vSphere in cui vengono implementati i tool ONTAP per VMware vSphere per l'alta disponibilità. La funzionalità VMware ha offre protezione di failover da guasti hardware e guasti del sistema operativo negli ambienti virtuali.</block>
   <block id="c972b11c861e42787c05a2ee24828e3a" category="doc">VMware vSphere ha</block>
   <block id="75e793d9133889f56a982d718f5f5c1f" category="paragraph">È possibile configurare l'ambiente vSphere in cui vengono implementati gli strumenti ONTAP per VMware vSphere per l'alta disponibilità (ha). La funzionalità VMware ha offre protezione di failover da guasti hardware e guasti del sistema operativo negli ambienti virtuali.</block>
@@ -2155,4 +2151,9 @@ Controllare l'accesso LUN per i LUN mappati nell'host ESXi per verificare la con
   <block id="df5910bf5ed161a784cc7b4fb3fc0a84" category="list-text">*SunRPC.MaxConnPerIP*</block>
   <block id="4a8c1c4202dd77901215a87452e10629" category="paragraph">Se si utilizza vSphere 7.0 o versione successiva, impostare questo valore su 128.</block>
   <block id="34881aef32159ff28f8619a31ff308a3" category="paragraph">Lo strumento matrice di interoperabilità (IMT) contiene le informazioni più recenti sulle versioni supportate di ONTAP, vCenter Server, host ESXi, applicazioni plug-in e Gestione ripristino sito (SRM). Per<block ref="c4e3c5dd56e9c0925a46d52133eef091" category="inline-link-rx"></block> informazioni sul percorso di aggiornamento supportato, consultare la sezione.</block>
+  <block id="dc00c7eca4a9deab6a54899a9976ba3a" category="inline-link">Tool ONTAP per VMware vSphere: Configurazione RBAC</block>
+  <block id="788b65c29277d612dded28375da10d63" category="paragraph"><block ref="788b65c29277d612dded28375da10d63" category="inline-link-rx"></block></block>
+  <block id="7230ef1fabe08177b3b9d5485ebc25c0" category="summary">I tool ONTAP per VMware vSphere offrono una gestione del ciclo di vita end-to-end per le macchine virtuali negli ambienti VMware che utilizzano sistemi storage NetApp. Consente agli amministratori di gestire direttamente lo storage all'interno di vCenter Server, semplificando quindi la gestione dello storage e dei dati per gli ambienti VMware.</block>
+  <block id="47635be81cb27fe24be3c1541e49e8c2" category="doc">Panoramica dei tool ONTAP</block>
+  <block id="693059892f5ca1ab1683c98e037ee404" category="summary">Se sei un nuovo utente di VMware e non hai mai utilizzato un prodotto NetApp ONTAP Tools, devi configurare vCenter Server e configurare un host ESXi prima di implementare e configurare gli strumenti ONTAP.</block>
 </blocks>

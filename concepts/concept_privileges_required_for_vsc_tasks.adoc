@@ -15,7 +15,7 @@ I diversi strumenti ONTAP per le attività VMware vSphere richiedono diverse com
 
 Informazioni sui privilegi richiesti per le attività degli strumenti ONTAP sono disponibili nell'articolo 1032542 della Knowledge base di NetApp.
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/How_to_configure_RBAC_for_Virtual_Storage_Console["Come configurare RBAC per Virtual Storage Console"]
+https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/VSC_VASA_and_SRA_ONTAP_RBAC_Configuration["Tool ONTAP per VMware vSphere: Configurazione RBAC"]
 
 
 

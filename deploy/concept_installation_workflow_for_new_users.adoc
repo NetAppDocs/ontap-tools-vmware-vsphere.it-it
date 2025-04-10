@@ -2,7 +2,7 @@
 permalink: deploy/concept_installation_workflow_for_new_users.html 
 sidebar: sidebar 
 keywords:  
-summary: Se non hai mai utilizzato un prodotto NetApp ONTAP Tools per la prima volta, devi configurare il server vCenter e configurare un host ESXi prima di implementare e configurare i tool ONTAP. 
+summary: Se sei un nuovo utente di VMware e non hai mai utilizzato un prodotto NetApp ONTAP Tools, devi configurare vCenter Server e configurare un host ESXi prima di implementare e configurare gli strumenti ONTAP. 
 ---
 = Workflow di implementazione per i nuovi utenti dei tool ONTAP per VMware vSphere
 :allow-uri-read: 
@@ -11,6 +11,6 @@ summary: Se non hai mai utilizzato un prodotto NetApp ONTAP Tools per la prima v
 
 
 [role="lead"]
-Se non hai mai utilizzato un prodotto NetApp ONTAP Tools per la prima volta, devi configurare il server vCenter e configurare un host ESXi prima di implementare e configurare i tool ONTAP.
+Se sei un nuovo utente di VMware e non hai mai utilizzato un prodotto NetApp ONTAP Tools, devi configurare vCenter Server e configurare un host ESXi prima di implementare e configurare gli strumenti ONTAP.
 
 image::../media/new_user_deployment_workflow_ontap_tools.png[Implementazione di nuovi utenti]
