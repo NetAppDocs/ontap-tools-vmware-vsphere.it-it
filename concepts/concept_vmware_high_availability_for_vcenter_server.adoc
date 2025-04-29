@@ -17,4 +17,4 @@ La funzione VMware ha monitora le macchine virtuali per rilevare guasti al siste
 
 La procedura di configurazione di VMware ha dipende dalla versione di vCenter Server in uso. Ad esempio, è possibile utilizzare il seguente collegamento di riferimento e selezionare la versione di vCenter Server richiesta per visualizzare la procedura di configurazione di VMware ha.
 
-https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html["Documentazione VMware vSphere: Creazione e utilizzo di cluster ha vSphere"]
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-5/vsphere-availability.html["Creazione e utilizzo di cluster vSphere ha"]

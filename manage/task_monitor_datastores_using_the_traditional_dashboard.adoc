@@ -17,7 +17,7 @@ summary: 'È possibile monitorare i datastore tradizionali e le macchine virtual
 
 Selezionare l'opzione *Enable Storage i/o Control and statistics collection* (Abilita controllo i/o storage e raccolta di statistiche) o *Disable Storage i/o Control but enable statistics collection* (Disattiva controllo i/o storage ma attiva raccolta di statistiche) nella finestra di dialogo Configure Storage i/o Control È possibile attivare Storage i/o Control solo se si dispone della licenza Enterprise Plus di VMware.
 
-https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-BB5D9BAB-9E0E-4204-A76A-54634CD8AD51.html["Documentazione VMware vSphere: Abilitare il controllo i/o dello storage"]
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-5/vsphere-resource-management-6-5.html["Gestione delle risorse vSphere"]
 
 La dashboard tradizionale visualizza le metriche di IOPS, spazio utilizzato, latenza e capacità impegnata ottenute dal server vCenter. ONTAP fornisce metriche aggregate per il risparmio di spazio alla dashboard tradizionale. È possibile visualizzare il risparmio di spazio per un aggregato specifico. Questi parametri delle performance consentono di identificare i colli di bottiglia delle performance nell'ambiente virtuale e di intraprendere azioni correttive per risolvere i problemi.
 

@@ -21,12 +21,7 @@ Per consentire a Storage Replication Adapter (SRA) di rilevare i sistemi storage
 
 *A proposito di questa attività*
 
-Le configurazioni fan-out di SnapMirror sono quelle in cui un volume di origine viene replicato in due diverse destinazioni. Questi creano un problema durante il ripristino quando SRM deve ripristinare la macchina virtuale dalla destinazione.
-
-
-NOTE: Storage Replication Adapter (SRA) non supporta le configurazioni di SnapMirror fan-out.
-
-*Fasi*
+Le configurazioni fan-out di SnapMirror sono quelle in cui un volume di origine viene replicato in due diverse destinazioni. Questi creano un problema durante il ripristino quando SRM deve ripristinare la macchina virtuale dalla destinazione. *Fasi*
 
 . Fare doppio clic su *Site Recovery* nella home page di vSphere Client, quindi fare clic su *Sites*.
 . Fare clic su *oggetti* > *azioni* > *Associa siti*.

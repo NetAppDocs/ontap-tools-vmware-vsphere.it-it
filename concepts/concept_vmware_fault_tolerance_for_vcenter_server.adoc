@@ -23,4 +23,4 @@ Il sistema deve soddisfare i requisiti della CPU, i requisiti dei limiti delle m
 
 La procedura per configurare ha dipende dalla versione di vCenter Server. Ad esempio, è possibile utilizzare il seguente collegamento di riferimento e selezionare la versione di vCenter Server richiesta per visualizzare la procedura di configurazione di ha.
 
-https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.avail.doc/GUID-57929CF0-DA9B-407A-BF2E-E7B72708D825.html["Documentazione di VMware vSphere: Requisiti di tolleranza agli errori, limiti e licenze"]
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-5/vsphere-availability.html["Requisiti di tolleranza di errore, limiti e licenze"]

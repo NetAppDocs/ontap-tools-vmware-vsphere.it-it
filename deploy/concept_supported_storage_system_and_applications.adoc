@@ -34,5 +34,5 @@ Per eseguire operazioni di failover per SRA, è necessario attivare la licenza S
 Per visualizzare gli IOPS di un datastore, è necessario attivare il controllo Storage i/o o o deselezionare la casella di controllo Disable Storage i/o statistics collection (Disattiva raccolta statistiche i/o storage) nella configurazione Storage i/o control (controllo i/o storage). È possibile attivare il controllo i/o dello storage solo se si dispone della licenza Enterprise Plus di VMware.
 
 * https://kb.vmware.com/s/article/1022091["Risoluzione dei problemi relativi al controllo i/o dello storage"]
-* https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-37CC0E44-7BC7-479C-81DC-FFFC21C1C4E3.html["Requisiti per il controllo i/o dello storage"]
+* https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-5/vsphere-resource-management-6-5.html["Gestione delle risorse vSphere"]
 
