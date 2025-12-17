@@ -18,7 +18,7 @@ summary: 'È possibile configurare Storage Replication Adapter utilizzando la pr
 * È necessario associare i siti protetti e i siti di ripristino in SRM.
 * È necessario aver configurato lo storage prima di configurare l'array manager.
 * È necessario aver configurato e replicato le relazioni di SnapMirror tra i siti protetti e i siti di ripristino.
-* È necessario aver abilitato le LIF di gestione SVM per abilitare la multi-tenancy.
+* È necessario aver abilitato i LIF di gestione SVM per supportare il multi-tenancy.
 
 
 SRA supporta la gestione a livello di cluster e la gestione a livello di SVM. Se si aggiunge storage a livello di cluster, è possibile rilevare ed eseguire operazioni su tutte le SVM del cluster. Se si aggiunge storage a livello di SVM, è possibile gestire solo la SVM specifica.

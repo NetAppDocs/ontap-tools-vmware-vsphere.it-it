@@ -40,7 +40,7 @@ Lo stato del provider VASA dall'implementazione esistente viene mantenuto dopo l
 NOTE: È possibile eseguire un aggiornamento in-place alla versione più recente dei tool ONTAP solo dalla versione 9.10 o successiva.
 
 
-NOTE: Dall'aggiornamento di ONTAP Tools 9,12, tutti i processi di autenticazione e comunicazione dei sistemi di archiviazione vengono modificati dall'autenticazione di base all'autenticazione basata su certificati mediante l'attendibilità automatica dei certificati di archiviazione ONTAP. Non è richiesta alcuna azione da parte dell'utente.
+NOTE: Con l'aggiornamento degli strumenti ONTAP 9.12, tutti i processi di autenticazione e comunicazione dei sistemi di archiviazione vengono modificati dall'autenticazione di base all'autenticazione basata su certificato, tramite l'auto-fiducia nei certificati di archiviazione ONTAP .
 
 L'aggiunta di un sistema storage senza autenticazione del certificato è limitata.
 

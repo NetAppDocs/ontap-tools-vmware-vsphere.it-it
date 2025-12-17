@@ -1501,7 +1501,6 @@
   <block id="56d43ad1a280ada5e16fd2960ae44b32" category="list-text">SRM</block>
   <block id="03b870ced8b149ca765fa1ffe2f8b770" category="paragraph">La documentazione sull'installazione di SRM è disponibile sul sito VMware.</block>
   <block id="4617dd5a7193927c5552182931541c9c" category="inline-link">Documentazione di VMware Site Recovery Manager</block>
-  <block id="2b27cdd9529ad91885c6c019ee8329ee" category="paragraph"><block ref="2b27cdd9529ad91885c6c019ee8329ee" category="inline-link-rx"></block></block>
   <block id="406292f3c5b20715e348f48fa5e6d6e3" category="list-text">SRA</block>
   <block id="5964a20b29586f71f419711aae6ae487" category="paragraph">L'adattatore viene installato su SRM.</block>
   <block id="39d642e40fbcd108eb0ab15715ee349d" category="list-text">Verificare che gli host ESXi primari siano connessi alle LUN nel sistema di storage primario sul sito protetto.</block>
@@ -1614,7 +1613,6 @@
   <block id="39b58596949c4b9771bc20ef05dffce8" category="list-text">È necessario associare i siti protetti e i siti di ripristino in SRM.</block>
   <block id="0fef91ca040522ee258c514383b22085" category="list-text">È necessario aver configurato lo storage prima di configurare l'array manager.</block>
   <block id="c57d1578817fecd8541ae081dd3b752e" category="list-text">È necessario aver configurato e replicato le relazioni di SnapMirror tra i siti protetti e i siti di ripristino.</block>
-  <block id="43195d9f7cab578cb244f5f740f6e085" category="list-text">È necessario aver abilitato le LIF di gestione SVM per abilitare la multi-tenancy.</block>
   <block id="7945c1d153109a7470a701147eb9bf91" category="paragraph">SRA supporta la gestione a livello di cluster e la gestione a livello di SVM. Se si aggiunge storage a livello di cluster, è possibile rilevare ed eseguire operazioni su tutte le SVM del cluster. Se si aggiunge storage a livello di SVM, è possibile gestire solo la SVM specifica.</block>
   <block id="e074ce1ed2ac873058a796fcf283eedd" category="admonition">VMware non supporta il protocollo NFS4.1 per SRM.</block>
   <block id="7fdab6ccf999bb53d546254efa8e925a" category="list-text">In SRM, fare clic su *Array Manager*, quindi su *Add Array Manager*.</block>
@@ -1947,7 +1945,6 @@ Per configurare syslog, attenersi alla procedura riportata di seguito.</block>
   <block id="9854c166539f1bb4ba9e61f895f32a6f" category="paragraph">Viene introdotta una nuova API per generare il _appliance-api-token_ che autentica le chiamate API. Alcune delle API esistenti vengono modificate per includere l'intestazione _appliance-api-token_. A partire dalla versione 9,12 degli strumenti ONTAP, swagger non supporta le API 1,0. I puntatori che in precedenza erano su 1.0 sono stati spostati in 2.0 o 3.0 API.</block>
   <block id="ca98aaad89f286b4cde26867bc59bed4" category="admonition">Dai tool ONTAP per VMware vSphere 9,13-02, le API del profilo di funzionalità dello storage 2,0 non sono più disponibili.</block>
   <block id="92ac68c3c800987e3d8470f227aef494" category="paragraph">Il file _.ova_ include gli strumenti ONTAP. Una volta completata la distribuzione, gli strumenti ONTAP, i prodotti VASA e SRA vengono installati nel proprio ambiente. Per impostazione predefinita, gli strumenti ONTAP iniziano a funzionare non appena si decide in merito al modello di distribuzione successivo e si sceglie se abilitare il provider VASA e SRA in base ai propri requisiti.</block>
-  <block id="47036403afaaf8ca717ff4a9ab5e937f" category="admonition">Dall'aggiornamento di ONTAP Tools 9,12, tutti i processi di autenticazione e comunicazione dei sistemi di archiviazione vengono modificati dall'autenticazione di base all'autenticazione basata su certificati mediante l'attendibilità automatica dei certificati di archiviazione ONTAP. Non è richiesta alcuna azione da parte dell'utente.</block>
   <block id="58219ebdf648f85e26c26438bb61d686" category="paragraph">Se il sistema storage viene aggiunto con un utente con ambito del cluster creato personalizzato utilizzando il file json e si desidera eseguire l'upgrade alla versione 9,12 e successive
 Eseguire i comandi riportati di seguito sulla CLI di ONTAP prima di eseguire l'aggiornamento per abilitare la comunicazione basata su certificato tra gli strumenti ONTAP per VMware vSphere e ONTAP.</block>
   <block id="89ee3f6f60ef2fe23bff96f279b6d85a" category="summary">Devi scaricare e implementare gli strumenti ONTAP nel tuo ambiente VMware vSphere, quindi configurare le applicazioni richieste in base alle attività da eseguire con gli strumenti ONTAP, il provider VASA e SRA.</block>
@@ -2153,4 +2150,7 @@ Controllare l'accesso LUN per i LUN mappati nell'host ESXi per verificare la con
   <block id="d2a8cc12733d837b21d04e966da18849" category="inline-link">Site Recovery Manager Installazione e configurazione Site Recovery Manager</block>
   <block id="aa7e72b3419247f39d0e6b1a10ecde90" category="paragraph"><block ref="e8cde9e1b38fd82f2c0a7be37ca3e90f" category="inline-link-rx"></block> contiene ulteriori informazioni.</block>
   <block id="1131b5ba310f0132fa89f2e2bc52cb0c" category="paragraph">Le configurazioni fan-out di SnapMirror sono quelle in cui un volume di origine viene replicato in due diverse destinazioni. Questi creano un problema durante il ripristino quando SRM deve ripristinare la macchina virtuale dalla destinazione. *Fasi*</block>
+  <block id="e9137eaa9a63d9c4bceed13dfb01d6db" category="admonition">Con l'aggiornamento degli strumenti ONTAP 9.12, tutti i processi di autenticazione e comunicazione dei sistemi di archiviazione vengono modificati dall'autenticazione di base all'autenticazione basata su certificato, tramite l'auto-fiducia nei certificati di archiviazione ONTAP .</block>
+  <block id="04afb3bdbc4139cf45256b44141b1a77" category="list-text">È necessario aver abilitato i LIF di gestione SVM per supportare il multi-tenancy.</block>
+  <block id="0d6d5f3b6b0d7149732baa366c9a237a" category="paragraph"><block ref="0d6d5f3b6b0d7149732baa366c9a237a" category="inline-link-rx"></block></block>
 </blocks>
